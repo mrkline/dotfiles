@@ -69,8 +69,8 @@ let g:SuperTabDefaultCompletionType="context"
 " Clang Complete:
 " Disable auto popup, use <Tab> to autocomplete
 let g:clang_complete_auto=0
-" Show clang errors in the quickfix window
-let g:clang_complete_copen=1
+" Don't show clang errors in the quickfix window
+let g:clang_complete_copen=0
 
 " Code folding based on syntax
 set foldmethod=syntax
