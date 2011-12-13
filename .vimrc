@@ -14,13 +14,25 @@ set ruler
 set modeline
 set ls=2
 
+" Remove the buffer when a tab is closed
+set nohidden
+
+" Re-read a file if it's been edited outside vim
+set autoread
+
 " Show line numbers
 set number
 " Numbers take up four columns
 set numberwidth=4
 
-" Remove the buffer when a tab is closed
-set nohidden
+" Make the window 80 columns wide, plus 4 for the line numbers
+set columns=84
+
+" Mark column 81
+set colorcolumn=81
+
+" Wrap text to column 80
+set textwidth=80
 
 " Tabs are four spaces wide, and aren't expanded into spaces
 set tabstop=4
@@ -29,9 +41,6 @@ set noexpandtab
 
 " auto indent (this may not be needed with auto syntax detection)
 set autoindent
-
-" Re-read a file if it's been edited outside vim
-set autoread
 
 " File type detection and syntax highlighting
 filetype plugin indent on
@@ -76,11 +85,6 @@ set backspace=2
 " .tex files are LaTeX by default
 let g:tex_flavor = "latex"
 
-" Make the window 80 columns wide, plus 4 for the line numbers
-set columns=84
-
-" Mark column 81
-set colorcolumn=81
 
 if has("gui_running")
 	" Set our color scheme
