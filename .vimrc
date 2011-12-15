@@ -89,14 +89,8 @@ let g:tex_flavor = "latex"
 if has("gui_running")
 	" Set our color scheme
 	colorscheme torte
-	" Remove menu bar
-	set guioptions-=m
-	" Remove scroll bar
-	set guioptions-=r
-	" Remove toolbar
-	set guioptions-=T
-	" Don't use pop-up dialogs
-	set guioptions-=c
+	" Behave like the console version, but with GUI tabs
+	set guioptions=acei
 
 	" Set our font
 	" Windows needs additional font params
