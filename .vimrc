@@ -172,9 +172,9 @@ endfunction
 let mapleader=','
 
 " Enable and disable spell check with a key press
-noremap <leader>c :call ToggleSpell()<CR>
+noremap <leader>sc :call ToggleSpell()<CR>
 " Enable and disable suggestions from the spelling dictionary with a key press
-noremap <leader>s :call ToggleSpellSuggest()<CR>
+noremap <leader>ss :call ToggleSpellSuggest()<CR>
 " Reload settings
 if has("win32")
 	noremap <leader>r :so ~/_vimrc<CR>
@@ -183,6 +183,9 @@ else
 endif
 " Trim trailing whitespace
 noremap <leader>t :call RemoveTrailingWhitespace()<CR>
+
+" Make Y consistent with C, D, etc.
+noremap Y y$
 
 " The escape key is a long ways away
 inoremap jk <Esc>
