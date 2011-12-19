@@ -89,8 +89,8 @@ let g:tex_flavor = "latex"
 if has("gui_running")
 	" Set our color scheme
 	colorscheme torte
-	" Behave like the console version, but with GUI tabs
-	set guioptions=acei
+	" Behave like the console version
+	set guioptions=aci
 
 	" Set our font
 	" Windows needs additional font params
