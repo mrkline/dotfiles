@@ -215,6 +215,18 @@ noremap <C-a> ggvG$
 " Space shuts off search highlighting
 noremap <Space> :noh<CR>
 
+" Resize the screen with movement keys
+noremap <C-j> :set lines+=1<CR>:echo &lines<CR>
+noremap <C-k> :set lines-=1<CR>:echo &lines<CR>
+noremap <C-l> :set columns+=1<CR>:echo &columns<CR>
+noremap <C-h> :set columns-=1<CR>:echo &columns<CR>
+
+" Do the same with internal windows
+noremap <C-w>j <C-w>+
+noremap <C-w>k <C-w>-
+noremap <C-w>l <C-w>>
+noremap <C-w>h <C-w><
+
 " The escape key is a long ways away
 inoremap jk <Esc>
 
