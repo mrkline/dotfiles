@@ -10,6 +10,9 @@ set showcmd
 " Show line and column
 set ruler
 
+" Highlight found terms
+set hlsearch
+
 " Always display the file name at the bottom
 set modeline
 set ls=2
@@ -33,6 +36,7 @@ set colorcolumn=81
 
 " Wrap text to column 80
 set textwidth=80
+let g:default_textwidth = &textwidth
 
 " Tabs are four spaces wide, and aren't expanded into spaces
 set tabstop=4
@@ -159,6 +163,21 @@ function! ToggleSpellSuggest()
 	endif
 endfunction
 
+function! ToggleWrap()
+	if (&textwidth > 0)
+		let b:last_textwidth = &textwidth
+		set textwidth=0
+		echo "Disabled auto-wrap"
+	else
+		if exists("b:last_textwidth")
+			let &textwidth=b:last_textwidth
+		else
+			let &textwidth=g:default_textwidth
+		endif
+		echo "Enabled auto-wrap. textwidth set to " . &textwidth
+	endif
+endfunction
+
 function! RemoveTrailingWhitespace()
 	let l:line = line('.')
 	let l:column = col('.')
@@ -171,21 +190,30 @@ endfunction
 " Map <leader> to comma
 let mapleader=','
 
-" Enable and disable spell check with a key press
-noremap <leader>sc :call ToggleSpell()<CR>
-" Enable and disable suggestions from the spelling dictionary with a key press
-noremap <leader>ss :call ToggleSpellSuggest()<CR>
 " Reload settings
 if has("win32")
 	noremap <leader>r :so ~/_vimrc<CR>
 else
 	noremap <leader>r :so ~/.vimrc<CR>
 endif
+
+" Enable and disable spell check with a key press
+noremap <leader>sc :call ToggleSpell()<CR>
+" Enable and disable suggestions from the spelling dictionary with a key press
+noremap <leader>ss :call ToggleSpellSuggest()<CR>
+" Enable and disable automatic hard wrapping
+noremap <leader>w :call ToggleWrap()<CR>
 " Trim trailing whitespace
 noremap <leader>t :call RemoveTrailingWhitespace()<CR>
+" ctags this directory
+noremap <leader>c :silent !ctags ./*<CR>
 
 " Make Y consistent with C, D, etc.
 noremap Y y$
+" Ctrl-A is select all
+noremap <C-a> ggvG$
+" Space shuts off search highlighting
+noremap <Space> :noh<CR>
 
 " The escape key is a long ways away
 inoremap jk <Esc>
