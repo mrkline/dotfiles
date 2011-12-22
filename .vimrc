@@ -113,6 +113,7 @@ if has("gui_running")
 	" Color preferences
 	highlight Cursor guibg=NONE guifg=NONE gui=reverse
 	highlight iCursor guibg=NONE guifg=NONE gui=reverse
+	highlight Search guibg=blue guifg=white
 	highlight Pmenu guibg=white guifg=black
 	highlight PmenuSel guibg=blue guifg=white gui=bold
 	highlight PmenuSbar guibg=white
@@ -130,6 +131,7 @@ else
 	" Color preferences
 	highlight Cursor ctermbg=NONE ctermfg=NONE cterm=reverse
 	highlight iCursor ctermbg=NONE ctermfg=NONE cterm=reverse
+	highlight Search ctermbg=blue ctermfg=white
 	highlight Pmenu ctermbg=white ctermfg=black
 	highlight PmenuSel ctermbg=blue ctermfg=white cterm=bold
 	highlight PmenuSbar ctermbg=white
