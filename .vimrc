@@ -183,9 +183,8 @@ endfunction
 function! RemoveTrailingWhitespace()
 	let l:line = line('.')
 	let l:column = col('.')
-	silent %s/\s\+$//ge
-	execute "normal " . l:line . "G"
-	execute "normal " . l:column . "|"
+	%s/\s\+$//ge
+	call cursor(l:line, l:column)
 	echo "Removed trailing whitespace"
 endfunction
 
