@@ -215,6 +215,9 @@ noremap Y y$
 noremap <C-a> ggvG$
 " Space shuts off search highlighting
 noremap <Space> :noh<CR>
+" Make the enter key do something useful
+noremap <CR> o<Esc>
+noremap <S-CR> O<Esc>
 
 " Resize the screen with movement keys
 noremap <C-j> :set lines+=1<CR>:echo &lines<CR>
