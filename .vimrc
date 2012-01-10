@@ -212,8 +212,8 @@ noremap <leader>ss :call ToggleSpellSuggest()<CR>
 noremap <leader>w :call ToggleWrap()<CR>
 " Trim trailing whitespace
 noremap <leader>t :call RemoveTrailingWhitespace()<CR>
-" ctags this directory
-noremap <leader>c :silent !ctags ./*<CR>
+" ctags this directory using C++ settings
+noremap <leader>c :silent !ctags -a --sort=1 --c++-kinds=+p --fields=+iaS --extra=+q ./*<CR>
 
 " Make Y consistent with C, D, etc.
 noremap Y y$
