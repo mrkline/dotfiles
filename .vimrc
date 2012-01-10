@@ -60,21 +60,27 @@ set nospell
 set wildmenu
 set wildmode=list:longest,full
 
+" OmniCppComplete:
+let OmniCpp_NamespaceSearch = 1
+let OmniCpp_GlobalScopeSearch = 1
+let OmniCpp_ShowAccess = 1
+let OmniCpp_ShowPrototypeInAbbr = 1 " show function parameters
+" Don't auto complete anything.
+let OmniCpp_MayCompleteDot = 0
+let OmniCpp_MayCompleteArrow = 0
+let OmniCpp_MayCompleteScope = 0
+
+
 " Default completion sources are .,w,b,u,t,i
 " Instead, only complete based on include files and the current buffer
 set complete=.,i
 " Complete options (disable preview scratch window)
 set completeopt=menu,menuone,longest
 
+
 " SuperTab:
 " SuperTab option for context aware completion
 let g:SuperTabDefaultCompletionType="context"
-
-" Clang Complete:
-" Disable auto popup, use <Tab> to autocomplete
-let g:clang_complete_auto=0
-" Don't show clang errors in the quickfix window
-let g:clang_complete_copen=0
 
 " Code folding based on syntax
 set foldmethod=syntax
