@@ -23,6 +23,10 @@ set nohidden
 " Re-read a file if it's been edited outside vim
 set autoread
 
+" Split down or to the right
+set splitright
+set splitbelow
+
 " Show line numbers
 set number
 " Numbers take up four columns
