@@ -241,9 +241,6 @@ noremap <C-w>k <C-w>-
 noremap <C-w>l <C-w>>
 noremap <C-w>h <C-w><
 
-" The escape key is a long ways away
-inoremap jk <Esc>
-
 "--------------------
 " Function: Open tag under cursor in new tab
 " Source:   http://stackoverflow.com/questions/563616/vimctags-tips-and-tricks
