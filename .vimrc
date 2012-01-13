@@ -23,6 +23,10 @@ set nohidden
 " Re-read a file if it's been edited outside vim
 set autoread
 
+" Prefer Unix file endings to Windows ones.
+" (This is a default on a Linux system but not on a Windows one)
+set fileformats=unix,dos
+
 " Split down or to the right
 set splitright
 set splitbelow
