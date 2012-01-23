@@ -103,6 +103,8 @@ set backspace=2
 " .tex files are LaTeX by default
 let g:tex_flavor = "latex"
 
+" I find the LaTeX auto indenting annoying
+au BufRead,BufNewFile *.tex set inde=
 
 if has("gui_running")
 	" Set our color scheme
