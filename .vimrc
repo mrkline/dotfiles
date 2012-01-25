@@ -234,6 +234,9 @@ noremap <Space> :noh<CR>
 " Make the enter key do something useful
 noremap <CR> o<Esc>
 noremap <S-CR> O<Esc>
+" Make <C-i> and <C-j> do something similar in insert mode
+inoremap <C-j> <Esc>o
+inoremap <C-k> <Esc>O
 
 " Resize the screen with movement keys
 noremap <C-j> :set lines+=1<CR>:echo &lines<CR>
