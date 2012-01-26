@@ -173,6 +173,7 @@ endfunction
 
 function! ToggleSpellSuggest()
 	if match(&complete, "kspell") < 0
+		set spell " Spell check needs to be enabled
 		set complete+=kspell
 		echo "Spelling suggestions enabled"
 	else
