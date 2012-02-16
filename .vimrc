@@ -234,9 +234,6 @@ noremap <Space> :noh<CR>
 " Make the enter key do something useful
 noremap <CR> o<Esc>
 noremap <S-CR> O<Esc>
-" Make <C-i> and <C-j> do something similar in insert mode
-inoremap <C-j> <Esc>o
-inoremap <C-k> <Esc>O
 
 " Resize the screen with movement keys
 noremap <C-j> :set lines+=1<CR>:echo &lines<CR>
@@ -255,3 +252,9 @@ noremap <C-w>h <C-w><
 " Source:   http://stackoverflow.com/questions/563616/vimctags-tips-and-tricks
 "--------------------
 noremap <C-\> :tab split<CR>:exec("tag ".expand("<cword>"))<CR>
+
+" Insert mode mappings
+inoremap <C-j> <Esc>o
+inoremap <C-k> <Esc>O
+inoremap <C-l> <Esc>>>A
+inoremap <C-h> <Esc><<A
