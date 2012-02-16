@@ -42,9 +42,8 @@ set columns=84
 " Mark column 81
 set colorcolumn=81
 
-" Wrap text to column 80
-set textwidth=80
-let g:default_textwidth = &textwidth
+" Set default text to 80
+let g:default_textwidth = 80
 
 " Tabs are four spaces wide, and aren't expanded into spaces
 set tabstop=4
