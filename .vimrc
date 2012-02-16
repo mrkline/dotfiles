@@ -204,9 +204,6 @@ function! RemoveTrailingWhitespace()
 	echo "Removed trailing whitespace"
 endfunction
 
-" Map <leader> to comma
-let mapleader=','
-
 " Reload settings
 if has("win32")
 	noremap <leader>r :so ~/_vimrc<CR>
