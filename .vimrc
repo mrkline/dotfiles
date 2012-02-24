@@ -232,13 +232,7 @@ noremap <Space> :noh<CR>
 noremap <CR> o<Esc>
 noremap <S-CR> O<Esc>
 
-" Resize the screen with movement keys
-noremap <C-j> :set lines+=1<CR>:echo &lines<CR>
-noremap <C-k> :set lines-=1<CR>:echo &lines<CR>
-noremap <C-l> :set columns+=1<CR>:echo &columns<CR>
-noremap <C-h> :set columns-=1<CR>:echo &columns<CR>
-
-" Do the same with internal windows
+" Resize internal windows with movement keys
 noremap <C-w>j <C-w>+
 noremap <C-w>k <C-w>-
 noremap <C-w>l <C-w>>
