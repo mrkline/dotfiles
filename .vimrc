@@ -248,4 +248,7 @@ noremap <C-\> :tab split<CR>:exec("tag ".expand("<cword>"))<CR>
 inoremap <C-j> <Esc>o
 inoremap <C-k> <Esc>O
 inoremap <C-l> <Esc>>>A
-inoremap <C-h> <Esc><<A
+" C-h is backspace in the windows shell, causing some issues
+if has("gui_running") || !has("win32")
+	inoremap <C-h> <Esc><<A
+endif
