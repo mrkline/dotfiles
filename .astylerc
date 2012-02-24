@@ -1,6 +1,8 @@
 style=k&r
 indent=tab
 indent-namespaces
+pad-oper
+align-pointer=type
 break-closing-brackets
 keep-one-line-blocks
 keep-one-line-statements
