@@ -11,3 +11,9 @@
 	graph = log --graph --oneline --decorate
 	ff = merge --ff-only
 	zip = archive --format=zip
+	dt = difftool
+[diff]
+	tool = meld
+[color "sh"]
+	branch = yellow bold
+	dirty = red bold
