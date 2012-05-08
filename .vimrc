@@ -67,23 +67,11 @@ set nospell
 set wildmenu
 set wildmode=list:longest,full
 
-" OmniCppComplete:
-let OmniCpp_NamespaceSearch = 1
-let OmniCpp_GlobalScopeSearch = 1
-let OmniCpp_ShowAccess = 1
-let OmniCpp_ShowPrototypeInAbbr = 1 " show function parameters
-" Don't auto complete anything.
-let OmniCpp_MayCompleteDot = 0
-let OmniCpp_MayCompleteArrow = 0
-let OmniCpp_MayCompleteScope = 0
-
-
 " Default completion sources are .,w,b,u,t,i
 " Instead, only complete based on include files and the current buffer
 set complete=.,i
 " Complete options (disable preview scratch window)
 set completeopt=menu,menuone,longest
-
 
 " SuperTab:
 " SuperTab option for context aware completion
