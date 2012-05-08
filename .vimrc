@@ -54,7 +54,7 @@ set noexpandtab
 set autoindent
 
 " File type detection and syntax highlighting
-filetype plugin indent on
+filetype indent on
 syntax on
 set grepprg=grep\ -nH\ $*
 
@@ -65,7 +65,7 @@ set nospell
 
 " Autocomple commands and such
 set wildmenu
-set wildmode=list:longest,full
+set wildmode=longest,list
 
 " Default completion sources are .,w,b,u,t,i
 " Instead, only complete based on include files and the current buffer
