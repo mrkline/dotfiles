@@ -17,3 +17,5 @@
 [color "sh"]
 	branch = yellow bold
 	dirty = red bold
+[push]
+	default = current
