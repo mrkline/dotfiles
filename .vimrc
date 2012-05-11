@@ -50,13 +50,15 @@ set tabstop=4
 set shiftwidth=4
 set noexpandtab
 
-" auto indent (this may not be needed with auto syntax detection)
-set autoindent
-
 " File type detection and syntax highlighting
 filetype indent on
 syntax on
 set grepprg=grep\ -nH\ $*
+
+" auto indent (this may not be needed with auto syntax detection)
+set autoindent
+" Disable cindint (it inserts tabs when I want spaces for alignment)
+set nocindent
 
 " I type in english.
 set spl=en spell
