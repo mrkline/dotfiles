@@ -50,16 +50,6 @@ set tabstop=4
 set shiftwidth=4
 set noexpandtab
 
-" File type detection and syntax highlighting
-filetype indent on
-syntax on
-set grepprg=grep\ -nH\ $*
-
-" auto indent (this may not be needed with auto syntax detection)
-set autoindent
-" Disable cindint (it inserts tabs when I want spaces for alignment)
-set nocindent
-
 " I type in english.
 set spl=en spell
 " Except when I'm coding, so don't start with spell checking
@@ -91,6 +81,15 @@ set backspace=2
 
 " .tex files are LaTeX by default
 let g:tex_flavor = "latex"
+
+" File type detection and syntax highlighting
+filetype on
+syntax on
+
+" No fancy indentation
+set nocindent
+set noautoindent
+set smartindent
 
 " I find the LaTeX auto indenting annoying
 au BufRead,BufNewFile *.tex set inde=
