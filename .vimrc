@@ -60,8 +60,7 @@ set wildmenu
 set wildmode=longest,list
 
 " Default completion sources are .,w,b,u,t,i
-" Instead, only complete based on include files and the current buffer
-set complete=.,i
+set complete=.,w,b,t,i
 " Complete options (disable preview scratch window)
 set completeopt=menu,menuone,longest
 
