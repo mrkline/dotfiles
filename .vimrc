@@ -37,7 +37,9 @@ set number
 set numberwidth=4
 
 " Make the window 80 columns wide, plus 4 for the line numbers
-set columns=84
+if &columns < 84
+	set columns=84
+endif
 
 " Mark column 81
 set colorcolumn=81
