@@ -36,16 +36,16 @@ set number
 " Numbers take up four columns
 set numberwidth=4
 
-" Make the window 80 columns wide, plus 4 for the line numbers
-if &columns < 84
-	set columns=84
+" Make the window 120 columns wide, plus 4 for the line numbers
+if &columns < 124
+	set columns=124
 endif
 
-" Mark column 81
-set colorcolumn=81
+" Mark column 121
+set colorcolumn=121
 
-" Set default text to 80
-let g:default_textwidth = 80
+" Set default text to 120
+let g:default_textwidth = 120
 
 " Tabs are four spaces wide, and aren't expanded into spaces
 set tabstop=4
