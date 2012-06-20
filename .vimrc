@@ -13,6 +13,9 @@ set ruler
 " Highlight found terms
 set hlsearch
 
+" Do not jump back to matching parens
+set noshowmatch
+
 " Always display the file name at the bottom
 set modeline
 set ls=2
