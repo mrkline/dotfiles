@@ -1,0 +1,71 @@
+# Modified fom from https://bbs.archlinux.org/viewtopic.php?pid=1084822#p1084822
+#-- Process --
+background              no
+double_buffer           yes
+update_interval         1
+cpu_avg_samples         5
+net_avg_samples         5
+no_buffers              yes
+#-- Window base --
+own_window              no
+own_window_colour       393939
+own_window_type         override
+own_window_transparent  yes
+#-- Window looks --
+alignment               top_left
+gap_x                   10
+gap_y                   34
+minimum_size            250 5
+border_width            0
+draw_shades             no
+draw_outline            no
+draw_borders            no
+draw_graph_borders      yes
+stippled_borders        0
+default_color           white
+default_outline_color   white
+border_inner_margin     5
+border_outer_margin     5
+border_width            5
+#default_shade_color     black
+#-- Font --
+use_xft                 yes
+xftalpha                1
+xftfont                 Droid Sans:size=10
+
+# stuff after 'TEXT' will be formatted on screen
+TEXT
+
+# SYSTEM
+${goto 90}User:${alignr}${uid_name 1000}
+${goto 90}Kernel:${alignr}$kernel ($machine)
+
+
+# CPU
+#${goto 90}Core 1:${goto 160} ${cpu cpu1}%${goto 220}@ ${hwmon 1 temp 2}°C${alignr}${cpubar cpu1 6,80}
+#${goto 90}Core 2:${goto 160} ${cpu cpu2}%${goto 220}@ ${hwmon 1 temp 3}°C${alignr}${cpubar cpu2 6,80}
+${goto 90}Core 1:${goto 160} ${cpu cpu1}%${goto 220}${alignr}${cpubar cpu1 6,80}
+${goto 90}Core 2:${goto 160} ${cpu cpu2}%${goto 220}${alignr}${cpubar cpu2 6,80}
+
+
+# RAM
+${goto 90}RAM:${goto 160}$memmax${goto 210}$memperc%${alignr}${membar 6,80}
+${goto 90}Swap:${goto 160}$swapmax${goto 210}$swapperc%${alignr}${swapbar 6,80}
+
+
+# DISK
+${goto 90}/${goto 160}${fs_size /}${goto 210}${fs_used_perc /}% ${alignr}${fs_bar 6,80 /}
+${goto 90}/windows${goto 160}${fs_size /windows}${goto 210}${fs_used_perc /windows}% ${alignr}${fs_bar 6,80 /windows}
+${goto 90}/shared${goto 160}${fs_size /shared}${goto 210}${fs_used_perc /shared}% ${alignr}${fs_bar 6,80 /shared}
+
+
+# NETWORK
+${goto 90}${downspeedgraph eth0 20,80 1793d1 37a2d7 -l -t}${goto 230}${upspeedgraph eth0 20,80 1793d1 37a2d7 -l -t}
+${goto 90}Down: ${downspeed eth0}${goto 230}Up: ${upspeed eth0}
+
+#-- background & images --
+${image ~/.conky/arch_icon.png -p 0, 0}
+${image ~/.conky/cpu_icon.png -p 0, 70}
+${image ~/.conky/ram_icon.png -p 0, 130}
+${image ~/.conky/hdd_icon.png -p 0, 195}
+${image ~/.conky/net_icon.png -p 0, 270}
