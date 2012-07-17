@@ -11,3 +11,4 @@ Faenza icons:
 Conky:
 - Install conky
 - Configure to heart's desire. See http://conky.sourceforge.net/variables.html for a list of possible objects
+- Set as a startup program in xfce. Use -p # to wait a few seconds before initializing to let the desktop load first.
