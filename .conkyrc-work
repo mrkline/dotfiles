@@ -7,11 +7,8 @@ update_interval         1
 cpu_avg_samples         5
 net_avg_samples         5
 no_buffers              yes
-#-- Window base --
-own_window              no
-own_window_colour       393939
-own_window_type         override
-own_window_transparent  yes
+#-- Window base (for if we choose to launch as a window) --
+own_window_colour       ffffff
 #-- Window looks --
 alignment               top_left
 gap_x                   10
