@@ -59,14 +59,17 @@ ${goto 90}Swap:${goto 160}$swapmax${goto 210}$swapperc%${alignr}${swapbar 6,80}
 ${goto 90}/${goto 160}${fs_size /}${goto 210}${fs_used_perc /}% ${alignr}${fs_bar 6,80 /}
 ${goto 90}/windows${goto 160}${fs_size /windows}${goto 210}${fs_used_perc /windows}% ${alignr}${fs_bar 6,80 /windows}
 
+${goto 90}${diskiograph 20,80 5b9224 70ae32 -t}
+${goto 90}sda: ${diskio}
+
 
 # NETWORK
-${goto 90}${downspeedgraph eth1 20,80 5b9224 70ae32 -l -t}${goto 230}${upspeedgraph eth1 20,80 5b9224 70ae32 -l -t}
+${goto 90}${downspeedgraph eth1 20,80 5b9224 70ae32 -t}${goto 230}${upspeedgraph eth1 20,80 5b9224 70ae32 -t}
 ${goto 90}Down: ${downspeed eth1}${goto 230}Up: ${upspeed eth1}
 
 #-- background & images --
 ${image ~/.conky/mint_icon.png -p 0, 0}
-${image ~/.conky/cpu_icon.png -p 0, 70}
-${image ~/.conky/ram_icon.png -p 0, 130}
-${image ~/.conky/hdd_icon.png -p 0, 195}
-${image ~/.conky/net_icon.png -p 0, 270}
+${image ~/.conky/cpu_icon.png -p 0, 65}
+${image ~/.conky/ram_icon.png -p 0, 125}
+${image ~/.conky/hdd_icon.png -p 0, 205}
+${image ~/.conky/net_icon.png -p 0, 335}
