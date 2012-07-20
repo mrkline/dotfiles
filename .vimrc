@@ -220,8 +220,6 @@ noremap <leader>c :silent !ctags -a --sort=1 --c++-kinds=+p --fields=+iaS --extr
 
 " Make Y consistent with C, D, etc.
 noremap Y y$
-" Ctrl-A is select all
-noremap <C-a> ggvG$
 " Space shuts off search highlighting
 noremap <Space> :noh<CR>
 " Make the enter key do something useful
