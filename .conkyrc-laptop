@@ -58,6 +58,8 @@ ${goto 90}/${goto 160}${fs_used /}${goto 210}${fs_used_perc /}% ${alignr}${fs_ba
 ${goto 90}/windows${goto 160}${fs_used /windows}${goto 210}${fs_used_perc /windows}% ${alignr}${fs_bar 6,80 /windows}
 ${goto 90}/shared${goto 160}${fs_used /shared}${goto 210}${fs_used_perc /shared}% ${alignr}${fs_bar 6,80 /shared}
 
+${goto 90}${diskiograph 20,80 1793d1 37a2d7 -t}
+${goto 90}sda: ${diskio}
 
 # NETWORK
 ${goto 90}${downspeedgraph wlan0 20,80 1793d1 37a2d7 -t}${goto 230}${upspeedgraph wlan0 20,80 1793d1 37a2d7 -t}
@@ -68,4 +70,4 @@ ${image ~/.conky/arch_icon.png -p 0, 0}
 ${image ~/.conky/cpu_icon.png -p 0, 80}
 ${image ~/.conky/ram_icon.png -p 0, 160}
 ${image ~/.conky/hdd_icon.png -p 0, 225}
-${image ~/.conky/wireless_icon.png -p 0, 300}
+${image ~/.conky/wireless_icon.png -p 0, 350}
