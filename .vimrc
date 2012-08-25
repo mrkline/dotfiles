@@ -226,12 +226,6 @@ noremap <Space> :noh<CR>
 noremap <CR> o<Esc>
 noremap <S-CR> O<Esc>
 
-" Resize internal windows with movement keys
-noremap <C-w>j <C-w>+
-noremap <C-w>k <C-w>-
-noremap <C-w>l <C-w>>
-noremap <C-w>h <C-w><
-
 "--------------------
 " Function: Open tag under cursor in new tab
 " Source:   http://stackoverflow.com/questions/563616/vimctags-tips-and-tricks
