@@ -69,10 +69,6 @@ set complete=.,w,b,t,i
 " Complete options (disable preview scratch window)
 set completeopt=menu,menuone,longest
 
-" SuperTab:
-" SuperTab option for context aware completion
-let g:SuperTabDefaultCompletionType="context"
-
 " Code folding based on syntax
 set foldmethod=syntax
 set foldlevelstart=99
@@ -106,14 +102,6 @@ if has("gui_running")
 	colorscheme torte
 	" Behave like the console version
 	set guioptions=aci
-
-	" Set our font
-	" Windows needs additional font params
-	if has("win32")
-		set guifont=Envy\ Code\ R:h10
-	else
-		set guifont=Envy\ Code\ R
-	endif
 
 	" Cursor preferences
 	set guicursor=n-v-c:block-Cursor
