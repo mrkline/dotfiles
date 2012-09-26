@@ -98,9 +98,6 @@ set smartindent
 " I find the LaTeX auto indenting annoying
 au BufRead,BufNewFile *.tex set inde=
 
-" Needed for eclim support
-au BufRead,BufNewFile *.java filetype plugin on
-
 if has("gui_running")
 	" Set our color scheme
 	colorscheme torte
