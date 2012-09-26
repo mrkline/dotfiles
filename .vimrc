@@ -14,6 +14,23 @@ Bundle 'gmarik/vundle'
 Bundle 'ervandew/supertab'
 Bundle 'Lokaltog/vim-powerline'
 
+"" Plugin config:
+
+" SuperTab:
+" SuperTab option for context aware completion
+let g:SuperTabDefaultCompletionType="context"
+
+" Powerline:
+" Unicode!
+set encoding=utf-8
+" Fancy powerline symbols
+let g:Powerline_symbols = 'fancy'
+
+if match($TERM, "xterm") == 0
+	" Make sure we support 256 colors in the terminal emulator
+	set t_Co=256
+endif
+
 "" Normal vimrc stuff:
 
 " No text wrapping
@@ -83,10 +100,6 @@ set wildmode=longest,list
 set complete=.,w,b,t,i
 " Complete options (disable preview scratch window)
 set completeopt=menu,menuone,longest
-
-" SuperTab:
-" SuperTab option for context aware completion
-let g:SuperTabDefaultCompletionType="context"
 
 " Code folding based on syntax
 set foldmethod=syntax
