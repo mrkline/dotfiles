@@ -1,6 +1,21 @@
 " No vi compatibility
 set nocompatible
 
+"" Vundle Setup:
+filetype off
+set rtp+=~/.vim/bundle/vundle/
+
+call vundle#rc()
+
+" let Vundle manage Vundle
+Bundle 'gmarik/vundle'
+
+" My bundles:
+Bundle 'ervandew/supertab'
+Bundle 'Lokaltog/vim-powerline'
+
+"" Normal vimrc stuff:
+
 " No text wrapping
 set nowrap
 
