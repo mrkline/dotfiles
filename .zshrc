@@ -1,6 +1,9 @@
 # The following lines were added by compinstall
+
 zstyle ':completion:*' completer _expand _complete _ignored
+zstyle ':completion:*' format 'Completing %d'
 zstyle ':completion:*' list-colors ''
+zstyle ':completion:*' verbose true
 zstyle :compinstall filename '/home/mrkline/.zshrc'
 
 autoload -Uz compinit
