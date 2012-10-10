@@ -19,6 +19,8 @@ setopt appendhistory nomatch
 unsetopt autocd beep extendedglob notify
 # Use vim bindings
 bindkey -v
+# But let us use ^R as reverse search in insert mode
+bindkey -M viins '^R' history-incremental-search-backward
 
 PS1='%n $ '
 
