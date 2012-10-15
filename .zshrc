@@ -1,35 +1,36 @@
-# The following lines were added by compinstall
+# Path to your oh-my-zsh configuration.
+ZSH=$HOME/oh-my-zsh
 
-zstyle ':completion:*' completer _expand _complete _ignored
-zstyle ':completion:*' format 'Completing %d'
-zstyle ':completion:*' list-colors ''
-zstyle ':completion:*' verbose true
-zstyle :compinstall filename '/home/mrkline/.zshrc'
+# Set name of the theme to load.
+# Look in ~/.oh-my-zsh/themes/
+# Optionally, if you set this to "random", it'll load a random theme each
+# time that oh-my-zsh is loaded.
+ZSH_THEME="robbyrussell"
 
-autoload -Uz compinit
-compinit
-# End of lines added by compinstall
+# Example aliases
+# alias zshconfig="mate ~/.zshrc"
+# alias ohmyzsh="mate ~/.oh-my-zsh"
 
-HISTFILE=~/.histfile
-HISTSIZE=1000
-SAVEHIST=1000
-# Ignore duplicate lines
-HISTCONTROL=ignoreboth
-setopt appendhistory nomatch
-unsetopt autocd beep extendedglob notify
-# Use vim bindings
-bindkey -v
-# But let us use ^R as reverse search in insert mode
-bindkey -M viins '^R' history-incremental-search-backward
+# Set to this to use case-sensitive completion
+# CASE_SENSITIVE="true"
 
-PS1='%n $ '
+# Comment this out to disable weekly auto-update checks
+# DISABLE_AUTO_UPDATE="true"
 
-# ls aliases
-alias ll='ls --color=auto -alF'
-alias la='ls --color=auto -A'
+# Uncomment following line if you want to disable colors in ls
+# DISABLE_LS_COLORS="true"
 
-# Color
-alias ls='ls --color=auto'
-alias grep='grep --color=auto'
-alias fgrep='fgrep --color=auto'
-alias egrep='egrep --color=auto'
+# Uncomment following line if you want to disable autosetting terminal title.
+# DISABLE_AUTO_TITLE="true"
+
+# Uncomment following line if you want red dots to be displayed while waiting for completion
+# COMPLETION_WAITING_DOTS="true"
+
+# Which plugins would you like to load? (plugins can be found in ~/.oh-my-zsh/plugins/*)
+# Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
+# Example format: plugins=(rails git textmate ruby lighthouse)
+plugins=(git vi-mode)
+
+source $ZSH/oh-my-zsh.sh
+
+# Customize to your needs...
