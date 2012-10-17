@@ -44,9 +44,6 @@ if &columns < 124
 	set columns=124
 endif
 
-" Mark column 121
-set colorcolumn=121
-
 " Set default text to 120
 let g:default_textwidth = 120
 
