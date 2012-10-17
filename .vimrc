@@ -97,6 +97,12 @@ au BufRead,BufNewFile *.tex set inde=
 " Needed for eclim support
 au BufRead,BufNewFile *.java filetype plugin on
 
+if match($TERM, "xterm") == 0
+	" Make sure we support 256 colors in the terminal emulator
+	set t_Co=256
+	" Set our color scheme
+	colorscheme torte
+endif
 if has("gui_running")
 	" Set our color scheme
 	colorscheme torte
