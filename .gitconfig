@@ -2,7 +2,7 @@
 	name = Matt Kline
 	email = slavik262@gmail.com
 [core]
-	pager = less -x5
+	pager = less -x4 -S
 	autocrlf = false
 	editor = vim
 [color]
