@@ -35,3 +35,6 @@ source $ZSH/oh-my-zsh.sh
 
 # Customize to your needs...
 unsetopt correct_all
+
+# Add par to path
+PATH=$PATH:~mrkline/src/Par152/
