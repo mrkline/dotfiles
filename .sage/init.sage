@@ -5,4 +5,4 @@ def phi(z):
 def Phi(z):
 	"The standard normal cumulative distribution function"
 	y = var('y')
-	return integral(phi(y), y, -infinity, z).n()
+	return integral(phi(y), y, -infinity, z)
