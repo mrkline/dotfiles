@@ -203,19 +203,18 @@ function! ToggleSpellSuggest()
 	endif
 endfunction
 
-function! ToggleWrap()
-	if (&textwidth > 0)
-		let b:last_textwidth = &textwidth
-		set textwidth=0
-		echo "Disabled auto-wrap"
-	else
-		if exists("b:last_textwidth")
-			let &textwidth=b:last_textwidth
-		else
-			let &textwidth=g:default_textwidth
-		endif
-		echo "Enabled auto-wrap. textwidth set to " . &textwidth
-	endif
+" Inspired by http://www.drbunsen.org/writing-in-vim.html
+function! WordProcessorMode()
+	set formatoptions=l
+	set spell spelllang=en_us
+	set complete+=kspell
+	set formatprg=par\ w\ 120
+	set wrap
+	set linebreak
+	set colorcolumn&
+	map j gj
+	map k gk
+	echo "Enabled word processor mode"
 endfunction
 
 function! RemoveTrailingWhitespace()
@@ -238,7 +237,7 @@ noremap <leader>sc :call ToggleSpell()<CR>
 " Enable and disable suggestions from the spelling dictionary with a key press
 noremap <leader>ss :call ToggleSpellSuggest()<CR>
 " Enable and disable automatic hard wrapping
-noremap <leader>w :call ToggleWrap()<CR>
+noremap <leader>w :call WordProcessorMode()<CR>
 " Trim trailing whitespace
 noremap <leader>t :call RemoveTrailingWhitespace()<CR>
 " ctags this directory using C++ settings
