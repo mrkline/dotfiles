@@ -82,9 +82,7 @@ set tabstop=4
 set shiftwidth=4
 set noexpandtab
 
-" I type in english.
-set spl=en spell
-" Except when I'm coding, so don't start with spell checking
+" Don't start with spell checking
 set nospell
 
 " Autocomple commands and such
