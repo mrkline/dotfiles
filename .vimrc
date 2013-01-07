@@ -224,11 +224,7 @@ function! RemoveTrailingWhitespace()
 endfunction
 
 " Reload settings
-if has("win32")
-	noremap <leader>r :so ~/_vimrc<CR>
-else
-	noremap <leader>r :so ~/.vimrc<CR>
-endif
+noremap <leader>r :so ~/.vimrc<CR>
 
 " Enable and disable spell check with a key press
 noremap <leader>sc :call ToggleSpell()<CR>
