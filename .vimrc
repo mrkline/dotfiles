@@ -119,6 +119,9 @@ set smartindent
 " I find the LaTeX auto indenting annoying
 au BufRead,BufNewFile *.tex set inde=
 
+" *.md is Markdown, not modula 2
+au BufRead,BufNewFile *.md set filetype=markdown
+
 if match($TERM, "xterm") == 0
 	" Make sure we support 256 colors in the terminal emulator
 	set t_Co=256
