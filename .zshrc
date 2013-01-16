@@ -40,4 +40,4 @@ unsetopt correct_all
 export LESS=-RSFX
 
 # Add par to path
-PATH=$PATH:~mrkline/src/Par152/
+export PATH=$PATH:~mrkline/src/Par152/
