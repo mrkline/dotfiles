@@ -36,8 +36,8 @@ source $ZSH/oh-my-zsh.sh
 # Customize to your needs...
 unsetopt correct_all
 
-# LESS OPTIONS
-export LESS=-RSFX
+# LESS Options
+export LESS=-x4RSFX
 
 # Add par to path
 export PATH=$PATH:~mrkline/src/Par152/
