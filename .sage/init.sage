@@ -6,3 +6,6 @@ def Phi(z):
 	"The standard normal cumulative distribution function"
 	y = var('y')
 	return integral(phi(y), y, -infinity, z)
+
+def choose(n, r):
+	return factorial(n) / (factorial(n - r) * factorial(r))
