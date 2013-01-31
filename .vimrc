@@ -19,6 +19,8 @@ Bundle 'Lokaltog/vim-powerline'
 " SuperTab:
 " SuperTab option for context aware completion
 let g:SuperTabDefaultCompletionType="context"
+let g:SuperTabMappingForward='<c-space>'
+let g:SuperTabMappingBackward='<c-s-space>'
 
 " Powerline:
 " Unicode!
