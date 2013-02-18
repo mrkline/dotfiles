@@ -1,0 +1,169 @@
+" A slimmed-down version of the usual .vimrc for root
+
+" No vi compatibility
+set nocompatible
+
+"" Normal vimrc stuff:
+
+" No text wrapping
+set nowrap
+
+" Show current command
+set showcmd
+
+" Show line and column
+set ruler
+
+" Highlight found terms
+set hlsearch
+
+" Do not jump back to matching parens
+set noshowmatch
+
+" Always display the file name at the bottom
+set modeline
+set ls=2
+
+" Remove the buffer when a tab is closed
+set nohidden
+
+" Re-read a file if it's been edited outside vim
+set autoread
+
+" Prefer Unix file endings to Windows ones.
+" (This is a default on a Linux system but not on a Windows one)
+set fileformats=unix,dos
+
+" Split down or to the right
+set splitright
+set splitbelow
+
+" Show line numbers
+set number
+" Numbers take up four columns
+set numberwidth=4
+
+" Tabs are four spaces wide, and aren't expanded into spaces
+set tabstop=4
+set shiftwidth=4
+set noexpandtab
+
+" Don't start with spell checking
+set nospell
+
+" Autocomple commands and such
+set wildmenu
+set wildmode=longest,list
+
+" Default completion sources are .,w,b,u,t,i
+set complete=.,w,b,t,i
+" Complete options (disable preview scratch window)
+set completeopt=menu,menuone,longest
+
+" Code folding based on syntax
+set foldmethod=syntax
+set foldlevelstart=99
+
+" Mouse support
+set mouse=a
+
+" Backspace default behavior
+set backspace=2
+
+" .tex files are LaTeX by default
+let g:tex_flavor = "latex"
+
+" File type detection and syntax highlighting
+filetype on
+syntax on
+
+" No fancy indentation
+set nocindent
+set noautoindent
+set smartindent
+
+" I find the LaTeX auto indenting annoying
+au BufRead,BufNewFile *.tex set inde=
+
+" *.md is Markdown, not modula 2
+au BufRead,BufNewFile *.md set filetype=markdown
+
+" 8 tabs for fstab are 8 spaces
+au BufRead,BufNewFile fstab setlocal tabstop=8
+
+colorscheme torte
+
+" Color preferences
+highlight Cursor ctermbg=NONE ctermfg=NONE cterm=reverse
+highlight iCursor ctermbg=NONE ctermfg=NONE cterm=reverse
+highlight Search ctermbg=blue ctermfg=white
+highlight Pmenu ctermbg=white ctermfg=black
+highlight PmenuSel ctermbg=blue ctermfg=white cterm=bold
+highlight PmenuSbar ctermbg=white
+highlight PmenuThumb ctermfg=DarkGray
+highlight ModeMsg cterm=NONE
+highlight Visual ctermbg=blue ctermfg=white cterm=NONE
+highlight Folded ctermbg=black ctermfg=white
+highlight MatchParen ctermfg=NONE ctermbg=blue
+highlight LineNr ctermfg=gray
+highlight NonText ctermfg=gray
+
+" Key mapping and functions
+
+function! ToggleSpell()
+	set spell!
+	if &spell
+		echo "Spell check enabled"
+	else
+		echo "Spell check disabled"
+	endif
+endfunction
+
+function! ToggleSpellSuggest()
+	if match(&complete, "kspell") < 0
+		set spell " Spell check needs to be enabled
+		set complete+=kspell
+		echo "Spelling suggestions enabled"
+	else
+		set complete-=kspell
+		echo "Spelling suggestions disabled"
+	endif
+endfunction
+
+function! RemoveTrailingWhitespace()
+	let l:line = line('.')
+	let l:column = col('.')
+	%s/\s\+$//ge
+	call cursor(l:line, l:column)
+	echo "Removed trailing whitespace"
+endfunction
+
+" Reload settings
+noremap <leader>r :so ~/.vimrc<CR>
+
+" Enable and disable spell check with a key press
+noremap <leader>sc :call ToggleSpell()<CR>
+" Enable and disable suggestions from the spelling dictionary with a key press
+noremap <leader>ss :call ToggleSpellSuggest()<CR>
+" Trim trailing whitespace
+noremap <leader>t :call RemoveTrailingWhitespace()<CR>
+
+" Make Y consistent with C, D, etc.
+noremap Y y$
+" Space shuts off search highlighting
+noremap <Space> :noh<CR>
+" Make the enter key do something useful
+noremap <CR> o<Esc>
+noremap <S-CR> O<Esc>
+
+"--------------------
+" Function: Open tag under cursor in new tab
+" Source:   http://stackoverflow.com/questions/563616/vimctags-tips-and-tricks
+"--------------------
+noremap <C-\> :tab split<CR>:exec("tag ".expand("<cword>"))<CR>
+
+" Insert mode mappings
+inoremap <C-j> <Esc>o
+inoremap <C-k> <Esc>O
+inoremap <C-l> <Esc>>>A
+inoremap <C-h> <Esc><<A
