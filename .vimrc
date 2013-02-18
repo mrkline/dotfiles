@@ -76,9 +76,6 @@ endif
 " Mark column 121
 set colorcolumn=121
 
-" Set default text to 120
-let g:default_textwidth = 120
-
 " Tabs are four spaces wide, and aren't expanded into spaces
 set tabstop=4
 set shiftwidth=4
