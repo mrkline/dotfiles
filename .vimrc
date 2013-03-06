@@ -11,16 +11,15 @@ call vundle#rc()
 Bundle 'gmarik/vundle'
 
 " My bundles:
-Bundle 'ervandew/supertab'
 Bundle 'Lokaltog/vim-powerline'
+Bundle 'Valloric/YouCompleteMe'
 
 "" Plugin config:
 
-" SuperTab:
-" SuperTab option for context aware completion
-let g:SuperTabDefaultCompletionType="context"
-let g:SuperTabMappingForward='<c-space>'
-let g:SuperTabMappingBackward='<c-s-space>'
+" YouCompleteMe:
+let g:ycm_semantic_triggers = { } " Disable completion started by 
+let g:ycm_min_num_of_chars_for_completion = 9001 " Disable auto-completion (<C-space> to start completion)
+let g:ycm_filetypes_to_completely_ignore = { 'tex' : 1 }
 
 " Powerline:
 " Unicode!
