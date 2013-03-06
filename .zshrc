@@ -41,3 +41,5 @@ export LESS=-x4RSFX
 
 # Add par to path
 export PATH=$PATH:~mrkline/src/Par152/
+
+export CLASSPATH=$CLASSPATH:~/school/cs536/
