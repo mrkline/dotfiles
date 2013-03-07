@@ -118,6 +118,10 @@ set smartindent
 " I find the LaTeX auto indenting annoying
 au BufRead,BufNewFile *.tex set inde=
 
+" SemTeX gets LaTeX highlighting
+au BufRead,BufNewFile *.stex set filetype=tex
+au BufRead,BufNewFile *.sex set filetype=tex
+
 " *.md is Markdown, not modula 2
 au BufRead,BufNewFile *.md set filetype=markdown
 
@@ -242,9 +246,9 @@ noremap <leader>t :call RemoveTrailingWhitespace()<CR>
 " ctags this directory using C++ settings
 noremap <leader>c :silent !ctags -a --sort=1 --c++-kinds=+p --fields=+iaS --extra=+q ./*<CR>
 " Build main.tex in the current directory (useful for note-taking)
-noremap <leader>p :!pdflatex main.tex<CR>
+noremap <leader>p :!semtex -v main.tex<CR>
 " Do the same for the current file
-noremap <leader>P :!pdflatex %<CR>
+noremap <leader>P :!semtex -v %<CR>
 
 " Make Y consistent with C, D, etc.
 noremap Y y$

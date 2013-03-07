@@ -42,4 +42,7 @@ export LESS=-x4RSFX
 # Add par to path
 export PATH=$PATH:~mrkline/src/Par152/
 
+# Add semtex to path
+export PATH=$PATH:~mrkline/src/semtex/
+
 export CLASSPATH=$CLASSPATH:~/school/cs536/
