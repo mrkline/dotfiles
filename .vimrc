@@ -19,7 +19,8 @@ Bundle 'Valloric/YouCompleteMe'
 " YouCompleteMe:
 let g:ycm_semantic_triggers = { } " Disable completion started by 
 let g:ycm_min_num_of_chars_for_completion = 9001 " Disable auto-completion (<C-space> to start completion)
-let g:ycm_filetypes_to_completely_ignore = { 'tex' : 1 }
+let g:ycm_filetypes_to_completely_ignore = { 'tex' : 1, 'gitcommit' : 1 }
+let g:ycm_global_ycm_extra_conf = '/home/mrkline/.vim/bundle/YouCompleteMe/cpp/ycm/.ycm_extra_conf.py'
 
 " Powerline:
 " Unicode!
