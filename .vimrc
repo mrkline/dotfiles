@@ -83,7 +83,7 @@ set noexpandtab
 
 " Show tabs and trailing whitespce
 set list
-set listchars=tab:->,trail:~
+set listchars=tab:→\ ,trail:~
 
 " Don't start with spell checking
 set nospell
