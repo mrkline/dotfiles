@@ -159,7 +159,7 @@ if has("gui_running")
 	set guicursor+=a:blinkwait700-blinkon700-blinkoff700
 
 	" Color preferences
-	highlight Cursor guibg=NONE guifg=NONE gui=reverse
+	highlight Cursor guibg=fg guifg=bg gui=NONE
 	highlight iCursor guibg=NONE guifg=NONE gui=reverse
 	highlight Search guibg=blue guifg=white
 	highlight Pmenu guibg=white guifg=black
@@ -178,7 +178,7 @@ if has("gui_running")
 
 else
 	" Color preferences
-	highlight Cursor ctermbg=NONE ctermfg=NONE cterm=reverse
+	highlight Cursor ctermbg=fg ctermfg=bg cterm=NONE
 	highlight iCursor ctermbg=NONE ctermfg=NONE cterm=reverse
 	highlight Search ctermbg=blue ctermfg=white
 	highlight Pmenu ctermbg=white ctermfg=black
