@@ -81,6 +81,10 @@ set tabstop=4
 set shiftwidth=4
 set noexpandtab
 
+" Show tabs and trailing whitespce
+set list
+set listchars=tab:->,trail:~
+
 " Don't start with spell checking
 set nospell
 
@@ -170,6 +174,7 @@ if has("gui_running")
 	highlight LineNr guifg=gray
 	highlight NonText guifg=gray
 	highlight Normal guifg=white
+	highlight SpecialKey guifg=#646464
 
 else
 	" Color preferences
@@ -186,6 +191,7 @@ else
 	highlight MatchParen ctermfg=NONE ctermbg=blue
 	highlight LineNr ctermfg=gray
 	highlight NonText ctermfg=gray
+	highlight SpecialKey ctermfg=240
 endif
 
 " Key mapping and functions
