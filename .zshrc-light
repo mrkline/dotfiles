@@ -4,7 +4,7 @@ zstyle ':completion:*' completer _expand _complete _ignored
 zstyle ':completion:*' format 'Completing %d'
 zstyle ':completion:*' list-colors ''
 zstyle ':completion:*' verbose true
-zstyle :compinstall filename '/home/mrkline/.zshrc'
+zstyle :compinstall filename '~mkline/.zshrc'
 
 autoload -Uz compinit
 compinit
