@@ -174,7 +174,7 @@ if has("gui_running")
 	highlight LineNr guifg=gray
 	highlight NonText guifg=gray
 	highlight Normal guifg=white
-	highlight SpecialKey guifg=#202020
+	highlight SpecialKey guifg=#505050
 
 else
 	" Color preferences
@@ -191,7 +191,7 @@ else
 	highlight MatchParen ctermfg=NONE ctermbg=blue
 	highlight LineNr ctermfg=gray
 	highlight NonText ctermfg=gray
-	highlight SpecialKey ctermfg=234
+	highlight SpecialKey ctermfg=237
 endif
 
 " Key mapping and functions
