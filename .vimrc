@@ -178,8 +178,6 @@ if has("gui_running")
 
 else
 	" Color preferences
-	highlight Cursor ctermbg=fg ctermfg=bg cterm=NONE
-	highlight iCursor ctermbg=NONE ctermfg=NONE cterm=reverse
 	highlight Search ctermbg=blue ctermfg=white
 	highlight Pmenu ctermbg=white ctermfg=black
 	highlight PmenuSel ctermbg=blue ctermfg=white cterm=bold
@@ -191,6 +189,7 @@ else
 	highlight MatchParen ctermfg=NONE ctermbg=blue
 	highlight LineNr ctermfg=gray
 	highlight NonText ctermfg=gray
+	highlight Normal ctermfg=white
 	highlight SpecialKey ctermfg=237
 endif
 
