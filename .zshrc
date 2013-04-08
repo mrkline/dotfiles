@@ -35,6 +35,7 @@ source $ZSH/oh-my-zsh.sh
 
 # Customize to your needs...
 unsetopt correct_all
+unsetopt correct
 
 # LESS Options
 export LESS=-x4RSFX
