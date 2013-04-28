@@ -41,9 +41,9 @@ unsetopt correct
 export LESS=-x4RSFX
 
 # Add par to path
-export PATH=$PATH:~mrkline/src/Par152/
+export PATH=$PATH:~/src/Par152/
 
 # Add semtex to path
-export PATH=$PATH:~mrkline/src/semtex/src/
+export PATH=$PATH:~/src/semtex/src/
 
 export CLASSPATH=$CLASSPATH:~/school/cs536/
