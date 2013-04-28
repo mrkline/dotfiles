@@ -46,4 +46,7 @@ export PATH=$PATH:~/src/Par152/
 # Add semtex to path
 export PATH=$PATH:~/src/semtex/src/
 
+# Add some user scripts to the path
+export PATH=$PATH:~/scripts/
+
 export CLASSPATH=$CLASSPATH:~/school/cs536/

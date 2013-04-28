@@ -1,0 +1,3 @@
+#!/bin/sh
+# Alias to pipe things into the clipboard
+xclip -selection clipboard

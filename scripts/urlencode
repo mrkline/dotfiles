@@ -1,0 +1,4 @@
+#!/usr/bin/python2
+# Encodes a string with URL-encoding
+import sys, urllib as ul;
+print ul.quote(sys.argv[1])
