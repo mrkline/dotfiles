@@ -223,6 +223,7 @@ function! WordProcessorMode()
 	set formatprg=par\ w\ 120
 	set wrap
 	set linebreak
+	set nolist " List breaks word wrapping
 	set colorcolumn&
 	map j gj
 	map k gk
