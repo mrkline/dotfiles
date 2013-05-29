@@ -97,6 +97,9 @@ set complete=.,w,b,t,i
 " Complete options (disable preview scratch window)
 set completeopt=menu,menuone,longest
 
+" Continue comment headers when enter is pressed
+set formatoptions+=or
+
 " Code folding based on syntax
 set foldmethod=syntax
 set foldlevelstart=99
