@@ -11,6 +11,13 @@
 	ff = merge --ff-only
 	zip = archive --format=zip
 	dt = difftool
+	ga = log --oneline --decorate --graph --all
+	gr = log --oneline --decorate --graph
+	co = checkout
+	ci = commit
+	st = status
+	df = diff
+	ca = commit --amend
 [diff]
 	tool = meld
 [color "sh"]
