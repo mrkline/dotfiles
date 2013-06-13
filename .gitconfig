@@ -17,7 +17,7 @@
 	ci = commit
 	st = status
 	df = diff
-	ca = commit --amend
+	cam = commit --amend
 [diff]
 	tool = meld
 [color "sh"]
