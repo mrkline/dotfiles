@@ -13,6 +13,7 @@ Bundle 'gmarik/vundle'
 " My bundles:
 Bundle 'ervandew/supertab'
 Bundle 'Lokaltog/vim-powerline'
+Bundle 'myusuf3/numbers.vim'
 
 "" Plugin config:
 
@@ -27,6 +28,9 @@ let g:SuperTabMappingBackward='<c-s-space>'
 set encoding=utf-8
 " Fancy powerline symbols
 let g:Powerline_symbols = 'fancy'
+
+" numbers.vim:
+noremap <C-n> :NumbersToggle<CR>
 
 "" Normal vimrc stuff:
 
