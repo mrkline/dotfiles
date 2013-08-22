@@ -12,8 +12,8 @@ Bundle 'gmarik/vundle'
 
 " My bundles:
 Bundle 'ervandew/supertab'
-Bundle 'Lokaltog/vim-powerline'
 Bundle 'myusuf3/numbers.vim'
+Bundle 'bling/vim-airline'
 
 "" Plugin config:
 
@@ -22,12 +22,6 @@ Bundle 'myusuf3/numbers.vim'
 let g:SuperTabDefaultCompletionType="context"
 let g:SuperTabMappingForward='<c-space>'
 let g:SuperTabMappingBackward='<c-s-space>'
-
-" Powerline:
-" Unicode!
-set encoding=utf-8
-" Fancy powerline symbols
-let g:Powerline_symbols = 'fancy'
 
 " numbers.vim:
 noremap <C-n> :NumbersToggle<CR>
