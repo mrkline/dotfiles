@@ -252,8 +252,8 @@ noremap <leader>w :call WordProcessorMode()<CR>
 noremap <leader>t :call RemoveTrailingWhitespace()<CR>
 " ctags this directory using C++ settings
 noremap <leader>c :silent !ctags --sort=1 --c++-kinds=+p --fields=+iaS --extra=+fq ./*<CR>
-" Build main.tex in the current directory (useful for note-taking)
-noremap <leader>p :!semtex -v main.tex<CR>
+" Build main.stex in the current directory (useful for note-taking)
+noremap <leader>p :!semtex -v main.stex<CR>
 " Do the same for the current file
 noremap <leader>P :!semtex -v %<CR>
 
