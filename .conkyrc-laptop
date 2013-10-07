@@ -8,20 +8,22 @@ cpu_avg_samples         5
 net_avg_samples         5
 no_buffers              yes
 #-- Window base (for if we choose to launch as a window) --
-own_window_colour       000000
+own_window              yes
+own_window_type         override
+own_window_transparent  yes
 #-- Window looks --
 alignment               top_left
-gap_x                   10
-gap_y                   34
-minimum_size            250 5
+gap_x                   555
+gap_y                   275
+minimum_size            220 5
 border_width            0
 draw_shades             no
 draw_outline            no
 draw_borders            no
 draw_graph_borders      yes
 stippled_borders        0
-default_color           white
-default_outline_color   white
+default_color           ff0000
+default_outline_color   ff0000
 border_inner_margin     5
 border_outer_margin     5
 border_width            5
@@ -29,45 +31,30 @@ border_width            5
 #-- Font --
 use_xft                 yes
 xftalpha                1
-xftfont                 Droid Sans:size=10
+xftfont                 Envy Code R:size=10
 
 # stuff after 'TEXT' will be formatted on screen
 TEXT
-
 # SYSTEM
-${goto 90}User:${alignr}${uid_name 1000}
-${goto 90}Kernel:${alignr}$kernel ($machine)
-
+User:${alignr}${uid_name 1000}
+Kernel:${alignr}$kernel ($machine)
 
 # CPU
-#${goto 90}Core 1:${goto 160} ${cpu cpu1}%${goto 220}@ ${hwmon 1 temp 2}°C${alignr}${cpubar cpu1 6,80}
-#${goto 90}Core 2:${goto 160} ${cpu cpu2}%${goto 220}@ ${hwmon 1 temp 3}°C${alignr}${cpubar cpu2 6,80}
-${goto 90}Core 1:${goto 160} ${cpu cpu1}%${goto 220}${alignr}${cpubar cpu1 6,80}
-${goto 90}Core 2:${goto 160} ${cpu cpu2}%${goto 220}${alignr}${cpubar cpu2 6,80}
-${goto 90}Core 3:${goto 160} ${cpu cpu3}%${goto 220}${alignr}${cpubar cpu3 6,80}
-${goto 90}Core 4:${goto 160} ${cpu cpu4}%${goto 220}${alignr}${cpubar cpu4 6,80}
-
+#C1:${goto 60} ${cpu cpu1}%@ ${hwmon 1 temp 2}°C${alignr}${cpubar cpu1 6,80}
+#C2:${goto 60} ${cpu cpu2}%@ ${hwmon 1 temp 3}°C${alignr}${cpubar cpu2 6,80}
+C1:${goto 60}${alignr}${cpu cpu1}% ${cpubar cpu1 6,80}
+C2:${goto 60}${alignr}${cpu cpu2}% ${cpubar cpu2 6,80}
+C3:${goto 60}${alignr}${cpu cpu3}% ${cpubar cpu3 6,80}
+C4:${goto 60}${alignr}${cpu cpu4}% ${cpubar cpu4 6,80}
 
 # RAM
-${goto 90}RAM:${goto 160}$mem${goto 210}$memperc%${alignr}${membar 6,80}
-${goto 90}Swap:${goto 160}$swap${goto 210}$swapperc%${alignr}${swapbar 6,80}
+MEM:${goto 60}$mem${alignr}$memperc% ${membar 6,80}
+SWP:${goto 60}$swap${alignr}$swapperc% ${swapbar 6,80}
 
+# Disk and Network
+/${goto 60}${fs_used /}${alignr}${fs_used_perc /}% ${fs_bar 6,80 /}
+/w${goto 60}${fs_used /windows}${alignr}${fs_used_perc /windows}% ${fs_bar 6,80 /windows}
+/s${goto 60}${fs_used /shared}${alignr}${fs_used_perc /shared}% ${fs_bar 6,80 /shared}
 
-# DISK
-${goto 90}/${goto 160}${fs_used /}${goto 210}${fs_used_perc /}% ${alignr}${fs_bar 6,80 /}
-${goto 90}/windows${goto 160}${fs_used /windows}${goto 210}${fs_used_perc /windows}% ${alignr}${fs_bar 6,80 /windows}
-${goto 90}/shared${goto 160}${fs_used /shared}${goto 210}${fs_used_perc /shared}% ${alignr}${fs_bar 6,80 /shared}
-
-${goto 90}${diskiograph 20,80 1793d1 37a2d7 -t}
-${goto 90}sda: ${diskio}
-
-# NETWORK
-${goto 90}${downspeedgraph wlan0 20,80 1793d1 37a2d7 -t}${goto 230}${upspeedgraph wlan0 20,80 1793d1 37a2d7 -t}
-${goto 90}Down: ${downspeed wlan0}${goto 230}Up: ${upspeed wlan0}
-
-#-- background & images --
-${image ~/.conky/arch_icon.png -p 0, 0}
-${image ~/.conky/cpu_icon.png -p 0, 80}
-${image ~/.conky/ram_icon.png -p 0, 160}
-${image ~/.conky/hdd_icon.png -p 0, 225}
-${image ~/.conky/wireless_icon.png -p 0, 350}
+${diskiograph 20,80 bb0000 ff0000 -t} ${downspeedgraph wlan0 20,80 bb0000 ff0000 -t} ${upspeedgraph wlan0 20,80 bb0000 ff0000 -t}
+sda: ${diskio}${goto 105}D: ${downspeed wlan0}${goto 185}U: ${upspeed wlan0}
