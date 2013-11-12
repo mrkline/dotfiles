@@ -18,6 +18,7 @@
 	st = status
 	df = diff
 	cam = commit --amend
+	append = commit --amend --no-edit
 [diff]
 	tool = meld
 [color "sh"]
