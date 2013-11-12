@@ -37,8 +37,6 @@ source $ZSH/oh-my-zsh.sh
 unsetopt correct_all
 unsetopt correct
 
-alias diff=colordiff
-
 # LESS Options
 export LESS=-x4RSFX
 
