@@ -1,4 +1,4 @@
-# Conky config for my laptop
+# Conky config for my desktop
 # Modified fom from https://bbs.archlinux.org/viewtopic.php?pid=1084822#p1084822
 #-- Process --
 background              no
@@ -13,17 +13,13 @@ own_window_type         override
 own_window_transparent  yes
 #-- Window looks --
 alignment               top_left
-gap_x                   1100
-gap_y                   40
-minimum_size            220 5
+gap_x                   1335
+gap_y                   34
+minimum_size            250 5
 border_width            0
-draw_shades             no
-draw_outline            no
-draw_borders            no
-draw_graph_borders      yes
-stippled_borders        0
-default_color           132732
-default_outline_color   000000
+draw_graph_borders      no
+default_color           edb951
+default_outline_color   edb951
 border_inner_margin     5
 border_outer_margin     5
 border_width            5
@@ -32,9 +28,11 @@ border_width            5
 use_xft                 yes
 xftalpha                1
 xftfont                 Envy Code R:size=10
+max_specials 1024
 
 # stuff after 'TEXT' will be formatted on screen
 TEXT
+
 # SYSTEM
 User:${alignr}${uid_name 1000}
 Kernel:${alignr}$kernel ($machine)
@@ -53,8 +51,10 @@ SWP:${goto 60}$swap${alignr}$swapperc% ${swapbar 6,80}
 
 # Disk and Network
 /${goto 60}${fs_used /}${alignr}${fs_used_perc /}% ${fs_bar 6,80 /}
-/w${goto 60}${fs_used /windows}${alignr}${fs_used_perc /windows}% ${fs_bar 6,80 /windows}
-/s${goto 60}${fs_used /shared}${alignr}${fs_used_perc /shared}% ${fs_bar 6,80 /shared}
+${if_mounted /windows}/w${goto 60}${fs_used /windows}${alignr}${fs_used_perc /windows}% ${fs_bar 6,80 /windows}$endif
 
-${diskiograph 20,80 132732 356e8c -t} ${downspeedgraph wlan0 20,80 132732 356e8c -t} ${upspeedgraph wlan0 20,80 132732 356e8c -t}
-sda: ${diskio}${goto 105}D: ${downspeed wlan0}${goto 185}U: ${upspeed wlan0}
+${diskiograph sda 20,120 000000 edb951 -t} ${diskiograph sdb 20,120 000000 edb951 -t}
+HDD: ${diskio sda}${goto 145}SDD: ${diskio sdb}
+
+${downspeedgraph eth0 20,120 000000 edb951 -t} ${upspeedgraph eth0 20,120 000000 edb951 -t}
+D: ${downspeed wlp6s0}${goto 145}U: ${upspeed wlp6s0}
