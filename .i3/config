@@ -28,7 +28,7 @@ floating_modifier $mod
 bindsym $mod+Return exec i3-sensible-terminal
 
 # kill focused window
-bindsym $mod+Ctrl+q kill
+bindsym $mod+Shift+q kill
 
 # start dmenu (a program launcher)
 bindsym $mod+d exec dmenu_run
@@ -50,14 +50,14 @@ bindsym $mod+l focus right
 # bindsym $mod+Right focus right
 
 # move focused window
-bindsym $mod+Ctrl+h move left
-bindsym $mod+Ctrl+j move down
-bindsym $mod+Ctrl+k move up
-bindsym $mod+Ctrl+l move right
+bindsym $mod+Shift+h move left
+bindsym $mod+Shift+j move down
+bindsym $mod+Shift+k move up
+bindsym $mod+Shift+l move right
 
 # alternatively, you can use the cursor keys:
-bindsym $mod+Ctrl+Left workspace prev_on_output
-bindsym $mod+Ctrl+Right workspace next_on_output
+bindsym $mod+Shift+Left workspace prev_on_output
+bindsym $mod+Shift+Right workspace next_on_output
 # enter fullscreen mode for the focused container
 bindsym $mod+f fullscreen
 
@@ -71,7 +71,7 @@ bindsym $mod+s split h
 bindsym $mod+v split v
 
 # toggle tiling / floating
-bindsym $mod+Ctrl+space floating toggle
+bindsym $mod+Shift+space floating toggle
 
 # change focus between tiling / floating windows
 bindsym $mod+space focus mode_toggle
@@ -95,16 +95,16 @@ bindsym $mod+9 workspace 9:Volume
 bindsym $mod+0 workspace 10:Web IO
 
 # move focused container to workspace
-bindsym $mod+Ctrl+1 move container to workspace 1
-bindsym $mod+Ctrl+2 move container to workspace 2
-bindsym $mod+Ctrl+3 move container to workspace 3
-bindsym $mod+Ctrl+4 move container to workspace 4
-bindsym $mod+Ctrl+5 move container to workspace 5
-bindsym $mod+Ctrl+6 move container to workspace 6
-bindsym $mod+Ctrl+7 move container to workspace 7
-bindsym $mod+Ctrl+8 move container to workspace 8:Skype
-bindsym $mod+Ctrl+9 move container to workspace 9:Volume
-bindsym $mod+Ctrl+0 move container to workspace 10:Web IO
+bindsym $mod+Shift+1 move container to workspace 1
+bindsym $mod+Shift+2 move container to workspace 2
+bindsym $mod+Shift+3 move container to workspace 3
+bindsym $mod+Shift+4 move container to workspace 4
+bindsym $mod+Shift+5 move container to workspace 5
+bindsym $mod+Shift+6 move container to workspace 6
+bindsym $mod+Shift+7 move container to workspace 7
+bindsym $mod+Shift+8 move container to workspace 8:Skype
+bindsym $mod+Shift+9 move container to workspace 9:Volume
+bindsym $mod+Shift+0 move container to workspace 10:Web IO
 
 # Assign certain programs to certain windows
 assign [class="(?i)skype"] 8:Skype
@@ -122,11 +122,11 @@ for_window [title="Calculator"] floating enable # Gnome calculator
 for_window [title="notifyd"] floating enable # xfce4-notifyd
 
 # reload the configuration file
-bindsym $mod+Ctrl+c reload
+bindsym $mod+Shift+c reload
 # restart i3 inplace (preserves your layout/session, can be used to upgrade i3)
-bindsym $mod+Ctrl+r restart
+bindsym $mod+Shift+r restart
 # exit i3 (logs you out of your X session)
-bindsym $mod+Ctrl+e exec "i3-nagbar -t warning -m 'You pressed the exit shortcut. Do you really want to exit i3? This will end your X session.' -b 'Yes, exit i3' 'i3-msg exit'"
+bindsym $mod+Shift+e exec "i3-nagbar -t warning -m 'You pressed the exit shortcut. Do you really want to exit i3? This will end your X session.' -b 'Yes, exit i3' 'i3-msg exit'"
 
 # resize window (you can also use the mouse for that)
 mode "resize" {
@@ -166,13 +166,13 @@ bar {
 # Keyboard shortcuts
 bindsym Print exec xfce4-screenshooter -f
 bindsym Ctrl+Print exec xfce4-screenshooter
-bindsym $mod+Ctrl+v exec xfce4-mixer
+bindsym $mod+Shift+v exec xfce4-mixer
 
 # Startup stuff
 exec feh --bg-scale ~/Dropbox/Wallpapers/justice_cross.jpg
 exec gnome-keyring-daemon
 exec nm-applet
-exec conky -b
+# exec conky -b
 exec xscreensaver -no-splash
 exec xfce4-clipman
 # exec compton --config ~/.i3/compton.conf
