@@ -169,7 +169,7 @@ bindsym Ctrl+Print exec xfce4-screenshooter
 bindsym $mod+Ctrl+v exec xfce4-mixer
 
 # Startup stuff
-exec feh --bg-scale ~/Dropbox/Wallpapers/justice_cross.jpg
+exec feh --bg-scale ~/Dropbox/Wallpapers/bsod.jpg
 exec gnome-keyring-daemon
 exec nm-applet
 exec conky -b -p 5 # pause a bit to let feh go first

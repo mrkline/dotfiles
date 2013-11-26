@@ -15,36 +15,9 @@ use_spacer left
 # stuff after 'TEXT' will be formatted on screen
 TEXT
 [
-# { "full_text":"▲ ${upspeed wlp6s0}", "color":"\#edb951"},
-# { "full_text":"▼ ${downspeed wlp6s0}", "color":"\#edb951"},
-# { "full_text":"HDD: ${diskio /dev/sda}", "color":"\#ebd951"},
-# { "full_text":"SSD: ${diskio /dev/sdb}", "color":"\#ebd951"},
-{ "full_text":"CPU: ${cpu cpu0}%", "color":"\#edb951"},
-{ "full_text":"MEM: $memperc%", "color":"\#ebd951"},
-{ "full_text":"SWP: $swapperc%", "color":"\#ebd951"},
-{ "full_text":"${battery_short}", "color":"\#ebd951"},
-{ "full_text":"${time %a, %F %H:%M:%S}", "color":"\#edb951"}
+{ "full_text":"CPU: ${cpu cpu0}%", "color":"\#ffffff"},
+{ "full_text":"MEM: $memperc%", "color":"\#ffffff"},
+{ "full_text":"SWP: $swapperc%", "color":"\#ffffff"},
+{ "full_text":"${battery_short}", "color":"\#ffffff"},
+{ "full_text":"${time %a, %F %H:%M:%S}", "color":"\#ffffff"}
 ],
-# SYSTEM
-# User:${alignr}${uid_name 1000}
-# Kernel:${alignr}$kernel ($machine)
-#
-# # CPU
-# #C1:${goto 60} ${cpu cpu1}%@ ${hwmon 1 temp 2}°C${alignr}${cpubar cpu1 6,80}
-# #C2:${goto 60} ${cpu cpu2}%@ ${hwmon 1 temp 3}°C${alignr}${cpubar cpu2 6,80}
-# C1:${goto 60}${alignr}${cpu cpu1}% ${cpubar cpu1 6,80}
-# C2:${goto 60}${alignr}${cpu cpu2}% ${cpubar cpu2 6,80}
-#
-# # RAM
-# MEM:${goto 60}$mem${alignr}$memperc% ${membar 6,80}
-# SWP:${goto 60}$swap${alignr}$swapperc% ${swapbar 6,80}
-#
-# # Disk and Network
-# /${goto 60}${fs_used /}${alignr}${fs_used_perc /}% ${fs_bar 6,80 /}
-# ${if_mounted /windows}/w${goto 60}${fs_used /windows}${alignr}${fs_used_perc /windows}% ${fs_bar 6,80 /windows}$endif
-# ${if_mounted /shared}/s${goto 60}${fs_used /shared}${alignr}${fs_used_perc /shared}% ${fs_bar 6,80 /shared}$endif
-#
-# ${diskiograph sda 20,120 000000 edb951 -t} ${diskiograph sdb 20,120 000000 edb951 -t}
-# sda: ${diskio sda}${goto 145}sdb: ${diskio sdb}
-# ${downspeedgraph eth0 20,120 000000 edb951 -t} ${upspeedgraph eth0 20,120 000000 edb951 -t}
-# D: ${downspeed eth0}${goto 145}U: ${upspeed eth0}

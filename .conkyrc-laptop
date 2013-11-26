@@ -18,8 +18,8 @@ gap_y                   34
 minimum_size            250 5
 border_width            0
 draw_graph_borders      no
-default_color           edb951
-default_outline_color   edb951
+default_color           ffffff
+default_outline_color   ffffff
 border_inner_margin     5
 border_outer_margin     5
 border_width            5
@@ -57,8 +57,8 @@ Bcache hit ratio:${goto 145}per 5 mins:${alignr}${exec cat /sys/block/bcache0/bc
 ${goto 145}per hour:${alignr}${exec cat /sys/block/bcache0/bcache/cache/stats_hour/cache_hit_ratio}%
 ${goto 145}per day:${alignr}${exec cat /sys/block/bcache0/bcache/cache/stats_hour/cache_hit_ratio}%
 
-${diskiograph sda 20,120 000000 edb951 -t} ${diskiograph sdb 20,120 000000 edb951 -t}
+${diskiograph sda 20,120 051c46 ffffff -t} ${diskiograph sdb 20,120 051c46 ffffff -t}
 HDD: ${diskio sda}${goto 145}SDD: ${diskio sdb}
 
-${downspeedgraph wlp6s0 20,120 000000 edb951 -t} ${upspeedgraph wlp6s0 20,120 000000 edb951 -t}
+${downspeedgraph wlp6s0 20,120 051c46 ffffff -t} ${upspeedgraph wlp6s0 20,120 051c46 ffffff -t}
 D: ${downspeed wlp6s0}${goto 145}U: ${upspeed wlp6s0}
