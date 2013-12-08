@@ -1,0 +1,22 @@
+# Modified fom from https://github.com/NorthAntrim/i3-config/blob/master/.i3/conkyrc
+#-- Process --
+background no
+out_to_console yes
+out_to_x no
+update_interval 1
+cpu_avg_samples 5
+net_avg_samples 5
+no_buffers yes
+pad_percents 2
+short_units
+use_spacer left
+#-- Window base (for if we choose to launch as a window) --
+
+# stuff after 'TEXT' will be formatted on screen
+TEXT
+[
+{ "full_text":"CPU: ${cpu cpu0}%", "color":"\#edb951"},
+{ "full_text":"MEM: $memperc%", "color":"\#edb951"},
+{ "full_text":"SWP: $swapperc%", "color":"\#edb951"},
+{ "full_text":"${time %a, %F %H:%M:%S}", "color":"\#edb951"}
+],
