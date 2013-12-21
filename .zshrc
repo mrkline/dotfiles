@@ -50,3 +50,6 @@ export PATH=$PATH:~/src/semtex/src/
 export PATH=$PATH:~/scripts/
 
 export CLASSPATH=$CLASSPATH:~/school/cs536/
+
+unalias gdc
+
