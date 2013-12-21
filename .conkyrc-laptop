@@ -55,7 +55,6 @@ ${if_mounted /windows}/w${goto 60}${fs_used /windows}${alignr}${fs_used_perc /wi
 
 Bcache hit ratio:${goto 145}per 5 mins:${alignr}${exec cat /sys/block/bcache0/bcache/cache/stats_five_minute/cache_hit_ratio}%
 ${goto 145}per hour:${alignr}${exec cat /sys/block/bcache0/bcache/cache/stats_hour/cache_hit_ratio}%
-${goto 145}per day:${alignr}${exec cat /sys/block/bcache0/bcache/cache/stats_hour/cache_hit_ratio}%
 
 ${diskiograph sda 20,120 051c46 ffffff -t} ${diskiograph sdb 20,120 051c46 ffffff -t}
 HDD: ${diskio sda}${goto 145}SDD: ${diskio sdb}
