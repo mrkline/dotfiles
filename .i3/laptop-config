@@ -119,7 +119,7 @@ bindsym mod4+0 exec transmission-gtk; exec bitcoin-qt
 
 # Force some things to float that don't tile well
 for_window [title="Calculator"] floating enable # Gnome calculator
-for_window [title="notifyd"] floating enable # xfce4-notifyd
+for_window [class="Xfce4-notifyd"] floating enable;border none; focus mode_toggle
 
 # reload the configuration file
 bindsym $mod+Ctrl+c reload
