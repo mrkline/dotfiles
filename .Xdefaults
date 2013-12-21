@@ -4,7 +4,7 @@ urxvt*background: #000000
 urxvt*foreground: #eeeeee
 urxvt*scrollBar: false
 urxvt*transparent: true
-urxvt*shading: 30
+urxvt*shading: 10
 urxvt*keysym.Home: \033[1~
 urxvt*keysym.End: \033[4~
 urxvt.keysym.Control-Up: \033[1;5A
