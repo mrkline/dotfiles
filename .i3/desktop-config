@@ -109,13 +109,13 @@ bindsym $mod+Ctrl+0 move container to workspace 10:Web IO
 # Assign certain programs to certain windows
 assign [class="(?i)skype"] 8:Skype
 assign [class="(?i)mixer"] 9:Volume
-assign [class="(?i)bitcoin"] 10:Web IO
+assign [class="(?i)electrum"] 10:Web IO
 assign [class="(?i)transmission"] 10:Web IO
 
 # ...and launch them with a matching key
 bindsym mod4+8 exec skype
 bindsym mod4+9 exec xfce4-mixer
-bindsym mod4+0 exec transmission-gtk; exec bitcoin-qt
+bindsym mod4+0 exec transmission-gtk; exec electrum
 
 # Force some things to float that don't tile well
 for_window [title="Calculator"] floating enable # Gnome calculator
