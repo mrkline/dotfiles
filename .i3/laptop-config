@@ -77,7 +77,7 @@ bindsym $mod+Ctrl+space floating toggle
 bindsym $mod+space focus mode_toggle
 
 # focus the parent container
-bindsym $mod+a focus parent
+#bindsym $mod+a focus parent
 
 # focus the child container
 #bindsym $mod+d focus child
@@ -116,6 +116,11 @@ assign [class="(?i)transmission"] 10:Web IO
 bindsym mod4+8 exec skype
 bindsym mod4+9 exec xfce4-mixer
 bindsym mod4+0 exec transmission-gtk; exec electrum
+
+# Volume stuff
+bindsym XF86AudioMute exec amixer set Master toggle
+bindsym XF86AudioRaiseVolume exec ~/scripts/inc-vol.sh
+bindsym XF86AudioLowerVolume exec amixer set Master 5%-
 
 # Force some things to float that don't tile well
 for_window [title="Calculator"] floating enable # Gnome calculator
@@ -159,7 +164,6 @@ bindsym $mod+r mode "resize"
 bar {
         font pango:Envy Code R 12
         position top
-        tray_output primary
         status_command ~/.i3/conky
 }
 
@@ -169,11 +173,11 @@ bindsym Ctrl+Print exec xfce4-screenshooter
 bindsym $mod+Ctrl+v exec xfce4-mixer
 
 # Startup stuff
-exec feh --bg-scale ~/Dropbox/Wallpapers/bsod.jpg
+exec feh --bg-center --geometry +20-20 -B black ~/scratch/Tux.png
 exec gnome-keyring-daemon
 exec nm-applet
 exec conky -b -p 5 # pause a bit to let feh go first
 exec xscreensaver -no-splash
 exec xfce4-clipman
 exec compton --config ~/.i3/compton.conf
-exec xfce4-mixer
+# exec xfce4-mixer
