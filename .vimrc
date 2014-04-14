@@ -140,63 +140,22 @@ au BufRead,BufNewFile fstab setlocal tabstop=8
 if match($TERM, "xterm") == 0
 	" Make sure we support 256 colors in the terminal emulator
 	set t_Co=256
-	" Set our color scheme
-	colorscheme torte
 endif
-if has("gui_running")
-	" Set our color scheme
-	colorscheme torte
-	" Behave like the console version
-	set guioptions=aci
 
-	" Set our font
-	" Windows needs additional font params
-	if has("win32")
-		set guifont=Envy\ Code\ R:h10
-	else
-		set guifont=Envy\ Code\ R
-	endif
-
-	" Cursor preferences
-	set guicursor=n-v-c:block-Cursor
-	set guicursor+=o:hor50-Cursor
-	set guicursor+=i-r:ver15-iCursor
-	set guicursor+=a:blinkwait700-blinkon700-blinkoff700
-
-	" Color preferences
-	highlight Cursor guibg=fg guifg=bg gui=NONE
-	highlight iCursor guibg=NONE guifg=NONE gui=reverse
-	highlight Search guibg=blue guifg=white
-	highlight Pmenu guibg=white guifg=black
-	highlight PmenuSel guibg=blue guifg=white gui=bold
-	highlight PmenuSbar guibg=white
-	highlight PmenuThumb guifg=DarkGray
-	highlight StatusLine guifg=black gui=bold
-	highlight ModeMsg gui=NONE
-	highlight Visual guibg=blue guifg=white gui=NONE
-	highlight Folded guibg=bg guifg=fg gui=italic
-	highlight MatchParen guifg=fg guibg=blue
-	highlight LineNr guifg=gray
-	highlight NonText guifg=gray
-	highlight Normal guifg=white
-	highlight SpecialKey guifg=#505050
-
-else
-	" Color preferences
-	highlight Search ctermbg=blue ctermfg=white
-	highlight Pmenu ctermbg=white ctermfg=black
-	highlight PmenuSel ctermbg=blue ctermfg=white cterm=bold
-	highlight PmenuSbar ctermbg=white
-	highlight PmenuThumb ctermfg=DarkGray
-	highlight ModeMsg cterm=NONE
-	highlight Visual ctermbg=blue ctermfg=white cterm=NONE
-	highlight Folded ctermbg=black ctermfg=white
-	highlight MatchParen ctermfg=NONE ctermbg=blue
-	highlight LineNr ctermfg=gray
-	highlight NonText ctermfg=gray
-	highlight Normal ctermfg=white
-	highlight SpecialKey ctermfg=237
-endif
+" Color preferences
+highlight Search ctermbg=blue ctermfg=white
+highlight Pmenu ctermbg=white ctermfg=black
+highlight PmenuSel ctermbg=blue ctermfg=white cterm=bold
+highlight PmenuSbar ctermbg=white
+highlight PmenuThumb ctermfg=DarkGray
+highlight ModeMsg cterm=NONE
+highlight Visual ctermbg=blue ctermfg=white cterm=NONE
+highlight Folded ctermbg=black ctermfg=white
+highlight MatchParen ctermfg=NONE ctermbg=blue
+highlight LineNr ctermfg=gray
+highlight NonText ctermfg=gray
+highlight Normal ctermfg=white
+highlight SpecialKey ctermfg=237
 
 " Key mapping and functions
 
