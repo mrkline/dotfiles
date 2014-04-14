@@ -14,14 +14,18 @@ Bundle 'gmarik/vundle'
 Bundle 'ervandew/supertab'
 Bundle 'myusuf3/numbers.vim'
 Bundle 'bling/vim-airline'
+Bundle 'vim-scripts/taglist.vim'
 
 "" Plugin config:
 
 " SuperTab:
 " SuperTab option for context aware completion
-let g:SuperTabDefaultCompletionType="context"
-let g:SuperTabMappingForward='<c-space>'
-let g:SuperTabMappingBackward='<c-s-space>'
+"let g:SuperTabDefaultCompletionType="context"
+"let g:SuperTabMappingForward='<c-space>'
+"let g:SuperTabMappingBackward='<c-s-space>'
+
+" Airline's mixed indentation messages are often wrong. Turn them off
+let g:airline#extensions#whitespace#checks = [ 'trailing' ]
 
 " numbers.vim:
 noremap <C-n> :NumbersToggle<CR>
@@ -88,7 +92,7 @@ set nospell
 
 " Autocomple commands and such
 set wildmenu
-set wildmode=longest,list
+set wildmode=longest,list,full
 
 " Default completion sources are .,w,b,u,t,i
 set complete=.,w,b,t,i
