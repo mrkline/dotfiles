@@ -176,3 +176,4 @@ exec xscreensaver -no-splash
 exec xfce4-clipman
 exec compton --config ~/.i3/compton.conf
 # exec xfce4-mixer
+exec dropboxd
