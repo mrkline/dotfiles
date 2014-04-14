@@ -49,7 +49,11 @@ export PATH=$PATH:~/src/semtex/src/
 # Add some user scripts to the path
 export PATH=$PATH:~/scripts/
 
+
+export PATH=$PATH:~/school/ece453/peta_install/petalinux-v2013.10-final/tools/linux-i386/arm-xilinx-linux-gnueabi/bin/
+
 export CLASSPATH=$CLASSPATH:~/school/cs536/
 
 unalias gdc
 
+export WINEARCH=win32
