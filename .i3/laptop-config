@@ -108,13 +108,13 @@ bindsym $mod+Ctrl+0 move container to workspace 10:Web IO
 
 # Assign certain programs to certain windows
 assign [class="(?i)skype"] 8:Skype
-assign [class="(?i)mixer"] 9:Volume
+assign [class="(?i)pavu"] 9:Volume
 assign [class="(?i)electrum"] 10:Web IO
 assign [class="(?i)transmission"] 10:Web IO
 
 # ...and launch them with a matching key
 bindsym mod4+8 exec skype
-bindsym mod4+9 exec xfce4-mixer
+bindsym mod4+9 exec pavucontrol
 bindsym mod4+0 exec transmission-gtk; exec electrum
 
 # Volume stuff
@@ -173,6 +173,7 @@ bindsym Ctrl+Print exec xfce4-screenshooter
 bindsym $mod+Ctrl+v exec xfce4-mixer
 
 # Startup stuff
+exec pulseaudio --start
 exec feh --bg-center --geometry +20-20 -B black ~/scratch/Tux.png
 exec gnome-keyring-daemon
 exec nm-applet
