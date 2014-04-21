@@ -77,7 +77,7 @@ bindsym $mod+Ctrl+space floating toggle
 bindsym $mod+space focus mode_toggle
 
 # focus the parent container
-bindsym $mod+a focus parent
+#bindsym $mod+a focus parent
 
 # focus the child container
 #bindsym $mod+d focus child
@@ -108,13 +108,13 @@ bindsym $mod+Ctrl+0 move container to workspace 10:Web IO
 
 # Assign certain programs to certain windows
 assign [class="(?i)skype"] 8:Skype
-assign [class="(?i)mixer"] 9:Volume
+assign [class="(?i)pavu"] 9:Volume
 assign [class="(?i)electrum"] 10:Web IO
 assign [class="(?i)transmission"] 10:Web IO
 
 # ...and launch them with a matching key
 bindsym mod4+8 exec skype
-bindsym mod4+9 exec xfce4-mixer
+bindsym mod4+9 exec pavucontrol
 bindsym mod4+0 exec transmission-gtk; exec electrum
 
 # Force some things to float that don't tile well
@@ -165,9 +165,9 @@ bar {
 # Keyboard shortcuts
 bindsym Print exec xfce4-screenshooter -f
 bindsym Ctrl+Print exec xfce4-screenshooter
-bindsym $mod+Ctrl+v exec xfce4-mixer
 
 # Startup stuff
+exec pulseaudio --start
 exec feh --bg-scale ~/Dropbox/Wallpapers/justice_cross.jpg
 exec gnome-keyring-daemon
 exec nm-applet
@@ -175,5 +175,4 @@ exec conky -b -p 5 # pause a bit to let feh go first
 exec xscreensaver -no-splash
 exec xfce4-clipman
 exec compton --config ~/.i3/compton.conf
-# exec xfce4-mixer
 exec dropboxd
