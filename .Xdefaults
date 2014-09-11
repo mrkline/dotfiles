@@ -5,8 +5,8 @@ urxvt*foreground: #eeeeee
 urxvt*scrollBar: false
 urxvt*transparent: true
 urxvt*shading: 10
-urxvt*keysym.Home: \033[1~
-urxvt*keysym.End: \033[4~
+#urxvt*keysym.Home: \033[1~
+#urxvt*keysym.End: \033[4~
 urxvt.keysym.Control-Up: \033[1;5A
 urxvt.keysym.Control-Down: \033[1;5B
 urxvt.keysym.Control-Left: \033[1;5D
