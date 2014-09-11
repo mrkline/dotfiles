@@ -19,5 +19,6 @@ TEXT
 { "full_text":"MEM: $memperc%", "color":"\#ffffff"},
 { "full_text":"SWP: $swapperc%", "color":"\#ffffff"},
 { "full_text":"${execi 10 charge}", "color":"\#ffffff"},
-{ "full_text":"${time %a, %F %H:%M:%S}", "color":"\#ffffff"}
+{ "full_text":"USA: ${time %a, %F %H:%M:%S}", "color":"\#ffffff"},
+{ "full_text":"JPN: ${tztime Asia/Tokyo %a, %F %H:%M}", "color":"\#ffffff"}
 ],
