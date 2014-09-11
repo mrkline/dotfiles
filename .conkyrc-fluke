@@ -1,0 +1,64 @@
+# Conky config for my desktop
+# Modified fom from https://bbs.archlinux.org/viewtopic.php?pid=1084822#p1084822
+#-- Process --
+background              no
+double_buffer           yes
+update_interval         1
+cpu_avg_samples         5
+net_avg_samples         5
+no_buffers              yes
+#-- Window base (for if we choose to launch as a window) --
+own_window              yes
+own_window_type         normal
+own_window_transparent  yes
+#-- Window looks --
+alignment               top_left
+gap_x                   1335
+gap_y                   34
+minimum_size            250 5
+border_width            0
+draw_graph_borders      no
+default_color           ffffff
+default_outline_color   ffffff
+border_inner_margin     5
+border_outer_margin     5
+border_width            5
+#default_shade_color     black
+#-- Font --
+use_xft                 yes
+xftalpha                1
+xftfont                 Envy Code R:size=10
+max_specials 1024
+
+# stuff after 'TEXT' will be formatted on screen
+TEXT
+
+# SYSTEM
+User:${alignr}${uid_name 1000}
+Kernel:${alignr}$kernel ($machine)
+
+# CPU
+#C1:${goto 60} ${cpu cpu1}%@ ${hwmon 1 temp 2}°C${alignr}${cpubar cpu1 6,80}
+#C2:${goto 60} ${cpu cpu2}%@ ${hwmon 1 temp 3}°C${alignr}${cpubar cpu2 6,80}
+C1:${goto 60}${alignr}${cpu cpu1}% ${cpubar cpu1 6,80}
+C2:${goto 60}${alignr}${cpu cpu2}% ${cpubar cpu2 6,80}
+C3:${goto 60}${alignr}${cpu cpu3}% ${cpubar cpu3 6,80}
+C4:${goto 60}${alignr}${cpu cpu4}% ${cpubar cpu4 6,80}
+C5:${goto 60}${alignr}${cpu cpu5}% ${cpubar cpu5 6,80}
+C6:${goto 60}${alignr}${cpu cpu6}% ${cpubar cpu6 6,80}
+C7:${goto 60}${alignr}${cpu cpu7}% ${cpubar cpu7 6,80}
+C8:${goto 60}${alignr}${cpu cpu8}% ${cpubar cpu8 6,80}
+
+# RAM
+MEM:${goto 60}$mem${alignr}$memperc% ${membar 6,80}
+SWP:${goto 60}$swap${alignr}$swapperc% ${swapbar 6,80}
+
+# Disk and Network
+/${goto 60}${fs_used /}${alignr}${fs_used_perc /}% ${fs_bar 6,80 /}
+${if_mounted /windows}/w${goto 60}${fs_used /windows}${alignr}${fs_used_perc /windows}% ${fs_bar 6,80 /windows}$endif
+
+${diskiograph sda 20,240 285577 ffffff -t}
+HDD: ${diskio sda}
+
+${downspeedgraph eno1 20,120 285577 ffffff -t} ${upspeedgraph eno1 20,120 285577 ffffff -t}
+D: ${downspeed eno1}${goto 145}U: ${upspeed eno1}
