@@ -171,6 +171,7 @@ exec pulseaudio --start
 exec feh --bg-scale ~/Dropbox/Wallpapers/justice_cross.jpg
 exec gnome-keyring-daemon
 exec nm-applet
+exec dunst
 exec conky -b -p 5 # pause a bit to let feh go first
 exec xscreensaver -no-splash
 exec xfce4-clipman

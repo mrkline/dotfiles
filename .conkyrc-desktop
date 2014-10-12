@@ -41,10 +41,14 @@ User:${alignr}${uid_name 1000}
 Kernel:${alignr}$kernel ($machine)
 
 # CPU
-#C1:${goto 60} ${cpu cpu1}%@ ${hwmon 1 temp 2}°C${alignr}${cpubar cpu1 6,80}
-#C2:${goto 60} ${cpu cpu2}%@ ${hwmon 1 temp 3}°C${alignr}${cpubar cpu2 6,80}
 C1:${goto 60}${alignr}${cpu cpu1}% ${cpubar cpu1 6,80}
 C2:${goto 60}${alignr}${cpu cpu2}% ${cpubar cpu2 6,80}
+C3:${goto 60}${alignr}${cpu cpu2}% ${cpubar cpu3 6,80}
+C4:${goto 60}${alignr}${cpu cpu2}% ${cpubar cpu4 6,80}
+C5:${goto 60}${alignr}${cpu cpu2}% ${cpubar cpu5 6,80}
+C6:${goto 60}${alignr}${cpu cpu2}% ${cpubar cpu6 6,80}
+C7:${goto 60}${alignr}${cpu cpu2}% ${cpubar cpu7 6,80}
+C8:${goto 60}${alignr}${cpu cpu2}% ${cpubar cpu8 6,80}
 
 # RAM
 MEM:${goto 60}$mem${alignr}$memperc% ${membar 6,80}
@@ -57,5 +61,5 @@ ${if_mounted /shared}/s${goto 60}${fs_used /shared}${alignr}${fs_used_perc /shar
 
 ${diskiograph sda 20,120 000000 edb951 -t} ${diskiograph sdb 20,120 000000 edb951 -t}
 sda: ${diskio sda}${goto 145}sdb: ${diskio sdb}
-${downspeedgraph eth0 20,120 000000 edb951 -t} ${upspeedgraph eth0 20,120 000000 edb951 -t}
-D: ${downspeed eth0}${goto 145}U: ${upspeed eth0}
+${downspeedgraph enp0s25 20,120 000000 edb951 -t} ${upspeedgraph enp0s25 20,120 000000 edb951 -t}
+D: ${downspeed enp0s25}${goto 145}U: ${upspeed enp0s25}
