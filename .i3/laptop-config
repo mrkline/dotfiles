@@ -117,6 +117,9 @@ bindsym mod4+8 exec skype
 bindsym mod4+9 exec pavucontrol
 bindsym mod4+0 exec transmission-gtk; exec electrum
 
+# Lock on Super + L
+bindsym mod4+l exec xscreensaver-command -lock
+
 # Volume stuff
 bindsym XF86AudioMute exec amixer set Master toggle
 bindsym XF86AudioRaiseVolume exec ~/scripts/inc-vol.sh
