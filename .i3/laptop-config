@@ -124,7 +124,6 @@ bindsym XF86AudioLowerVolume exec amixer set Master 5%-
 
 # Force some things to float that don't tile well
 for_window [title="Calculator"] floating enable # Gnome calculator
-for_window [class="Xfce4-notifyd"] floating enable;border none; focus mode_toggle
 
 # reload the configuration file
 bindsym $mod+Ctrl+c reload
@@ -175,6 +174,7 @@ bindsym $mod+Ctrl+v exec xfce4-mixer
 # Startup stuff
 exec pulseaudio --start
 exec feh --bg-center --geometry +20-20 -B black ~/scratch/Tux.png
+exec dunst
 exec gnome-keyring-daemon
 exec nm-applet
 exec conky -b -p 5 # pause a bit to let feh go first
