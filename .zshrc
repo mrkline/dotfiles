@@ -73,6 +73,28 @@ fi
 # Yay colors
 autoload -U colors && colors
 
+# Get VCS info for the prompt
+autoload -Uz vcs_info
+
+zstyle ':vcs_info:*' stagedstr '%F{green}●%f'
+zstyle ':vcs_info:*' unstagedstr '%F{yellow}●%f'
+zstyle ':vcs_info:*' check-for-changes true
+zstyle ':vcs_info:(sv[nk]|bzr):*' branchformat '%b%F{1}:%F{11}%r'
+zstyle ':vcs_info:*' enable git svn
+# A function which checks if there are unstaged files.
+# If there are, add a red dot to the prompt
+vcs_precmd () {
+    if [[ -z $(git ls-files --other --exclude-standard 2> /dev/null) ]] {
+        zstyle ':vcs_info:*' formats ' %F{green}[%b%c%u%f%B%F{green}]%f'
+    } else {
+        zstyle ':vcs_info:*' formats ' %F{green}[%b%c%u%f%B%F{red}●%f%F{green}]%f'
+    }
+
+    vcs_info
+}
+autoload -U add-zsh-hook
+add-zsh-hook precmd vcs_precmd # Add our hook
+
 alias grep="grep --color=auto"
 alias ls="ls --color=auto"
 
@@ -100,9 +122,10 @@ export PATH="$PATH:$HOME/.rvm/bin" # Add RVM to PATH for scripting
 [[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm" # Load RVM into a shell session *as a function*
 PATH="/usr/local/heroku/bin:$PATH"
 
+# Set up our prompt
 setopt PROMPT_SUBST
 if [[ -x $(which promptd) ]] then
-	PROMPT='$(promptd)'
+	PROMPT='%B$(promptd)${vcs_info_msg_0_} %% %b'
 else
-	PROMPT='%1d %% '
+	PROMPT='%1d${vcs_info_msg_0_} %% %b'
 fi
