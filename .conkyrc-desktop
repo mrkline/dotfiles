@@ -43,12 +43,12 @@ Kernel:${alignr}$kernel ($machine)
 # CPU
 C1:${goto 60}${alignr}${cpu cpu1}% ${cpubar cpu1 6,80}
 C2:${goto 60}${alignr}${cpu cpu2}% ${cpubar cpu2 6,80}
-C3:${goto 60}${alignr}${cpu cpu2}% ${cpubar cpu3 6,80}
-C4:${goto 60}${alignr}${cpu cpu2}% ${cpubar cpu4 6,80}
-C5:${goto 60}${alignr}${cpu cpu2}% ${cpubar cpu5 6,80}
-C6:${goto 60}${alignr}${cpu cpu2}% ${cpubar cpu6 6,80}
-C7:${goto 60}${alignr}${cpu cpu2}% ${cpubar cpu7 6,80}
-C8:${goto 60}${alignr}${cpu cpu2}% ${cpubar cpu8 6,80}
+C3:${goto 60}${alignr}${cpu cpu3}% ${cpubar cpu3 6,80}
+C4:${goto 60}${alignr}${cpu cpu4}% ${cpubar cpu4 6,80}
+C5:${goto 60}${alignr}${cpu cpu5}% ${cpubar cpu5 6,80}
+C6:${goto 60}${alignr}${cpu cpu6}% ${cpubar cpu6 6,80}
+C7:${goto 60}${alignr}${cpu cpu7}% ${cpubar cpu7 6,80}
+C8:${goto 60}${alignr}${cpu cpu8}% ${cpubar cpu8 6,80}
 
 # RAM
 MEM:${goto 60}$mem${alignr}$memperc% ${membar 6,80}
