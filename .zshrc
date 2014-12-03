@@ -108,17 +108,16 @@ export PATH=$PATH:~/src/Par152/
 export PATH=$PATH:~/src/semtex/src/
 
 # Add some user scripts to the path
-export PATH=$PATH:~/scripts/
+export PATH=$PATH:~/scripts
 
 export PATH=$PATH:~/src/promptd
-
-export PATH=$PATH:~/school/ece453/peta_install/petalinux-v2013.10-final/tools/linux-i386/arm-xilinx-linux-gnueabi/bin/
-
-export CLASSPATH=$CLASSPATH:~/school/cs536/
+export PATH=$PATH:~/src/charge
+export PATH=$PATH:~/src/bmpt
 
 export WINEARCH=win32
 
 export PATH="$PATH:$HOME/.rvm/bin" # Add RVM to PATH for scripting
+
 [[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm" # Load RVM into a shell session *as a function*
 PATH="/usr/local/heroku/bin:$PATH"
 
@@ -129,3 +128,5 @@ if [[ -x $(which promptd) ]] then
 else
 	PROMPT='%1d${vcs_info_msg_0_} %% %b'
 fi
+
+source ~/.zshrc-work
