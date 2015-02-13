@@ -98,6 +98,8 @@ add-zsh-hook precmd vcs_precmd # Add our hook
 alias grep="grep --color=auto"
 alias ls="ls --color=auto"
 
+#export EDITOR=vim
+
 # LESS Options
 export LESS=-x4RSFX
 
@@ -113,6 +115,8 @@ export PATH=$PATH:~/scripts
 export PATH=$PATH:~/src/promptd
 export PATH=$PATH:~/src/charge
 export PATH=$PATH:~/src/bmpt
+
+export PATH=$PATH:~/.gem/ruby/2.1.0/bin
 
 export WINEARCH=win32
 

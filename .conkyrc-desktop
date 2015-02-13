@@ -56,8 +56,9 @@ SWP:${goto 60}$swap${alignr}$swapperc% ${swapbar 6,80}
 
 # Disk and Network
 /${goto 60}${fs_used /}${alignr}${fs_used_perc /}% ${fs_bar 6,80 /}
+/h${goto 60}${fs_used /home}${alignr}${fs_used_perc /home}% ${fs_bar 6,80 /home}
 ${if_mounted /windows}/w${goto 60}${fs_used /windows}${alignr}${fs_used_perc /windows}% ${fs_bar 6,80 /windows}$endif
-${if_mounted /shared}/s${goto 60}${fs_used /shared}${alignr}${fs_used_perc /shared}% ${fs_bar 6,80 /shared}$endif
+${if_mounted /windows-data}/w-d${goto 60}${fs_used /windows-data}${alignr}${fs_used_perc /windows-data}% ${fs_bar 6,80 /windows-data}$endif
 
 ${diskiograph sda 20,120 000000 edb951 -t} ${diskiograph sdb 20,120 000000 edb951 -t}
 sda: ${diskio sda}${goto 145}sdb: ${diskio sdb}
