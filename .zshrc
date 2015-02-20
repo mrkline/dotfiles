@@ -56,6 +56,15 @@ key[PageDown]=${terminfo[knp]}
 bindkey '^[[1;5C' forward-word # [Ctrl-RightArrow] - move forward one word
 bindkey '^[[1;5D' backward-word # [Ctrl-LeftArrow] - move backward one word
 
+# This implements a bash-style backward-kill-word.
+# To use,
+#   zle -N bash-backward-kill-word
+#   bindkey '...' bash-backward-kill-word
+function bash-backward-kill-word {
+    local WORDCHARS=''
+    zle .backward-kill-word
+}
+
 # Finally, make sure the terminal is in application mode
 # when zle is active.
 # Only then are the values from $terminfo valid.
@@ -68,7 +77,10 @@ if (( ${+terminfo[smkx]} )) && (( ${+terminfo[rmkx]} )); then
     }
     zle -N zle-line-init
     zle -N zle-line-finish
+    zle -N bash-backward-kill-word
 fi
+
+bindkey '^W' bash-backward-kill-word
 
 # Yay colors
 autoload -U colors && colors
@@ -81,15 +93,9 @@ zstyle ':vcs_info:*' unstagedstr '%F{yellow}●%f'
 zstyle ':vcs_info:*' check-for-changes true
 zstyle ':vcs_info:(sv[nk]|bzr):*' branchformat '%b%F{1}:%F{11}%r'
 zstyle ':vcs_info:*' enable git svn
-# A function which checks if there are unstaged files.
-# If there are, add a red dot to the prompt
-vcs_precmd () {
-    if [[ -z $(git ls-files --other --exclude-standard 2> /dev/null) ]] {
-        zstyle ':vcs_info:*' formats ' %F{green}[%b%c%u%f%B%F{green}]%f'
-    } else {
-        zstyle ':vcs_info:*' formats ' %F{green}[%b%c%u%f%B%F{red}●%f%F{green}]%f'
-    }
+zstyle ':vcs_info:*' formats ' %F{green}[%b%c%u%f%B%F{green}]%f'
 
+vcs_precmd () {
     vcs_info
 }
 autoload -U add-zsh-hook
@@ -120,17 +126,15 @@ export PATH=$PATH:~/.gem/ruby/2.1.0/bin
 
 export WINEARCH=win32
 
-export PATH="$PATH:$HOME/.rvm/bin" # Add RVM to PATH for scripting
-
-[[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm" # Load RVM into a shell session *as a function*
-PATH="/usr/local/heroku/bin:$PATH"
+# dem gems
+export PATH=$PATH:~/.gem/ruby/2.2.0/bin
 
 # Set up our prompt
 setopt PROMPT_SUBST
 if [[ -x $(which promptd) ]] then
-	PROMPT='%B$(promptd)${vcs_info_msg_0_} %% %b'
+    PROMPT='%B$(promptd)${vcs_info_msg_0_} %% %b'
 else
-	PROMPT='%1d${vcs_info_msg_0_} %% %b'
+    PROMPT='%1d${vcs_info_msg_0_} %% %b'
 fi
 
 source ~/.zshrc-work
