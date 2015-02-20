@@ -4,7 +4,8 @@
 ### Should you change your keyboard layout somewhen, delete
 # this file and re-run i3-config-wizard(1).
 #
-exec xrandr --output DP-2 --auto --right-of LVDS-0 --output DP-3 --auto --right-of DP-2
+#exec xrandr --output DP-2 --auto --right-of LVDS-0 --output DP-3 --auto --right-of DP-2
+exec xrandr --output LVDS-0 --auto --pos 0x0 --output DP-0 --auto --right-of LVDS-0 --output DP-2 --auto --right-of DP-0 --output VGA-0 --right-of DP-2
 #exec xrandr --output DP-0 --auto --right-of LVDS-0
 
 # i3 config file (v4)
@@ -183,7 +184,7 @@ bindsym $mod+Ctrl+v exec xfce4-mixer
 exec compton --config ~/.i3/compton.conf
 exec pulseaudio --start
 exec dunst
-#exec feh --bg-center --geometry +20-20 -B black ~/scratch/Tux.png
+exec feh --bg-center -B black /home/mrkline/flip.png
 exec gnome-keyring-daemon
 exec nm-applet
 exec conky -b -p 5 # pause a bit to let feh go first
