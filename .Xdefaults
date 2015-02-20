@@ -1,3 +1,36 @@
+!! black dark/light
+*color0:  #2E3436
+*color8:  #555753
+
+!! red dark/light
+*color1:  #a40000
+*color9:  #EF2929
+
+!! green dark/light
+*color2:  #4E9A06
+*color10: #8AE234
+
+!! yellow dark/light
+*color3:  #C4A000
+*color11: #FCE94F
+
+!! blue dark/light
+*color4:  #3465A4
+*color12: #729FCF
+
+!! magenta dark/light
+*color5:  #75507B
+*color13: #AD7FA8
+
+!! cyan dark/light
+*color6:  #ce5c00
+*color14: #fcaf3e
+
+!! white dark/light
+*color7:  #babdb9
+*color15: #EEEEEC
+
+# All the other normal stuff
 urxvt*font: xft:Envy Code R:size=10;antialias=true;hinting=true
 urxvt*termName: rxvt
 urxvt*background: #000000
