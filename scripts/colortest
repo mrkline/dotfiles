@@ -1,0 +1,10 @@
+#!/bin/sh
+for color in $(seq 0 7); do
+	printf %2d: $color
+	echo -e "\\033[38;5;${color}mhello\\033[48;5;${color}mworld\\033[0m"
+
+	lighter=$((color + 8))
+
+	printf %2d: $(($lighter))
+	echo -e "\\033[38;5;${lighter}mhello\\033[48;5;${lighter}mworld\\033[0m"
+done
