@@ -137,4 +137,4 @@ else
     PROMPT='%1d${vcs_info_msg_0_} %% %b'
 fi
 
-source ~/.zshrc-work
+[[ -f ~/.zshrc-work ]] && source ~/.zshrc-work
