@@ -31,7 +31,6 @@
 *color15: #EEEEEC
 
 # Other looks (fonts, etc.)
-urxvt*font: xft:Envy Code R:size=10;antialias=true;hinting=true
 urxvt*termName: rxvt
 urxvt*background: #000000
 urxvt*foreground: #eeeeee
@@ -39,9 +38,10 @@ urxvt*scrollBar: false
 urxvt*transparent: true
 urxvt*shading: 10
 
+urxvt*font: xft:Envy Code R:size=10
 Xft*dpi: 96
 Xft*antialias: true
-Xft*hinting:  full
+Xft*hinting: full
 
 # Stop auto-scrolling when you examine history
 URxvt*scrollTtyOutput:      false

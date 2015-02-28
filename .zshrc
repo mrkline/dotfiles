@@ -132,7 +132,7 @@ export PATH=$PATH:~/.gem/ruby/2.2.0/bin
 # Set up our prompt
 setopt PROMPT_SUBST
 if [[ -x $(which promptd) ]] then
-    PROMPT='%B$(promptd)${vcs_info_msg_0_} %% %b'
+    PROMPT='%B$(promptd) %% %b'
 else
     PROMPT='%1d${vcs_info_msg_0_} %% %b'
 fi
