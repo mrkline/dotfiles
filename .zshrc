@@ -129,6 +129,9 @@ export WINEARCH=win32
 # dem gems
 export PATH=$PATH:~/.gem/ruby/2.2.0/bin
 
+# Custom D compiler
+export PATH=/home/mrkline/src/dlang/dmd/src:/home/mrkline/src/dlang/tools/generated/linux/64:$PATH
+
 # Set up our prompt
 setopt PROMPT_SUBST
 if [[ -x $(which promptd) ]] then
