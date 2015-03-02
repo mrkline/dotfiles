@@ -134,10 +134,11 @@ export PATH=/home/mrkline/src/dlang/dmd/src:/home/mrkline/src/dlang/tools/genera
 
 # Set up our prompt
 setopt PROMPT_SUBST
+setopt PROMPT_PERCENT
 if [[ -x $(which promptd) ]] then
-    PROMPT='%B$(promptd) %% %b'
+    PROMPT='%B$(promptd) %%%b '
 else
-    PROMPT='%1d${vcs_info_msg_0_} %% %b'
+    PROMPT='%1d${vcs_info_msg_0_} %%%b '
 fi
 
 [[ -f ~/.zshrc-work ]] && source ~/.zshrc-work
