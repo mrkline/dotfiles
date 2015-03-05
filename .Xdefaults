@@ -30,6 +30,9 @@
 *color7:  #babdb9
 *color15: #EEEEEC
 
+# Save a whole lotta lines
+urxvt*saveLines: 65535
+
 # Other looks (fonts, etc.)
 urxvt*termName: rxvt
 urxvt*background: #000000
