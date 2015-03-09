@@ -85,22 +85,6 @@ bindkey '^W' bash-backward-kill-word
 # Yay colors
 autoload -U colors && colors
 
-# Get VCS info for the prompt
-autoload -Uz vcs_info
-
-zstyle ':vcs_info:*' stagedstr '%F{green}●%f'
-zstyle ':vcs_info:*' unstagedstr '%F{yellow}●%f'
-zstyle ':vcs_info:*' check-for-changes true
-zstyle ':vcs_info:(sv[nk]|bzr):*' branchformat '%b%F{1}:%F{11}%r'
-zstyle ':vcs_info:*' enable git svn
-zstyle ':vcs_info:*' formats ' %F{green}[%b%c%u%f%B%F{green}]%f'
-
-vcs_precmd () {
-    vcs_info
-}
-autoload -U add-zsh-hook
-add-zsh-hook precmd vcs_precmd # Add our hook
-
 alias grep="grep --color=auto"
 alias ls="ls --color=auto"
 
@@ -135,10 +119,10 @@ export PATH=/home/mrkline/src/dlang/dmd/src:/home/mrkline/src/dlang/tools/genera
 # Set up our prompt
 setopt PROMPT_SUBST
 setopt PROMPT_PERCENT
-if [[ -x $(which promptd) ]] then
-    PROMPT='%B$(promptd) %%%b '
+if [[ -x $(which promptd-vcs) && -x $(which promptd-path) ]] then
+    PROMPT='%B$(promptd-path) $(promptd-vcs --zsh -t 300) %%%b '
 else
-    PROMPT='%1d${vcs_info_msg_0_} %%%b '
+    PROMPT='%1d %% '
 fi
 
 [[ -f ~/.zshrc-work ]] && source ~/.zshrc-work
