@@ -65,21 +65,7 @@ function bash-backward-kill-word {
     zle .backward-kill-word
 }
 
-# Finally, make sure the terminal is in application mode
-# when zle is active.
-# Only then are the values from $terminfo valid.
-if (( ${+terminfo[smkx]} )) && (( ${+terminfo[rmkx]} )); then
-    function zle-line-init () {
-        printf '%s' "${terminfo[smkx]}"
-    }
-    function zle-line-finish () {
-        printf '%s' "${terminfo[rmkx]}"
-    }
-    zle -N zle-line-init
-    zle -N zle-line-finish
-    zle -N bash-backward-kill-word
-fi
-
+zle -N bash-backward-kill-word
 bindkey '^W' bash-backward-kill-word
 
 # Yay colors
