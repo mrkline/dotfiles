@@ -86,7 +86,7 @@ export PATH=$PATH:~/src/Par152/
 export PATH=$PATH:~/src/semtex/src/
 
 # Add some user scripts to the path
-export PATH=$PATH:~/scripts
+export PATH=~/scripts:$PATH
 
 export PATH=$PATH:~/src/promptd
 export PATH=$PATH:~/src/charge
