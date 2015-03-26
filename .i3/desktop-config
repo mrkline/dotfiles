@@ -176,4 +176,4 @@ exec conky -b -p 5 # pause a bit to let feh go first
 exec xscreensaver -no-splash
 exec xfce4-clipman
 exec compton --config ~/.i3/compton.conf
-exec dropboxd
+exec dropbox
