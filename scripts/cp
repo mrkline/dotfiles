@@ -1,0 +1,2 @@
+#!/bin/sh
+/usr/bin/cp --reflink=auto --sparse=auto "$@"
