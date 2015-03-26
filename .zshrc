@@ -77,7 +77,7 @@ alias ls="ls --color=auto"
 #export EDITOR=vim
 
 # LESS Options
-export LESS=-x4RSFX
+export LESS=-x4RSX
 
 # Add par to path
 export PATH=$PATH:~/src/Par152/
