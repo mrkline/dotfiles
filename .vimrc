@@ -75,13 +75,13 @@ if &columns < 124
 	set columns=124
 endif
 
-" Mark column 121
-set colorcolumn=121
+" Mark column 81
+set colorcolumn=81
 
 " Tabs are four spaces wide, and aren't expanded into spaces
 set tabstop=4
 set shiftwidth=4
-set noexpandtab
+set expandtab
 
 " Show tabs and trailing whitespce
 set list
