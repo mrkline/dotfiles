@@ -51,17 +51,14 @@ set noshowmatch
 set modeline
 set ls=2
 
-" Remove the buffer when a tab is closed
-set nohidden
-
-" Re-read a file if it's been edited outside vim
+" Re-read a file if it's been modified outside vim
 set autoread
 
 " Prefer Unix file endings to Windows ones.
 " (This is a default on a Linux system but not on a Windows one)
 set fileformats=unix,dos
 
-" Split down or to the right
+" Split down and to the right
 set splitright
 set splitbelow
 
@@ -70,20 +67,15 @@ set number
 " Numbers take up four columns
 set numberwidth=4
 
-" Make the window 120 columns wide, plus 4 for the line numbers
-if &columns < 124
-	set columns=124
-endif
-
-" Mark column 81
+" Mark column 81 (to encourage 80-column lines)
 set colorcolumn=81
 
-" Tabs are four spaces wide, and aren't expanded into spaces
+" Tabs are four spaces wide, and are expanded into spaces
 set tabstop=4
 set shiftwidth=4
 set expandtab
 
-" Show tabs and trailing whitespce
+" Show tabs (as >   ) and trailing whitespce (as ~)
 set list
 set listchars=tab:>\ ,trail:~
 
@@ -125,22 +117,14 @@ set noautoindent
 set smartindent
 
 " I find the LaTeX auto indenting annoying
-au BufRead,BufNewFile *.tex set inde=
+autocmd BufRead,BufNewFile *.tex set inde=
 
 " SemTeX gets LaTeX highlighting
-au BufRead,BufNewFile *.stex set filetype=tex
-au BufRead,BufNewFile *.sex set filetype=tex
+autocmd BufRead,BufNewFile *.stex set filetype=tex
+autocmd BufRead,BufNewFile *.sex set filetype=tex
 
 " *.md is Markdown, not modula 2
-au BufRead,BufNewFile *.md set filetype=markdown
-
-" 8 tabs for fstab are 8 spaces
-au BufRead,BufNewFile fstab setlocal tabstop=8
-
-if match($TERM, "xterm") == 0
-	" Make sure we support 256 colors in the terminal emulator
-	set t_Co=256
-endif
+autocmd BufRead,BufNewFile *.md set filetype=markdown
 
 " Color preferences
 highlight Search ctermbg=blue ctermfg=white
