@@ -92,12 +92,10 @@ export PATH=$PATH:~/src/promptd/build
 export PATH=$PATH:~/src/charge
 export PATH=$PATH:~/src/bmpt
 
-export PATH=$PATH:~/.gem/ruby/2.1.0/bin
-
 export WINEARCH=win32
 
 # dem gems
-export PATH=$PATH:~/.gem/ruby/2.2.0/bin
+export PATH=$PATH:$(ruby -rubygems -e "puts Gem.user_dir")/bin
 
 # Custom D compiler
 export PATH=/home/mrkline/src/dlang/dmd/src:/home/mrkline/src/dlang/tools/generated/linux/64:$PATH
