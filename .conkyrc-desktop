@@ -60,7 +60,7 @@ SWP:${goto 60}$swap${alignr}$swapperc% ${swapbar 6,80}
 ${if_mounted /windows}/w${goto 60}${fs_used /windows}${alignr}${fs_used_perc /windows}% ${fs_bar 6,80 /windows}$endif
 ${if_mounted /windows-data}/w-d${goto 60}${fs_used /windows-data}${alignr}${fs_used_perc /windows-data}% ${fs_bar 6,80 /windows-data}$endif
 
-${diskiograph sda 20,120 000000 edb951 -t} ${diskiograph sdb 20,120 000000 edb951 -t}
-sda: ${diskio sda}${goto 145}sdb: ${diskio sdb}
+${diskiograph sda 20,120 000000 edb951 -t} ${diskiograph sdc 20,120 000000 edb951 -t}
+/h: ${diskio sda}${goto 145}/ (SSD): ${diskio sdc}
 ${downspeedgraph enp0s25 20,120 000000 edb951 -t} ${upspeedgraph enp0s25 20,120 000000 edb951 -t}
 D: ${downspeed enp0s25}${goto 145}U: ${upspeed enp0s25}
