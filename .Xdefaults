@@ -37,7 +37,8 @@ urxvt*saveLines: 65535
 urxvt*termName: rxvt
 urxvt*background: #000000
 urxvt*foreground: #eeeeee
-urxvt*scrollBar: false
+urxvt.scrollstyle: plain
+urxvt.scrollBar_right: true
 urxvt*transparent: true
 urxvt*shading: 10
 
