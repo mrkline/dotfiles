@@ -104,9 +104,9 @@ export PATH=/home/mrkline/src/dlang/dmd/src:/home/mrkline/src/dlang/tools/genera
 setopt PROMPT_SUBST
 setopt PROMPT_PERCENT
 if [[ -x $(which promptd-vcs) && -x $(which promptd-path) ]] then
-    PROMPT='%B$(promptd-path)$(promptd-vcs --zsh -t 300 --prefix " [") %%%b '
+    PROMPT='%B$(promptd-path)$(promptd-vcs --zsh -t 300 --prefix " [") $%b '
 else
-    PROMPT='%1d %% '
+    PROMPT='%1d $ '
 fi
 
 [[ -f ~/.zshrc-work ]] && source ~/.zshrc-work
