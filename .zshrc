@@ -88,7 +88,7 @@ export PATH=$PATH:~/src/semtex/src/
 # Add some user scripts to the path
 export PATH=~/scripts:$PATH
 
-export PATH=$PATH:~/src/promptd/build
+export PATH=$PATH:~/src/promptoglyph/build
 export PATH=$PATH:~/src/charge
 export PATH=$PATH:~/src/bmpt
 
@@ -103,8 +103,8 @@ export PATH=/home/mrkline/src/dlang/dmd/src:/home/mrkline/src/dlang/tools/genera
 # Set up our prompt
 setopt PROMPT_SUBST
 setopt PROMPT_PERCENT
-if [[ -x $(which promptd-vcs) && -x $(which promptd-path) ]] then
-    PROMPT='%B$(promptd-path)$(promptd-vcs --zsh -t 300 --prefix " [") $%b '
+if [[ -x $(which promptoglyph-vcs) && -x $(which promptoglyph-path) ]] then
+    PROMPT='%B$(promptoglyph-path)$(promptoglyph-vcs --zsh -t 300 --prefix " [") $%b '
 else
     PROMPT='%1d $ '
 fi
