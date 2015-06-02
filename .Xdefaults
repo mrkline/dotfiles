@@ -1,29 +1,29 @@
 !! black dark/light
-*color0:  #2E3436
-*color8:  #555753
+*color0:  #000000
+*color8:  #5a5a5a
 
 !! red dark/light
-*color1:  #a40000
-*color9:  #EF2929
+*color1:  #ff2020
+*color9:  #ff6464
 
 !! green dark/light
-*color2:  #4E9A06
-*color10: #8AE234
+*color2:  #67cc08
+*color10: #8ce635
 
 !! yellow dark/light
-*color3:  #C4A000
-*color11: #FCE94F
+*color3:  #e6bb00
+*color11: #ffe933
 
 !! blue dark/light
-*color4:  #3465A4
-*color12: #729FCF
+*color4:  #729fcf
+*color12: #85baf2
 
 !! magenta dark/light
-*color5:  #75507B
-*color13: #AD7FA8
+*color5:  #b383ad
+*color13: #ffbbf8
 
 !! cyan dark/light
-*color6:  #00a0a0
+*color6:  #00cccb
 *color14: #00ffff
 
 !! white dark/light
