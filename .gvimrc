@@ -11,7 +11,7 @@ colorscheme torte
 if has("win32")
 	set guifont=Envy\ Code\ R:h10
 else
-	set guifont=Envy\ Code\ R
+	set guifont=Envy\ Code\ R\ 12
 endif
 
 " Cursor preferences

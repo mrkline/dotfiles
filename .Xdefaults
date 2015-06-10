@@ -41,8 +41,9 @@ urxvt.scrollstyle: plain
 urxvt.scrollBar_right: true
 urxvt*transparent: true
 urxvt*shading: 10
+urxvt.internalBorder: 0
 
-urxvt*font: xft:Envy Code R:size=10
+urxvt*font: xft:Envy Code R:size=12
 Xft*dpi: 96
 Xft*antialias: true
 Xft*hinting: full
