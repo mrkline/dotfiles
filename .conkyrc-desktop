@@ -55,12 +55,14 @@ MEM:${goto 60}$mem${alignr}$memperc% ${membar 6,80}
 SWP:${goto 60}$swap${alignr}$swapperc% ${swapbar 6,80}
 
 # Disk and Network
-/${goto 60}${fs_used /}${alignr}${fs_used_perc /}% ${fs_bar 6,80 /}
 /h${goto 60}${fs_used /home}${alignr}${fs_used_perc /home}% ${fs_bar 6,80 /home}
+/${goto 60}${fs_used /}${alignr}${fs_used_perc /}% ${fs_bar 6,80 /}
 ${if_mounted /windows}/w${goto 60}${fs_used /windows}${alignr}${fs_used_perc /windows}% ${fs_bar 6,80 /windows}$endif
 ${if_mounted /windows-data}/w-d${goto 60}${fs_used /windows-data}${alignr}${fs_used_perc /windows-data}% ${fs_bar 6,80 /windows-data}$endif
 
-${diskiograph sda 20,120 000000 edb951 -t} ${diskiograph sdc 20,120 000000 edb951 -t}
-/h: ${diskio sda}${goto 145}/ (SSD): ${diskio sdc}
+/h:   ${diskio sda}${alignr}${voffset -7}${diskiograph sda 20,120 000000 edb951 -t}
+/:    ${diskio sdc}${alignr}${voffset -7}${diskiograph sdc 20,120 000000 edb951 -t}
+/w-d: ${diskio sdb}${alignr}${voffset -7}${diskiograph sdb 20,120 000000 edb951 -t}
+
 ${downspeedgraph enp0s25 20,120 000000 edb951 -t} ${upspeedgraph enp0s25 20,120 000000 edb951 -t}
 D: ${downspeed enp0s25}${goto 145}U: ${upspeed enp0s25}
