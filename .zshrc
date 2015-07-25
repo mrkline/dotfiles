@@ -74,6 +74,11 @@ autoload -U colors && colors
 alias grep="grep --color=auto"
 alias ls="ls --color=auto"
 
+# Self-deprecating humor
+alias :w="echo YOU FAIL"
+alias :wq="echo YOU FAIL"
+alias :q="echo YOU FAIL"
+
 #export EDITOR=vim
 
 # LESS Options
