@@ -103,7 +103,7 @@ export WINEARCH=win32
 export PATH=$PATH:$(ruby -rubygems -e "puts Gem.user_dir")/bin
 
 # Custom D compiler
-export PATH=/home/mrkline/src/dlang/dmd/src:/home/mrkline/src/dlang/tools/generated/linux/64:$PATH
+export PATH=~/src/dlang/dmd/src:~/src/dlang/tools/generated/linux/64:$PATH
 
 # Set up our prompt
 setopt PROMPT_SUBST
