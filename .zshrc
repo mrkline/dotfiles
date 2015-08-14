@@ -73,6 +73,7 @@ autoload -U colors && colors
 
 alias grep="grep --color=auto"
 alias ls="ls --color=auto"
+alias dmap="tree --du -h --dirsfirst --sort=size"
 
 # Self-deprecating humor
 alias :w="echo YOU FAIL"
