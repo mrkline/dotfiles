@@ -80,6 +80,9 @@ alias :w="echo YOU FAIL"
 alias :wq="echo YOU FAIL"
 alias :q="echo YOU FAIL"
 
+# ...
+alias rot13="tr '[A-Za-z]' '[N-ZA-Mn-za-m]'"
+
 #export EDITOR=vim
 
 # LESS Options
