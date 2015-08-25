@@ -184,10 +184,9 @@ bindsym $mod+Ctrl+v exec xfce4-mixer
 exec compton --config ~/.i3/compton.conf
 exec pulseaudio --start
 exec dunst
-exec feh --bg-center -B black /home/mrkline/flip.png
-exec gnome-keyring-daemon
+exec feh --bg-fill -B black /home/mkline/Dropbox/Wallpapers/apollo11.jpg
 exec nm-applet
-exec conky -b -p 5 # pause a bit to let feh go first
+exec conky -p 5 # pause a bit to let feh go first
 exec xscreensaver -no-splash
 exec xfce4-clipman
 exec dropboxd
