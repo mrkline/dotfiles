@@ -1,6 +1,3 @@
-" No vi compatibility
-set nocompatible
-
 "" Vundle Setup:
 filetype off
 set rtp+=~/.vim/bundle/vundle/
@@ -43,6 +40,9 @@ set ruler
 
 " Highlight found terms
 set hlsearch
+
+" Don't jump around
+set noincsearch
 
 " Do not jump back to matching parens
 set noshowmatch
@@ -140,6 +140,7 @@ highlight LineNr ctermfg=gray
 highlight NonText ctermfg=gray
 highlight Normal ctermfg=white
 highlight SpecialKey ctermfg=237
+highlight ColorColumn ctermbg=red
 
 " Key mapping and functions
 
