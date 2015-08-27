@@ -34,7 +34,6 @@
 URxvt*saveLines: 65535
 
 # Other looks (fonts, etc.)
-URxvt*termName: rxvt
 URxvt*background: #000000
 URxvt*foreground: #eeeeee
 URxvt.scrollstyle: plain
