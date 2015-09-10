@@ -23,6 +23,8 @@ setopt hist_verify
 setopt inc_append_history
 setopt share_history # share command history data
 
+bindkey -e
+
 # Key bindings from the Arch wiki:
 
 # create a zkbd compatible hash;
@@ -83,7 +85,16 @@ alias :q="echo YOU FAIL"
 # ...
 alias rot13="tr '[A-Za-z]' '[N-ZA-Mn-za-m]'"
 
-#export EDITOR=vim
+if type nvim >/dev/null; then
+    alias vim="nvim"
+    export EDITOR=nvim
+elif type vim >/dev/null; then
+    export EDITOR=vim
+elif type vi >/dev/null; then
+    export EDITOR=vi
+else
+    export EDITOR=nano
+fi
 
 # LESS Options
 export LESS=-x4RSX
