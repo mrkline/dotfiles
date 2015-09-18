@@ -27,3 +27,5 @@
 	default = upstream
 [merge]
 	ff = false
+[fetch]
+	prune = true
