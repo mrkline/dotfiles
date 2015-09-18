@@ -75,6 +75,9 @@ set tabstop=4
 set shiftwidth=4
 set expandtab
 
+" Use par with 80-character lines for formatting.
+set formatprg=par\ 80
+
 " Show tabs (as >   ) and trailing whitespce (as ~)
 set list
 set listchars=tab:>\ ,trail:~
@@ -126,7 +129,13 @@ autocmd BufRead,BufNewFile *.sex set filetype=tex
 " *.md is Markdown, not modula 2
 autocmd BufRead,BufNewFile *.md set filetype=markdown
 
+" Makefiles use tabs
+autocmd BufRead,BufNewFile Makefile setlocal noexpandtab
+
 " Color preferences
+
+set background=dark
+
 highlight Search ctermbg=blue ctermfg=white
 highlight Pmenu ctermbg=white ctermfg=black
 highlight PmenuSel ctermbg=blue ctermfg=white cterm=bold
@@ -139,7 +148,7 @@ highlight MatchParen ctermfg=NONE ctermbg=blue
 highlight LineNr ctermfg=gray
 highlight NonText ctermfg=gray
 highlight Normal ctermfg=white
-highlight SpecialKey ctermfg=237
+highlight SpecialKey ctermfg=grey
 highlight ColorColumn ctermbg=red
 
 " Key mapping and functions
@@ -169,7 +178,6 @@ function! WordProcessorMode()
 	set formatoptions=l
 	set spell spelllang=en_us
 	set complete+=kspell
-	set formatprg=par\ w\ 120
 	set wrap
 	set linebreak
 	set nolist " List breaks word wrapping
@@ -199,7 +207,7 @@ noremap <leader>w :call WordProcessorMode()<CR>
 " Trim trailing whitespace
 noremap <leader>t :call RemoveTrailingWhitespace()<CR>
 " ctags this directory using C++ settings
-noremap <leader>c :silent !ctags --sort=1 --c++-kinds=+p --fields=+iaS --extra=+fq ./*<CR>
+noremap <leader>c :!ctags --sort=1 --c++-kinds=+p --fields=+iaS --extra=+fq ./*<CR>
 " Build main.stex in the current directory (useful for note-taking)
 noremap <leader>p :!semtex -v -p xelatex main.stex<CR>
 " Do the same for the current file
