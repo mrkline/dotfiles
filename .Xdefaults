@@ -45,7 +45,8 @@ URxvt.internalBorder: 0
 URxvt*font: xft:Envy Code R:size=12
 Xft*dpi: 96
 Xft*antialias: true
-Xft*hinting: full
+Xft*hinting: true
+Xft*hintstyle: hintfull
 
 # Stop auto-scrolling when you examine history
 URxvt*scrollTtyOutput:      false
