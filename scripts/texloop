@@ -1,0 +1,5 @@
+#!/bin/zsh
+while (true) {
+inotifywait -e modify "$@"
+xelatex -halt-on-error -shell-escape "$@"
+}
