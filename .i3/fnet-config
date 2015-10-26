@@ -92,8 +92,8 @@ bindsym $mod+3 workspace 3
 bindsym $mod+4 workspace 4
 bindsym $mod+5 workspace 5
 bindsym $mod+6 workspace 6
-bindsym $mod+7 workspace 7:Web IO
-bindsym $mod+8 workspace 8:Skype
+bindsym $mod+7 workspace 7
+bindsym $mod+8 workspace 8
 bindsym $mod+9 workspace 9:Volume
 bindsym $mod+0 workspace 10:Status
 
@@ -104,8 +104,8 @@ bindsym $mod+Ctrl+3 move container to workspace 3
 bindsym $mod+Ctrl+4 move container to workspace 4
 bindsym $mod+Ctrl+5 move container to workspace 5
 bindsym $mod+Ctrl+6 move container to workspace 6
-bindsym $mod+Ctrl+7 move container to workspace 7:Web IO
-bindsym $mod+Ctrl+8 move container to workspace 8:Skype
+bindsym $mod+Ctrl+7 move container to workspace 7
+bindsym $mod+Ctrl+8 move container to workspace 8
 bindsym $mod+Ctrl+9 move container to workspace 9:Volume
 bindsym $mod+Ctrl+0 move container to workspace 10:Status
 
@@ -133,6 +133,8 @@ bindsym XF86AudioLowerVolume exec amixer set Master 5%-
 for_window [title="Calculator"] floating enable # Gnome calculator
 
 for_window [class="Conky"] border 1pixel
+
+for_window [title="OpenArena"] floating disable
 
 # reload the configuration file
 bindsym $mod+Ctrl+c reload
@@ -184,7 +186,7 @@ bindsym $mod+Ctrl+v exec xfce4-mixer
 exec compton --config ~/.i3/compton.conf
 exec pulseaudio --start
 exec dunst
-exec feh --bg-fill -B black /home/mkline/Dropbox/Wallpapers/apollo11.jpg
+exec feh --bg-fill -B black /home/mkline/Dropbox/Wallpapers/apollo/csm.jpg
 exec nm-applet
 exec conky -p 5 # pause a bit to let feh go first
 exec xscreensaver -no-splash
