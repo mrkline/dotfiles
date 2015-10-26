@@ -77,6 +77,8 @@ alias grep="grep --color=auto"
 alias ls="ls --color=auto"
 alias dmap="tree --du -h --dirsfirst --sort=size"
 
+alias pacdiff='sudo DIFFSEARCHPATH="/boot /etc /usr" DIFFPROG="meld" pacdiff'
+
 # Self-deprecating humor
 alias :w="echo YOU FAIL"
 alias :wq="echo YOU FAIL"
