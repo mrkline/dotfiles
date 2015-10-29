@@ -24,7 +24,7 @@
 	branch = yellow bold
 	dirty = red bold
 [push]
-	default = upstream
+	default = current
 [merge]
 	ff = false
 [fetch]
