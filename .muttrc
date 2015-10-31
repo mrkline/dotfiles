@@ -1,0 +1,10 @@
+set editor=`echo \$EDITOR`
+set imap_user='matt@bitbashing.io'
+set folder='imaps://mail.privateemail.com'
+set spoolfile=+INBOX
+set record=+Sent
+set imap_check_subscribed
+set sort='reverse-threads'
+set edit_headers=yes
+
+set sendmail='msmtp'
