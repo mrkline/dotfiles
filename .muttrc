@@ -1,10 +1,33 @@
 set editor=`echo \$EDITOR`
-set imap_user='matt@bitbashing.io'
-set folder='imaps://mail.privateemail.com'
+set from="Matt Kline <matt@bitbashing.io>"
+set folder="imaps://mail.privateemail.com"
+set imap_user="matt@bitbashing.io"
+set imap_pass=`secret-tool lookup host mail.privateemail.com service imap user "matt@bitbashing.io"`
+set imap_check_subscribed
 set spoolfile=+INBOX
 set record=+Sent
-set imap_check_subscribed
-set sort='reverse-threads'
+set postponed="~/postponed"
 set edit_headers=yes
-
+set sort="reverse-threads"
 set sendmail='msmtp'
+
+# Palette for use with the Linux console.  Black background.
+color hdrdefault cyan black
+color quoted green black
+color signature blue black
+color attachment red black
+color prompt green black
+color message white black
+color error brightred black
+color indicator black cyan
+color status green black
+color tree white black
+color normal white black
+color markers white black
+color search white black
+color tilde brightmagenta black
+color index blue black ~F
+color index green black "~N|~O"
+
+# color body brightwhite black '\*+[^*]+\*+'
+# color body brightwhite black '_+[^_]+_+'
