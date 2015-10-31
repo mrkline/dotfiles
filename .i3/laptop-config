@@ -178,9 +178,8 @@ bindsym $mod+Ctrl+v exec xfce4-mixer
 exec pulseaudio --start
 exec feh --bg-center --geometry +20-20 -B black ~/scratch/Tux.png
 exec dunst
-exec gnome-keyring-daemon
 exec nm-applet
-exec conky -b -p 5 # pause a bit to let feh go first
+exec conky -p 5 # pause a bit to let feh go first
 exec xscreensaver -no-splash
 exec xfce4-clipman
 exec compton --config ~/.i3/compton.conf
