@@ -8,10 +8,12 @@ set spoolfile=+INBOX
 set record=+Sent
 set postponed="~/postponed"
 set edit_headers=yes
-set sort="reverse-threads"
+set sort="threads"
 set sendmail='msmtp'
+set user_agent=no
 
-# Palette for use with the Linux console.  Black background.
+lists dlang-study@puremagic.com
+
 color hdrdefault cyan black
 color quoted green black
 color signature blue black
