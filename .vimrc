@@ -239,8 +239,7 @@ noremap <C-\> :tab split<CR>:exec("tag ".expand("<cword>"))<CR>
 " Insert mode mappings
 inoremap <C-j> <Esc>o
 inoremap <C-k> <Esc>O
-inoremap <C-l> <Esc>>>A
-" C-h is backspace in the windows shell, causing some issues
-if has("gui_running") || !has("win32")
-	inoremap <C-h> <Esc><<A
-endif
+
+" Use Ctrl+d for digraphs
+inoremap <C-d> <C-k>
+cnoremap <C-d> <C-k>
