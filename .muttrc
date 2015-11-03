@@ -10,7 +10,6 @@ set postponed="~/postponed"
 set edit_headers=yes
 set sort="threads"
 set sendmail='msmtp'
-set user_agent=no
 
 lists dlang-study@puremagic.com
 
