@@ -1,11 +1,10 @@
 "" Vundle Setup:
 filetype off
-set rtp+=~/.vim/bundle/vundle/
+set rtp+=~/.vim/bundle/Vundle.vim
 
-call vundle#rc()
-
+call vundle#begin()
 " let Vundle manage Vundle
-Bundle 'gmarik/vundle'
+Bundle 'VundleVim/Vundle.vim'
 
 " My bundles:
 Bundle 'ervandew/supertab'
@@ -24,6 +23,8 @@ Bundle 'vim-scripts/taglist.vim'
 " Airline's mixed indentation messages are often wrong. Turn them off
 let g:airline#extensions#whitespace#checks = [ 'trailing' ]
 let g:airline_theme='papercolor'
+
+call vundle#end()
 
 " numbers.vim:
 noremap <C-n> :NumbersToggle<CR>
