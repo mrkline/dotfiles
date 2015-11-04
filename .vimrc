@@ -23,6 +23,7 @@ Bundle 'vim-scripts/taglist.vim'
 
 " Airline's mixed indentation messages are often wrong. Turn them off
 let g:airline#extensions#whitespace#checks = [ 'trailing' ]
+let g:airline_theme='papercolor'
 
 " numbers.vim:
 noremap <C-n> :NumbersToggle<CR>
@@ -143,22 +144,9 @@ endfunction
 
 " Color preferences
 
-set background=dark
+set background=light
 
-highlight Search ctermbg=blue ctermfg=white
-highlight Pmenu ctermbg=white ctermfg=black
-highlight PmenuSel ctermbg=blue ctermfg=white cterm=bold
-highlight PmenuSbar ctermbg=white
-highlight PmenuThumb ctermfg=DarkGray
-highlight ModeMsg cterm=NONE
-highlight Visual ctermbg=blue ctermfg=white cterm=NONE
-highlight Folded ctermbg=black ctermfg=white
-highlight MatchParen ctermfg=NONE ctermbg=blue
-highlight LineNr ctermfg=gray
-highlight NonText ctermfg=gray
-highlight Normal ctermfg=white
 highlight SpecialKey ctermfg=grey
-highlight ColorColumn ctermbg=red
 
 " Key mapping and functions
 
