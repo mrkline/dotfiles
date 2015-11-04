@@ -13,22 +13,22 @@ set sendmail='msmtp'
 
 lists dlang-study@puremagic.com
 
-color hdrdefault cyan black
-color quoted green black
-color signature blue black
-color attachment red black
-color prompt green black
-color message white black
-color error brightred black
-color indicator black cyan
-color status green black
-color tree white black
-color normal white black
-color markers white black
-color search white black
-color tilde brightmagenta black
-color index blue black ~F
-color index green black "~N|~O"
+color hdrdefault cyan default
+color quoted green default
+color signature blue default
+color attachment red default
+color prompt green default
+color message black default
+color error brightred default
+color indicator default cyan
+color status green default
+color tree black default
+color normal black default
+color markers black default
+color search black default
+color tilde brightmagenta default
+color index blue default ~F
+color index green default "~N|~O"
 
-# color body brightwhite black '\*+[^*]+\*+'
-# color body brightwhite black '_+[^_]+_+'
+# color body brightwhite default '\*+[^*]+\*+'
+# color body brightwhite default '_+[^_]+_+'

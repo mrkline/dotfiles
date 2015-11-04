@@ -57,8 +57,8 @@ Bcache hit ratio:${goto 145}per 5 mins:${alignr}${exec cat /sys/block/bcache0/bc
 ${goto 145}since boot:${alignr}${exec cat /sys/block/bcache0/bcache/cache/stats_total/cache_hit_ratio}%
 ${goto 145}dirty:${alignr}${exec cat /sys/block/bcache0/bcache/dirty_data}
 
-${diskiograph sda 20,120 285577 ffffff -t} ${diskiograph sdb 20,120 285577 ffffff -t}
+${diskiograph sda 20,120 ffffff ffffff -t} ${diskiograph sdb 20,120 ffffff ffffff -t}
 HDD: ${diskio sda}${goto 145}SDD: ${diskio sdb}
 
-${downspeedgraph wlp6s0 20,120 285577 ffffff -t} ${upspeedgraph wlp6s0 20,120 285577 ffffff -t}
+${downspeedgraph wlp6s0 20,120 ffffff ffffff -t} ${upspeedgraph wlp6s0 20,120 ffffff ffffff -t}
 D: ${downspeed wlp6s0}${goto 145}U: ${upspeed wlp6s0}
