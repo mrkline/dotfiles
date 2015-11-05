@@ -80,9 +80,10 @@ alias dmap="tree --du -h --dirsfirst --sort=size"
 alias pacdiff='sudo DIFFSEARCHPATH="/boot /etc /usr" DIFFPROG="meld" pacdiff'
 
 # Self-deprecating humor
-alias :w="echo YOU FAIL"
-alias :wq="echo YOU FAIL"
-alias :q="echo YOU FAIL"
+alias :w="echo E_NOTVIM"
+alias :wq="echo E_I_AM_A_SHELL"
+alias :q="echo In Russia, shell quits you!"
+alias :qa="echo No escape"
 
 # ...
 alias rot13="tr '[A-Za-z]' '[N-ZA-Mn-za-m]'"
