@@ -1,0 +1,5 @@
+#!/bin/sh
+find -type f -exec filefrag {} + 2>/dev/null | \
+    sed -r 's/(.*)\: ([0-9]+) extents? found/\2 - \1/g' | \
+    sed '/^[01] - /d' | \
+    sort -nr
