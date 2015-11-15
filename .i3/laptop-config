@@ -176,7 +176,7 @@ bindsym $mod+Ctrl+v exec xfce4-mixer
 
 # Startup stuff
 exec pulseaudio --start
-exec feh --bg-center --geometry +20-20 -B black ~/scratch/Tux.png
+exec feh --bg-fill ~/Dropbox/Wallpapers/che_rms.png
 exec dunst
 exec nm-applet
 exec conky -p 5 # pause a bit to let feh go first
