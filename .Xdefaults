@@ -44,7 +44,7 @@ URxvt*shading: 190
 URxvt*internalBorder: 0
 
 URxvt*font: xft:Envy Code R:size=12
-Xft*dpi: 96
+Xft*dpi: 94
 Xft*antialias: true
 Xft*hinting: true
 Xft*hintstyle: hintmedium
