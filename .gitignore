@@ -1,1 +1,4 @@
 spell/
+# Ignore symlinks in .i3 to machine-specific files.
+.i3/conkyrc
+.i3/config
