@@ -20,6 +20,7 @@
 	append = commit --amend --no-edit
 [diff]
 	tool = meld
+	algorithm = patience
 [color "sh"]
 	branch = yellow bold
 	dirty = red bold
