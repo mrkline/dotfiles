@@ -102,9 +102,6 @@ fi
 # LESS Options
 export LESS=-x4RSX
 
-# Add par to path
-export PATH=$PATH:~/src/Par152/
-
 # Add semtex to path
 export PATH=$PATH:~/src/semtex/src/
 
