@@ -18,6 +18,7 @@
 	df = diff
 	cam = commit --amend
 	append = commit --amend --no-edit
+	kill-branch = !git push --delete origin "$@" && git branch -d
 [diff]
 	tool = meld
 	algorithm = patience
