@@ -122,7 +122,7 @@ bindsym mod4+9 exec pavucontrol
 bindsym mod4+0 exec transmission-gtk; exec electrum
 
 # Lock the scren with Super-L
-bindsym mod4+l exec xscreensaver-command --lock
+bindsym mod4+l exec lock.sh
 
 # Volume stuff
 bindsym XF86AudioMute exec amixer set Master toggle
@@ -183,13 +183,13 @@ bindsym Ctrl+Print exec xfce4-screenshooter
 bindsym $mod+Ctrl+v exec xfce4-mixer
 
 # Startup stuff
+exec xset dpms 0 1800 3600 # Standby screen at 30 mins, off at 60
 exec compton --config ~/.i3/compton.conf
 exec pulseaudio --start
 exec dunst
 exec feh --bg-fill -B black /home/mkline/Dropbox/Wallpapers/apollo/csm.jpg
 exec nm-applet
 exec conky -p 5 # pause a bit to let feh go first
-exec xscreensaver -no-splash
 exec xfce4-clipman
 exec dropboxd
 # exec xfce4-mixer
