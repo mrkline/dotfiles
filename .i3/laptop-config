@@ -117,8 +117,8 @@ bindsym mod4+8 exec skype
 bindsym mod4+9 exec pavucontrol
 bindsym mod4+0 exec transmission-gtk; exec electrum
 
-# Lock on Super + L
-bindsym mod4+l exec xscreensaver-command -lock
+# Lock the scren with Super-L
+bindsym mod4+l exec lock.sh
 
 # Volume stuff
 bindsym XF86AudioMute exec amixer set Master toggle
@@ -175,6 +175,7 @@ bindsym Ctrl+Print exec xfce4-screenshooter
 bindsym $mod+Ctrl+v exec xfce4-mixer
 
 # Startup stuff
+exec xset dpms 0 300 600 # Standby screen at 5 mins, off at 10
 exec pulseaudio --start
 exec feh --bg-fill ~/Dropbox/Wallpapers/che_rms.png
 exec dunst
