@@ -117,6 +117,9 @@ bindsym mod4+8 exec skype
 bindsym mod4+9 exec pavucontrol
 bindsym mod4+0 exec transmission-gtk; exec electrum
 
+# Lock the scren with Super-L
+bindsym mod4+l exec lock.sh
+
 # Force some things to float that don't tile well
 for_window [title="Calculator"] floating enable # Gnome calculator
 for_window [class="Xfce4-notifyd"] floating enable;border none; focus mode_toggle
@@ -167,12 +170,12 @@ bindsym Print exec xfce4-screenshooter -f
 bindsym Ctrl+Print exec xfce4-screenshooter
 
 # Startup stuff
+exec xset dpms 0 1800 3600 # Standby screen at 30 mins, off at 60
 exec pulseaudio --start
 exec feh --bg-scale ~/Dropbox/Wallpapers/justice_cross.jpg
 exec nm-applet
 exec dunst
 exec conky -p 5 # pause a bit to let feh go first
-exec xscreensaver -no-splash
 exec xfce4-clipman
 exec compton --config ~/.i3/compton.conf
 exec dropbox
