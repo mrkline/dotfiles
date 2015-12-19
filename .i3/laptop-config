@@ -102,9 +102,9 @@ bindsym mod4+0 exec transmission-gtk; exec electrum
 bindsym mod4+l exec lock.sh
 
 # Volume stuff
-bindsym XF86AudioMute exec amixer set Master toggle
-bindsym XF86AudioRaiseVolume exec ~/scripts/inc-vol.sh
-bindsym XF86AudioLowerVolume exec amixer set Master 5%-
+bindsym XF86AudioMute exec pactl set-sink-mute 0 toggle
+bindsym XF86AudioRaiseVolume exec pactl set-sink-volume 0 +5%
+bindsym XF86AudioLowerVolume exec pactl set-sink-volume 0 -5%
 
 # Force some things to float that don't tile well
 for_window [title="Calculator"] floating enable # Gnome calculator
