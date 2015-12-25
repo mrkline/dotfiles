@@ -156,13 +156,13 @@ bindsym Ctrl+Print exec xfce4-screenshooter
 bindsym $mod+Ctrl+v exec xfce4-mixer
 
 # Startup stuff
+exec xset s 0 0
 exec xset dpms 0 300 600 # Standby screen at 5 mins, off at 10
 exec pulseaudio --start
 exec feh --bg-fill ~/Dropbox/Wallpapers/che_rms.png
 exec dunst
 exec nm-applet
 exec conky -p 5 # pause a bit to let feh go first
-exec xscreensaver -no-splash
 exec xfce4-clipman
 exec compton --config ~/.i3/compton.conf
 # exec xfce4-mixer
