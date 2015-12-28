@@ -11,7 +11,7 @@ set edit_headers=yes
 set sort="threads"
 set sendmail='msmtp'
 
-lists dlang-study@puremagic.com
+subscribe dlang-study@puremagic.com
 
 color hdrdefault cyan default
 color quoted green default
