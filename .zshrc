@@ -87,6 +87,13 @@ alias :qa="echo No escape"
 # ...
 alias rot13="tr '[A-Za-z]' '[N-ZA-Mn-za-m]'"
 
+# Clang!
+if type clang >/dev/null; then
+    export CC=clang
+    export CXX=clang++
+fi
+
+# Neovim!
 if type nvim >/dev/null; then
     alias vim="nvim"
     export EDITOR=nvim
