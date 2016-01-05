@@ -232,3 +232,10 @@ inoremap <C-k> <Esc>O
 " Use Ctrl+d for digraphs
 inoremap <C-d> <C-k>
 cnoremap <C-d> <C-k>
+
+" Neovim: When in the terminal, map our usual returns to normal mode
+" to escape the terminal, then seek to the end of the last non-whitespace
+if (has('nvim'))
+    tnoremap <C-[> <C-\><C-n>:call search('\S', 'b')<CR>
+    tnoremap <Esc> <C-\><C-n>:call search('\S', 'b')<CR>
+endif
