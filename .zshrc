@@ -131,7 +131,7 @@ export PATH=~/src/dlang/dmd/src:~/src/dlang/tools/generated/linux/64:$PATH
 setopt PROMPT_SUBST
 setopt PROMPT_PERCENT
 if [[ -x $(which promptoglyph-vcs) && -x $(which promptoglyph-path) ]] then
-    PROMPT='%B$(promptoglyph-path)$(promptoglyph-vcs --zsh -t 300 --prefix " [") $%b '
+    PROMPT='%B$(promptoglyph-path -n 3)$(promptoglyph-vcs --zsh -t 300 --prefix " [") $%b '
 else
     PROMPT='%1d $ '
 fi
