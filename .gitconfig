@@ -29,5 +29,6 @@
 	default = current
 [merge]
 	ff = false
+	conflictStyle = diff3
 [fetch]
 	prune = true
