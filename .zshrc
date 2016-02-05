@@ -74,9 +74,13 @@ autoload -U colors && colors
 
 alias grep="grep --color=auto"
 alias ls="ls --color=auto"
-alias dmap="tree --du -h --dirsfirst --sort=size"
 
+# Useful commands
+alias dmap="tree --du -h --dirsfirst --sort=size"
 alias pacdiff='sudo DIFFSEARCHPATH="/boot /etc /usr" DIFFPROG="meld" pacdiff'
+
+# Patience diff is best diff
+alias pdiff=git diff --patience --no-index
 
 # Self-deprecating humor
 alias :w="echo E_NOTVIM"
@@ -115,9 +119,9 @@ export PATH=$PATH:~/src/semtex/src/
 # Add some user scripts to the path
 export PATH=~/scripts:$PATH
 
+# Add the crap I wrote to the path
 export PATH=$PATH:~/src/promptoglyph/build
 export PATH=$PATH:~/src/charge
-export PATH=$PATH:~/src/bmpt
 
 export WINEARCH=win32
 
@@ -136,4 +140,5 @@ else
     PROMPT='%1d $ '
 fi
 
+# Top secret work things
 [[ -f ~/.zshrc-work ]] && source ~/.zshrc-work
