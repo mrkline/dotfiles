@@ -47,7 +47,7 @@ URxvt*font: xft:Envy Code R:size=12
 Xft*dpi: 94
 Xft*antialias: true
 Xft*hinting: true
-Xft*hintstyle: hintmedium
+Xft*hintstyle: hintslight
 
 # Stop auto-scrolling when you examine history
 URxvt*scrollTtyOutput:      false
