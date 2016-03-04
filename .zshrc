@@ -113,9 +113,6 @@ fi
 # LESS Options
 export LESS=-x4RSX
 
-# Add semtex to path
-export PATH=$PATH:~/src/semtex/src/
-
 # Add some user scripts to the path
 export PATH=~/scripts:$PATH
 
