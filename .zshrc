@@ -120,6 +120,7 @@ export PATH=~/scripts:$PATH
 export PATH=$PATH:~/src/promptoglyph/build
 export PATH=$PATH:~/src/charge
 
+# Emulate a 32-bit Windows machine with wine
 export WINEARCH=win32
 
 # dem gems
