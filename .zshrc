@@ -110,6 +110,12 @@ else
     export EDITOR=nano
 fi
 
+# bfs!
+alias find="bfs"
+
+# Stupid hipchat rename
+alias hipchat="HipChat4"
+
 # LESS Options
 export LESS=-x4RSX
 
