@@ -1,16 +1,17 @@
 "" Vundle Setup:
 filetype off
 set rtp+=~/.vim/bundle/Vundle.vim
-
 call vundle#begin()
+
 " let Vundle manage Vundle
-Bundle 'VundleVim/Vundle.vim'
+Plugin 'VundleVim/Vundle.vim'
 
 " My bundles:
-Bundle 'ervandew/supertab'
-Bundle 'myusuf3/numbers.vim'
-Bundle 'bling/vim-airline'
-Bundle 'vim-scripts/taglist.vim'
+Plugin 'ervandew/supertab'
+Plugin 'myusuf3/numbers.vim'
+Plugin 'vim-airline/vim-airline'
+Plugin 'vim-airline/vim-airline-themes'
+Plugin 'vim-scripts/taglist.vim'
 
 "" Plugin config:
 
@@ -25,6 +26,7 @@ let g:airline#extensions#whitespace#checks = [ 'trailing' ]
 let g:airline_theme='papercolor'
 
 call vundle#end()
+filetype plugin indent on
 
 " numbers.vim:
 noremap <C-n> :NumbersToggle<CR>
@@ -113,7 +115,6 @@ set backspace=2
 let g:tex_flavor = "latex"
 
 " File type detection and syntax highlighting
-filetype on
 syntax on
 
 " No fancy indentation
