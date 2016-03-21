@@ -1,13 +1,5 @@
 exec xrandr --output LVDS-0 --off --pos 0x0 --output DP-0 --auto --right-of LVDS-0 --output DP-2 --auto --right-of DP-0 --output VGA-0 --right-of DP-2
 
-# Taken from jbear/dotfiles, though his i3 config seems to have disappeared.
-# Cache at http://webcache.googleusercontent.com/search?q=cache:https://github.com/jearbear/dotfiles/blob/master/i3config
-set $background  #1d2021
-set $foreground  #ebdbb2
-set $black       #282828
-set $darkgrey    #928374
-set $white       #ebdbb2
-
 set $mod Mod1
 
 # Font for window titles. Will also be used by the bar unless a different font
@@ -24,7 +16,7 @@ bindsym $mod+Return exec i3-sensible-terminal
 bindsym $mod+Ctrl+q kill
 
 # Use rofi as a launcher
-bindsym $mod+d exec rofi -show run -font 'CMU Concrete 16' -lines 5 -opacity "95" -bc "$black" -bg "$black" -fg "$darkgrey" -hlbg "$black" -hlfg "$white"
+bindsym $mod+d exec rofi -show run -font 'CMU Concrete 16' -lines 5 -opacity "95"
 
 
 # change focus
