@@ -1,0 +1,3 @@
+#!/bin/sh
+rm -fv *.aux *.log *.out *.toc
+rm -rv _minted*
