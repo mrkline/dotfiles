@@ -77,6 +77,8 @@ alias ls="ls --color=auto"
 # Useful commands
 alias dmap="tree --du -h --dirsfirst --sort=size"
 alias pacdiff='sudo DIFFSEARCHPATH="/boot /etc /usr" DIFFPROG="meld" pacdiff'
+alias lss="ls -lShr"
+alias lst="ls -lthr"
 
 # Patience diff is best diff
 alias pdiff=git diff --patience --no-index
@@ -110,7 +112,7 @@ else
 fi
 
 # bfs!
-alias find="bfs"
+#alias find="bfs"
 
 # Stupid hipchat rename
 alias hipchat="HipChat4"
