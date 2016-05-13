@@ -1,6 +1,6 @@
 #!/bin/zsh
-xelatex -halt-on-error -shell-escape "$1"
+lualatex -halt-on-error -shell-escape "$1"
 while (true) {
 inotifywait -e modify "$@"
-xelatex -halt-on-error -shell-escape "$1"
+lualatex -halt-on-error -shell-escape "$1"
 }
