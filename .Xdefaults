@@ -43,7 +43,7 @@ URxvt*transparent: true
 URxvt*shading: 190
 URxvt*internalBorder: 0
 
-URxvt*font: xft:Envy Code R:size=12
+URxvt*font: xft:mononoki:size=12
 Xft*dpi: 94
 Xft*antialias: true
 Xft*hinting: true
