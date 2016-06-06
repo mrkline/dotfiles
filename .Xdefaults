@@ -42,8 +42,9 @@ URxvt*scrollBar_right: true
 URxvt*transparent: true
 URxvt*shading: 190
 URxvt*internalBorder: 0
-
+URxvt*skipBuiltinGlyphs: true
 URxvt*font: xft:mononoki:size=12
+
 Xft*dpi: 94
 Xft*antialias: true
 Xft*hinting: true
