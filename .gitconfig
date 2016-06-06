@@ -21,7 +21,7 @@
 	kill-branch = !git push --delete origin "$@" && git branch -d
 [diff]
 	tool = meld
-	algorithm = patience
+	algorithm = histogram
 [color "sh"]
 	branch = yellow bold
 	dirty = red bold
