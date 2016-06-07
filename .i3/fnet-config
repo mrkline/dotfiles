@@ -1,4 +1,4 @@
-exec xrandr --output LVDS-0 --off --pos 0x0 --output DP-0 --auto --right-of LVDS-0 --output DP-2 --auto --right-of DP-0 --output VGA-0 --right-of DP-2
+exec desk-monitors.sh
 
 set $mod Mod1
 
