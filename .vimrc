@@ -132,6 +132,9 @@ autocmd BufRead,BufNewFile *.sex set filetype=tex
 " *.md is Markdown, not modula 2
 autocmd BufRead,BufNewFile *.md set filetype=markdown
 
+" .rs is Rust
+autocmd BufRead,BufNewFile *.rs set filetype=rust
+
 " Makefiles use tabs
 autocmd BufRead,BufNewFile Makefile setlocal noexpandtab
 
