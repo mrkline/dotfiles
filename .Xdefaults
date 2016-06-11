@@ -39,11 +39,14 @@ URxvt.saveLines: 65535
 # Other looks (fonts, etc.)
 URxvt.scrollstyle: plain
 URxvt.scrollBar_right: true
-URxvt.transparent: true
-URxvt.shading: 190
+# "fake" transparency, done by blitting the background. Slow.
+#URxvt.transparent: true
+#URxvt.shading: 190
+URxvt*depth: 32
+URxvt*background: rgba:ee00/ee00/ee00/f000
 URxvt.internalBorder: 0
 URxvt.skipBuiltinGlyphs: true
-URxvt.buffered: false
+#URxvt.buffered: false
 URxvt.font: xft:mononoki:size=12
 
 Xft*dpi: 94
