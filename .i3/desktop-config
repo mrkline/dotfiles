@@ -96,7 +96,7 @@ assign [class="(?i)transmission"] 10:Web IO
 # ...and launch them with a matching key
 bindsym mod4+8 exec skype
 bindsym mod4+9 exec pavucontrol
-bindsym mod4+0 exec transmission-gtk; exec electrum
+bindsym mod4+0 exec nice transmission-gtk; exec electrum
 
 # Lock the scren with Super-L
 bindsym mod4+l exec lock.sh
@@ -159,4 +159,4 @@ exec dunst
 exec conky -p 5 # pause a bit to let feh go first
 exec xfce4-clipman
 exec compton --config ~/.i3/compton.conf
-exec dropbox
+exec nice dropbox
