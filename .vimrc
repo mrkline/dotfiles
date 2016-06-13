@@ -140,11 +140,12 @@ autocmd BufRead,BufNewFile Makefile setlocal noexpandtab
 
 " https://tools.ietf.org/html/rfc2822#section-2.1.1
 " (78 char lines)
-autocmd FileType mail call MuttSetup()
+autocmd BufRead,BufNewFile,FileType mail call MuttSetup()
 
 function MuttSetup()
 	setlocal colorcolumn=79
 	setlocal formatprg=par\ 78
+	setlocal textwidth=78
 endfunction
 
 " Color preferences
