@@ -22,6 +22,7 @@
 [diff]
 	tool = meld
 	algorithm = histogram
+	compactionHeuristic = true
 [color "sh"]
 	branch = yellow bold
 	dirty = red bold
