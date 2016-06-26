@@ -12,6 +12,7 @@ Plugin 'myusuf3/numbers.vim'
 Plugin 'vim-airline/vim-airline'
 Plugin 'vim-airline/vim-airline-themes'
 Plugin 'vim-scripts/taglist.vim'
+Plugin 'rust-lang/rust.vim'
 
 "" Plugin config:
 
