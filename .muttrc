@@ -6,8 +6,6 @@ set imap_pass=`secret-tool lookup host mail.privateemail.com service imap user "
 set imap_check_subscribed
 set spoolfile=+INBOX
 set record=+Sent
-set header_cache="~/.cache/mutt"
-set message_cachedir="~/mail"
 set postponed="~/postponed"
 set edit_headers=yes
 set sort="reverse-threads"
