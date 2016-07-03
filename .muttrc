@@ -1,10 +1,7 @@
 set editor=`echo \$EDITOR`
 set from="Matt Kline <matt@bitbashing.io>"
-set folder="imaps://mail.privateemail.com"
-set imap_user="matt@bitbashing.io"
-set imap_pass=`secret-tool lookup host mail.privateemail.com service imap user "matt@bitbashing.io"`
-set imap_check_subscribed
-set spoolfile=+INBOX
+set folder="~/mail"
+set spoolfile=+Inbox
 set record=+Sent
 set postponed="~/postponed"
 set edit_headers=yes
