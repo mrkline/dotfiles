@@ -34,7 +34,7 @@
 *foreground: #000000
 
 # Save a whole lotta lines
-URxvt.saveLines: 65535
+#URxvt.saveLines: 65535
 
 # Other looks (fonts, etc.)
 URxvt.scrollstyle: plain
