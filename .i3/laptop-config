@@ -16,7 +16,7 @@ font pango:CMU Concrete 12
 floating_modifier $mod
 
 # start a terminal
-bindsym $mod+Return exec i3-sensible-terminal
+bindsym $mod+Return exec xfce4-terminal
 
 # kill focused window
 bindsym $mod+Ctrl+q kill
@@ -161,7 +161,7 @@ exec xset dpms 0 300 600 # Standby screen at 5 mins, off at 10
 exec pulseaudio --start
 #exec feh --bg-fill ~/Dropbox/Wallpapers/che_rms.png
 exec feh --bg-fill ~/Dropbox/Wallpapers/apollo/csm.jpg
-exec dunst
+#exec dunst
 exec nm-applet
 exec conky -p 5 # pause a bit to let feh go first
 exec xfce4-clipman
