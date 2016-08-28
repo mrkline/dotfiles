@@ -16,7 +16,7 @@ font pango:CMU Concrete 12
 floating_modifier $mod
 
 # start a terminal
-bindsym $mod+Return exec i3-sensible-terminal
+bindsym $mod+Return exec xfce4-terminal
 
 # kill focused window
 bindsym $mod+Ctrl+q kill
@@ -155,7 +155,7 @@ exec xset dpms 0 1800 3600 # Standby screen at 30 mins, off at 60
 exec pulseaudio --start
 exec feh --bg-scale ~/Dropbox/Wallpapers/justice_cross.jpg
 exec nm-applet
-exec dunst
+#exec dunst
 exec conky -p 5 # pause a bit to let feh go first
 exec xfce4-clipman
 exec compton --config ~/.i3/compton.conf
