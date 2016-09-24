@@ -23,4 +23,5 @@ ColorCursor=
 ColorPalette=#266626662666;#999900000000;#000066660000;#b7b787872727;#00000000ffff;#757550507b7b;#404080808080;#bfffbfffbfff;#599959995999;#bfbf00000000;#000080800000;#d4d4afaf3737;#00005f5f8787;#adad7f7fa8a8;#5353a6a6a6a6;#eeeeeeeeeeee
 ColorForeground=#000000000000
 ColorBackground=#eeeeeeeeeeee
+ScrollingOnOutput=FALSE
 
