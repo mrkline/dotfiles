@@ -1,0 +1,47 @@
+Besides cloning https://github.com/mrkline/dotfiles/, symlinking as needed,
+and pulling fonts from Dropbox,
+
+Partitioning/subvolumes:
+- Create btrfs subvolume for root (for easy snapshotting).
+  Grub should pick it up on next grub-mkconfig.
+- Create a btrfs subvolume for /home
+- Create a btrfs subvolume for remotely backed-up files (e.g. git stuff),
+  such as /mnt/hosted.
+
+At work:
+- Don't forget to create user with proper UID and GIDs
+- Add to uucp group for serial access
+- Don't forget to symlink ~/.zshrc-work
+
+System config:
+- Tie keyring unlock to PAM: https://wiki.archlinux.org/index.php/GNOME/Keyring#Automatic_login
+- Font config:
+  - Monitor subpixel layout: http://www.lagom.nl/lcd-test/subpixel.php
+  - Symlinks from /etc/font/conf.avail/ to /etc/font/conf.d/ (e.g. remove 90-synthetic.conf)
+- Consider playing with swappiness (via /etc/sysctl.d)
+
+User config:
+- Symlink gitconfig, desired ~/.config, etc. from dotfiles
+
+Fonts and styling packages:
+- faenza-icon-theme
+- gtk-engine-aurora
+- otf-bitstream-charter
+- otf-cm-unicode
+- otf-eb-garamond
+- otf-ipafont
+- otf-libre-caslon
+- otf-xits
+- ttf-dejavu
+- ttf-droid
+- ttf-envy-code-r
+- ttf-freefont
+- ttf-inconsolata-gwf
+- ttf-indic-otf
+- ttf-lato
+- ttf-liberation
+- ttf-linux-libertine
+- ttf-ms-fonts
+- ttf-sil-fonts
+- ttf-symbola
+- ttf-ubuntu-font-family
