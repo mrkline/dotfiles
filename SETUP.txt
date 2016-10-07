@@ -8,17 +8,15 @@ Partitioning/subvolumes:
 - Create a btrfs subvolume for remotely backed-up files (e.g. git stuff),
   such as /mnt/hosted.
 
-At work:
-- Don't forget to create user with proper UID and GIDs
-- Add to uucp group for serial access
-- Don't forget to symlink ~/.zshrc-work
-
 System config:
+- Install polkit
 - Tie keyring unlock to PAM: https://wiki.archlinux.org/index.php/GNOME/Keyring#Automatic_login
 - Font config:
   - Monitor subpixel layout: http://www.lagom.nl/lcd-test/subpixel.php
   - Symlinks from /etc/font/conf.avail/ to /etc/font/conf.d/ (e.g. remove 90-synthetic.conf)
 - Consider playing with swappiness (via /etc/sysctl.d)
+- Disable laptop close sleep in /etc/systemd/logind.conf
+- Configure Network Manger to use dhclient (dhcp=dhclient)
 
 User config:
 - Symlink gitconfig, desired ~/.config, etc. from dotfiles
@@ -26,6 +24,7 @@ User config:
 Fonts and styling packages:
 - faenza-icon-theme
 - gtk-engine-aurora
+- tex-gyre-fonts
 - otf-bitstream-charter
 - otf-cm-unicode
 - otf-eb-garamond
@@ -45,3 +44,8 @@ Fonts and styling packages:
 - ttf-sil-fonts
 - ttf-symbola
 - ttf-ubuntu-font-family
+
+At work:
+- Don't forget to create user with proper UID and GIDs
+- Add to uucp group for serial access
+- Don't forget to symlink ~/.zshrc-work
