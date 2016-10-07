@@ -34,7 +34,6 @@ max_specials 1024
 TEXT
 
 # SYSTEM
-User:${alignr}${uid_name 1000}
 Kernel:${alignr}$kernel ($machine)
 
 # CPU
