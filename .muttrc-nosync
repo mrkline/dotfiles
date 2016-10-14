@@ -1,0 +1,33 @@
+set editor=`echo \$EDITOR`
+set from="Matt Kline <matt@bitbashing.io>"
+set folder="imaps://mail.privateemail.com"
+set imap_user="matt@bitbashing.io"
+set imap_check_subscribed
+set spoolfile=+INBOX
+set record=+Sent
+set postponed="~/postponed"
+set edit_headers=yes
+set sort="reverse-threads"
+set sendmail='msmtp'
+
+subscribe dlang-study@puremagic.com
+
+color hdrdefault cyan default
+color quoted green default
+color signature blue default
+color attachment red default
+color prompt green default
+color message black default
+color error brightred default
+color indicator default cyan
+color status green default
+color tree black default
+color normal black default
+color markers black default
+color search black default
+color tilde brightmagenta default
+color index blue default ~F
+color index green default "~N|~O"
+
+# color body brightwhite default '\*+[^*]+\*+'
+# color body brightwhite default '_+[^_]+_+'
