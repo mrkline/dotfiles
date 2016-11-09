@@ -98,6 +98,9 @@ if type clang >/dev/null; then
     export CXX=clang++
 fi
 
+# Native rust builds!
+export RUSTFLAGS="-C target-cpu=native"
+
 # Neovim!
 if type nvim >/dev/null; then
     alias vim="nvim"
