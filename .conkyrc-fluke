@@ -1,4 +1,4 @@
--- Conky config for my desktop
+-- Conky config for my work laptop
 -- Modified fom from https://bbs.archlinux.org/viewtopic.php?pid=1084822#p1084822
 
 conky.config = {

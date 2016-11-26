@@ -1,41 +1,41 @@
-# Conky config for my desktop
-# Modified fom from https://bbs.archlinux.org/viewtopic.php?pid=1084822#p1084822
-#-- Process --
-background              no
-double_buffer           yes
-update_interval         1
-cpu_avg_samples         5
-net_avg_samples         5
-no_buffers              yes
-#-- Window base (for if we choose to launch as a window) --
-own_window              yes
-own_window_type         override
-own_window_transparent  yes
-#-- Window looks --
-alignment               top_left
-gap_x                   1665
-gap_y                   34
-minimum_size            250 5
-border_width            0
-draw_shades             no
-draw_outline            no
-draw_borders            no
-draw_graph_borders      yes
-stippled_borders        0
-default_color           edb951
-default_outline_color   edb951
-border_inner_margin     5
-border_outer_margin     5
-border_width            5
-#default_shade_color     black
-#-- Font --
-use_xft                 yes
-xftalpha                1
-xftfont                 Envy Code R:size=10
+-- Conky config for my desktop
+-- Modified fom from https://bbs.archlinux.org/viewtopic.php?pid=1084822#p1084822
 
-# stuff after 'TEXT' will be formatted on screen
-TEXT
+conky.config = {
+	background = false,
+	double_buffer = true,
+	update_interval = 1,
+	cpu_avg_samples = 5,
+	net_avg_samples = 5,
+	no_buffers = true,
+	-- Window base (for if we choose to launch as a window) --
+	own_window = true,
+	own_window_type = 'override',
+	own_window_transparent = true,
+	-- Window looks --
+	alignment = 'top_left',
+	gap_x = 1665,
+	gap_y = 34,
+	minimum_width = 250,
+	minimum_height = 5,
+	border_width = 0,
+	draw_shades = false,
+	draw_outline = false,
+	draw_borders = false,
+	draw_graph_borders = true,
+	stippled_borders = 0,
+	default_color = 'edb951',
+	default_outline_color = 'edb951',
+	border_inner_margin = 5,
+	border_outer_margin = 5,
+	border_width = 5,
+	-- Font --
+	use_xft = true,
+	xftalpha = 1,
+	font = 'mononoki:size=12'
+}
 
+conky.text = [[
 # SYSTEM
 User:${alignr}${uid_name 1000}
 Kernel:${alignr}$kernel ($machine)
@@ -66,3 +66,4 @@ ${if_mounted /windows-data}/w-d${goto 60}${fs_used /windows-data}${alignr}${fs_u
 
 ${downspeedgraph enp0s25 20,120 000000 edb951 -t} ${upspeedgraph enp0s25 20,120 000000 edb951 -t}
 D: ${downspeed enp0s25}${goto 145}U: ${upspeed enp0s25}
+]]

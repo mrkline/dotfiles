@@ -1,19 +1,19 @@
-# Modified fom from https://github.com/NorthAntrim/i3-config/blob/master/.i3/conkyrc
-#-- Process --
-background no
-out_to_console yes
-out_to_x no
-update_interval 1
-cpu_avg_samples 5
-net_avg_samples 5
-no_buffers yes
-pad_percents 2
-short_units
-use_spacer left
-#-- Window base (for if we choose to launch as a window) --
+-- Modified fom from https://github.com/NorthAntrim/i3-config/blob/master/.i3/conkyrc
 
-# stuff after 'TEXT' will be formatted on screen
-TEXT
+conky.config = {
+	background = false,
+	out_to_console = true,
+	out_to_x = false,
+	update_interval = 1,
+	cpu_avg_samples = 5,
+	net_avg_samples = 5,
+	no_buffers = true,
+	pad_percents = 2,
+	short_units = true,
+	use_spacer = 'left'
+}
+
+conky.text = [[
 [
 { "full_text":"CPU: ${cpu cpu0}%", "color":"\#edb951"},
 { "full_text":"MEM: $memperc%", "color":"\#edb951"},
@@ -21,3 +21,4 @@ TEXT
 { "full_text":"CST: ${tztime US/Central %a, %F %H:%M}", "color":"\#edb951"},
 { "full_text":"${time %a, %F %H:%M:%S}", "color":"\#edb951"}
 ],
+]]
