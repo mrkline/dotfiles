@@ -7,7 +7,8 @@ call vundle#begin()
 Plugin 'VundleVim/Vundle.vim'
 
 " My bundles:
-Plugin 'ervandew/supertab'
+"Plugin 'ervandew/supertab'
+Plugin 'valloric/youcompleteme'
 Plugin 'myusuf3/numbers.vim'
 Plugin 'vim-airline/vim-airline'
 Plugin 'vim-airline/vim-airline-themes'
@@ -21,6 +22,11 @@ Plugin 'rust-lang/rust.vim'
 "let g:SuperTabDefaultCompletionType="context"
 "let g:SuperTabMappingForward='<c-space>'
 "let g:SuperTabMappingBackward='<c-s-space>'
+
+" YouCompleteMe:
+let g:ycm_extra_conf_globlist = ['~/mantis-top/*']
+let g:ycm_global_ycm_extra_conf = '~/.vim/bundle/youcompleteme/ycm_extra_conf.py'
+let g:ycm_autoclose_preview_window_after_insertion = 1
 
 " Airline's mixed indentation messages are often wrong. Turn them off
 let g:airline#extensions#whitespace#checks = [ 'trailing' ]
