@@ -26,6 +26,7 @@ Plugin 'rust-lang/rust.vim'
 " YouCompleteMe:
 let g:ycm_extra_conf_globlist = ['~/mantis-top/*']
 let g:ycm_global_ycm_extra_conf = '~/.vim/bundle/youcompleteme/ycm_extra_conf.py'
+let g:ycm_min_num_of_chars_for_completion = 8
 let g:ycm_autoclose_preview_window_after_insertion = 1
 
 " Airline's mixed indentation messages are often wrong. Turn them off
