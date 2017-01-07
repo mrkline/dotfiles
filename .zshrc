@@ -150,3 +150,5 @@ fi
 
 # Top secret work things
 [[ -f ~/.zshrc-work ]] && source ~/.zshrc-work
+# Clear error code so I'm not greeted with a red "1" at home
+true
