@@ -24,7 +24,6 @@ User config:
 Fonts and styling packages:
 - faenza-icon-theme
 - gtk-engine-aurora
-- tex-gyre-fonts
 - otf-bitstream-charter
 - otf-cm-unicode
 - otf-eb-garamond
