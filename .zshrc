@@ -98,6 +98,12 @@ if type clang >/dev/null; then
     export CXX=clang++
 fi
 
+# Other compiler fun.
+CPPFLAGS="-D_FORTIFY_SOURCE=2"
+CFLAGS="-march=native -pipe -fstack-protector-strong"
+CXXFLAGS="-march=native -pipe -fstack-protector-strong"
+LDFLAGS="-Wl,-O1,--sort-common,--as-needed,-z,relro,-z,now"
+
 # Native rust builds!
 export RUSTFLAGS="-C target-cpu=native"
 
