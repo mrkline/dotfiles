@@ -9,6 +9,14 @@ set sort="reverse-threads"
 set sendmail='msmtp'
 set send_charset="us-ascii:utf-8"
 
+source /usr/share/doc/mutt/samples/gpg.rc
+set crypt_autosign = yes
+set crypt_replyencrypt = yes
+set crypt_replysign = yes
+set crypt_replysignencrypted = yes
+set pgp_use_gpg_agent = yes
+set pgp_sign_as = EE7B9B6062B3B7A6
+
 subscribe dlang-study@puremagic.com
 
 color hdrdefault cyan default
@@ -30,3 +38,4 @@ color index green default "~N|~O"
 
 # color body brightwhite default '\*+[^*]+\*+'
 # color body brightwhite default '_+[^_]+_+'
+#
