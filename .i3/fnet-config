@@ -166,7 +166,7 @@ exec xset s 0 0 # Screensaver off
 exec xset dpms 0 1800 3600 # Standby screen at 30 mins, off at 60
 exec compton --config ~/.i3/compton.conf
 #exec dunst
-exec feh --bg-fill -B black /home/mkline/Dropbox/Wallpapers/apollo/csm.jpg
+exec feh --bg-fill /home/mkline/apollo11.jpeg
 exec nm-applet
 exec conky -p 5 # pause a bit to let feh go first
 exec xfce4-clipman
