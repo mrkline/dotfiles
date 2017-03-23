@@ -1,2 +1,2 @@
 #!/bin/sh
-pacmd load-module module-remap-sink sink_name=mono master=$(pacmd list-sinks | grep -oP 'name:\s<\K.*analog.*(?=>)') channels=2 channel_map=mono,mono
+pacmd load-module module-remap-sink sink_name=mono master=$(pacmd list-sinks | grep -oP 'name:\s<\K.*analog[^>]*') channels=2 channel_map=mono,mono
