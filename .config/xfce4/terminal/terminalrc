@@ -23,4 +23,5 @@ ColorPalette=#266626662666;#999900000000;#000066660000;#b7b787872727;#00000000ff
 ColorForeground=#000000000000
 ColorBackground=#eeeeeeeeeeee
 ScrollingOnOutput=FALSE
+ShortcutsNoMenukey=TRUE
 
