@@ -1,6 +1,8 @@
 #!/bin/zsh
-lualatex -halt-on-error -shell-escape "$1"
+makeit="latexmk -lualatex -latexoption=-halt-on-error -latexoption=-shell-escape $1"
+
+eval $makeit
 while (true) {
 inotifywait -e modify "$@"
-lualatex -halt-on-error -shell-escape "$1"
+eval $makeit
 }
