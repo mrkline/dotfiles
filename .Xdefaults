@@ -42,19 +42,19 @@ URxvt.scrollBar_right: true
 # "fake" transparency, done by blitting the background. Slow.
 #URxvt.transparent: true
 #URxvt.shading: 190
-URxvt*depth: 32
-URxvt*background: rgba:ee00/ee00/ee00/f000
+URxvt.depth: 32
+URxvt.background: rgba:ee00/ee00/ee00/f000
 URxvt.internalBorder: 0
 URxvt.skipBuiltinGlyphs: true
 #URxvt.buffered: false
 URxvt.font: xft:mononoki:size=12
 
-Xft*dpi: 94
-Xft*antialias: true
-Xft*hinting: true
-Xft*hintstyle: hintslight
-Xft*rgba: rgb
-#Xft*autohint: true
+Xft.dpi: 94
+Xft.antialias: true
+Xft.hinting: true
+Xft.hintstyle: hintslight
+Xft.rgba: rgb
+#Xft.autohint: true
 
 # Stop auto-scrolling when you examine history
 URxvt.scrollTtyOutput:      false
