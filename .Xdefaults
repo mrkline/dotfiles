@@ -54,7 +54,8 @@ Xft.antialias: true
 Xft.hinting: true
 Xft.hintstyle: hintslight
 Xft.rgba: rgb
-!Xft.autohint: true
+Xft.lcdfilter: lcddefault
+Xft.autohint: false
 
 ! Stop auto-scrolling when you examine history
 URxvt.scrollTtyOutput:      false
