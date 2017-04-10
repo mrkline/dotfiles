@@ -1,0 +1,10 @@
+#!/bin/sh
+set -e
+
+cd /tmp
+cower -d linux-ck
+cd linux-ck
+patch -Np1 -i ~/Dropbox/ck-build.patch
+nice makepkg -sc
+sudo cp -iv *.pkg.tar.xz /var/cache/pacman/pkg/
+sudo nice pacman -U *.pkg.tar.xz
