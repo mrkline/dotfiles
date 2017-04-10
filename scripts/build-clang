@@ -1,0 +1,19 @@
+#!/bin/sh
+set -e
+
+# Restor CC and CXX to GCC so we don't build the bleeding edge with
+# a slightly less-bleeding edge.
+unset CC CXX
+
+if [ -z $LLVM_DIR ]; then
+    echo "Set LLVM_DIR to the llvm-svn AUR directory"
+    exit 1
+fi
+
+cd "$LLVM_DIR"
+git fetch && git ff
+nice makepkg -sc
+rm -v llvm-ocaml-svn-*.pkg.tar.xz
+sudo cp -iv *.pkg.tar.xz /var/cache/pacman/pkg/
+sudo nice pacman -U *.pkg.tar.xz
+rm -v *.pkg.tar.xz
