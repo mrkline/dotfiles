@@ -11,5 +11,7 @@ if [ -z $LLVM_DIR ]; then
 fi
 
 cd "$LLVM_DIR"
-git fetch && git ff
-nice makepkg -sc
+rm -v llvm-ocaml-svn-*.pkg.tar.xz
+sudo cp -iv *.pkg.tar.xz /var/cache/pacman/pkg/
+sudo nice pacman -U *.pkg.tar.xz
+rm -v *.pkg.tar.xz
