@@ -22,7 +22,7 @@ bindsym $mod+Return exec xfce4-terminal
 bindsym $mod+Ctrl+q kill
 
 # Use rofi as a launcher
-bindsym $mod+d exec rofi -show run -font 'CMU Concrete 16' -lines 5 -opacity "95"
+bindsym $mod+d exec rofi -show run -font 'CMU Concrete 16' -lines 5 -opacity "95" -bc "$black" -bg "$black" -fg "$darkgrey" -hlbg "$black" -hlfg "$white"
 
 # change focus
 bindsym $mod+h focus left
@@ -159,6 +159,7 @@ bindsym $mod+Ctrl+v exec xfce4-mixer
 exec xset s 0 0
 exec xset dpms 0 300 600 # Standby screen at 5 mins, off at 10
 exec nice dropbox
+#exec feh --bg-fill ~/Dropbox/Wallpapers/che_rms.png
 exec feh --bg-fill ~/Dropbox/Wallpapers/apollo/csm.jpg
 #exec dunst
 exec nm-applet
