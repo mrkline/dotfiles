@@ -24,8 +24,14 @@ ColorForeground=#000000000000
 ColorBackground=#eeeeeeeeeeee
 ScrollingOnOutput=FALSE
 ShortcutsNoMenukey=TRUE
-MiscCopyOnSelect=FALSE
+MiscCopyOnSelect=TRUE
 MiscRewrapOnResize=TRUE
 ScrollingUnlimited=TRUE
 TitleMode=TERMINAL_TITLE_REPLACE
+MiscBellUrgent=FALSE
+MiscMouseWheelZoom=TRUE
+MiscMiddleClickOpensUri=FALSE
+MiscDefaultWorkingDir=
+MiscUseShiftArrowsToScroll=FALSE
+MiscSlimTabs=FALSE
 
