@@ -165,9 +165,6 @@ else
     PROMPT='%F{red}%(?..%? )%f%1d $ '
 fi
 
-# Top secret work things
-[[ -f ~/.zshrc-work ]] && source ~/.zshrc-work
-
 # Machine-specific nonsense
 [[ -f ~/.zshrc-machine ]] && source ~/.zshrc-machine
 # Clear error code so I'm not greeted with a red "1" at home
