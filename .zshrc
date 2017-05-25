@@ -92,6 +92,7 @@ alias :qa="echo No escape"
 # ...
 alias rot13="tr '[A-Za-z]' '[N-ZA-Mn-za-m]'"
 
+# Helps pinentry behave when unlocking GPG keys
 export GPG_TTY=$(tty)
 
 # Clang!
