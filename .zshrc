@@ -107,6 +107,10 @@ CFLAGS="-march=native -pipe -fstack-protector-strong"
 CXXFLAGS="-march=native -pipe -fstack-protector-strong"
 LDFLAGS="-Wl,-O1,--sort-common,--as-needed,-z,relro,-z,now"
 
+# Stop libstdc++ misadventures:
+# https://www.zerotier.com/blog/2017-05-05-theleak.shtml
+export GLIBCXX_FORCE_NEW=y
+
 # Native rust builds!
 export RUSTFLAGS="-C target-cpu=native"
 
