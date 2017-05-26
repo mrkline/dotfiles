@@ -5,4 +5,4 @@ cd /tmp
 cower -d linux-ck
 cd linux-ck
 patch -Np1 -i ~/Dropbox/ck-build.patch
-nice makepkg -sc
+time nice makepkg -sc
