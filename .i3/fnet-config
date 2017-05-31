@@ -164,7 +164,7 @@ bindsym $mod+Ctrl+v exec xfce4-mixer
 # Startup stuff
 exec xset s 0 0 # Screensaver off
 exec xset dpms 0 1800 3600 # Standby screen at 30 mins, off at 60
-exec compton --config ~/.i3/compton.conf
+exec compton
 #exec dunst
 exec feh --bg-fill /home/mkline/apollo11.jpeg
 exec nm-applet
