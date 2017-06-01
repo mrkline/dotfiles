@@ -128,7 +128,7 @@ else
 fi
 
 # bfs!
-alias find="bfs"
+# alias find="bfs"
 
 # Clone AUR packages to /tmp/ - I don't want them filling up .cache/
 export AURDEST=/tmp/pacaur-aur-dest
