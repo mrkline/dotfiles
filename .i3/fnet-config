@@ -16,8 +16,7 @@ bindsym $mod+Return exec xfce4-terminal
 bindsym $mod+Ctrl+q kill
 
 # Use rofi as a launcher
-bindsym $mod+d exec rofi -show run -font 'CMU Concrete 16' -lines 5 -opacity "95"
-
+bindsym $mod+d exec rofi -show run -font 'CMU Concrete 14' -lines 5 -opacity "95"
 
 # change focus
 bindsym $mod+h focus left
