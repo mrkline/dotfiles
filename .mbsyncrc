@@ -2,7 +2,7 @@ IMAPAccount bitbashing
 # Address to connect to
 Host mail.privateemail.com
 User matt@bitbashing.io
-PassCmd "secret-tool lookup host mail.privateemail.com service imap user matt@bitbashing.io"
+PassCmd "pass email"
 # Use SSL
 SSLType IMAPS
 # The following line should work. If get certificate errors, uncomment the two following lines and read the "Troubleshooting" section.
