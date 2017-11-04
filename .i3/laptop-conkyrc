@@ -4,7 +4,7 @@ conky.config = {
 	background = false,
 	out_to_console = true,
 	out_to_x = false,
-	update_interval = 1,
+	update_interval = 5,
 	cpu_avg_samples = 5,
 	net_avg_samples = 5,
 	no_buffers = true,
@@ -18,8 +18,8 @@ conky.text = [[
 { "full_text":"CPU: ${cpu cpu0}%", "color":"\#ffffff"},
 { "full_text":"MEM: $memperc%", "color":"\#ffffff"},
 { "full_text":"SWP: $swapperc%", "color":"\#ffffff"},
-{ "full_text":"${execi 10 charge}", "color":"\#ffffff"},
+{ "full_text":"${exec charge}", "color":"\#ffffff"},
 { "full_text":"CT: ${tztime US/Central %a, %F %H:%M}", "color":"\#ffffff"},
-{ "full_text":"Me: ${time %a, %F %H:%M:%S}", "color":"\#ffffff"}
+{ "full_text":"Me: ${time %a, %F %H:%M}", "color":"\#ffffff"}
 ],
 ]]
