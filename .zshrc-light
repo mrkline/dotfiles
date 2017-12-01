@@ -1,31 +1,147 @@
-# The following lines were added by compinstall
+# Completion options from oh-my-zsh:
+unsetopt menu_complete
+setopt auto_menu
+setopt complete_in_word
+setopt always_to_end
 
-zstyle ':completion:*' completer _expand _complete _ignored
-zstyle ':completion:*' format 'Completing %d'
-zstyle ':completion:*' list-colors ''
-zstyle ':completion:*' verbose true
-zstyle :compinstall filename '~mkline/.zshrc'
-
-autoload -Uz compinit
+# Fire up completion
+autoload -U compinit
 compinit
-# End of lines added by compinstall
 
-HISTFILE=~/.histfile
-HISTSIZE=1000
-SAVEHIST=1000
-# Ignore duplicate lines
-HISTCONTROL=ignoreboth
-setopt appendhistory nomatch
-unsetopt autocd beep extendedglob notify
+# History options from oh-my-zsh:
+if [ -z $HISTFILE ]; then
+    HISTFILE=$HOME/.zsh_history
+fi
+HISTSIZE=10000
+SAVEHIST=10000
 
-PS1='%n $ '
+setopt extended_history
+setopt hist_ignore_dups # ignore duplication command history list
+setopt hist_ignore_space
+setopt hist_verify
+setopt inc_append_history_time
 
-# ls aliases
-alias ll='ls --color=auto -alF'
-alias la='ls --color=auto -A'
+bindkey -e
 
-# Color
-alias ls='ls --color=auto'
-alias grep='grep --color=auto'
-alias fgrep='fgrep --color=auto'
-alias egrep='egrep --color=auto'
+# Key bindings from the Arch wiki:
+
+# create a zkbd compatible hash;
+# to add other keys to this hash, see: man 5 terminfo
+typeset -A key
+
+key[Home]=${terminfo[khome]}
+
+key[End]=${terminfo[kend]}
+key[Insert]=${terminfo[kich1]}
+key[Delete]=${terminfo[kdch1]}
+key[Up]=${terminfo[kcuu1]}
+key[Down]=${terminfo[kcud1]}
+key[Left]=${terminfo[kcub1]}
+key[Right]=${terminfo[kcuf1]}
+key[PageUp]=${terminfo[kpp]}
+key[PageDown]=${terminfo[knp]}
+
+# setup key accordingly
+[[ -n "${key[Home]}"     ]]  && bindkey  "${key[Home]}"     beginning-of-line
+[[ -n "${key[End]}"      ]]  && bindkey  "${key[End]}"      end-of-line
+[[ -n "${key[Insert]}"   ]]  && bindkey  "${key[Insert]}"   overwrite-mode
+[[ -n "${key[Delete]}"   ]]  && bindkey  "${key[Delete]}"   delete-char
+[[ -n "${key[Up]}"       ]]  && bindkey  "${key[Up]}"       up-line-or-history
+[[ -n "${key[Down]}"     ]]  && bindkey  "${key[Down]}"     down-line-or-history
+[[ -n "${key[Left]}"     ]]  && bindkey  "${key[Left]}"     backward-char
+[[ -n "${key[Right]}"    ]]  && bindkey  "${key[Right]}"    forward-char
+[[ -n "${key[PageUp]}"   ]]  && bindkey  "${key[PageUp]}"   beginning-of-buffer-or-history
+[[ -n "${key[PageDown]}" ]]  && bindkey  "${key[PageDown]}" end-of-buffer-or-history
+
+bindkey '^[[1;5C' forward-word # [Ctrl-RightArrow] - move forward one word
+bindkey '^[[1;5D' backward-word # [Ctrl-LeftArrow] - move backward one word
+
+# This implements a bash-style backward-kill-word.
+# To use,
+#   zle -N bash-backward-kill-word
+#   bindkey '...' bash-backward-kill-word
+function bash-backward-kill-word {
+    local WORDCHARS=''
+    zle .backward-kill-word
+}
+
+zle -N bash-backward-kill-word
+bindkey '^W' bash-backward-kill-word
+
+# Yay colors
+autoload -U colors && colors
+
+alias grep="grep --color=auto"
+alias ls="ls --color=auto"
+
+# Useful commands
+alias dmap="tree --du -h --dirsfirst --sort=size"
+alias lss="ls -lShr"
+alias lst="ls -lthr"
+
+# Patience diff is best diff
+alias pdiff=git diff --patience --no-index
+
+# Self-deprecating humor
+alias :w="echo E_NOTVIM"
+alias :wq="echo E_I_AM_A_SHELL"
+alias :q="echo In Russia, shell quits you!"
+alias :qa="echo No escape"
+
+# ...
+alias rot13="tr '[A-Za-z]' '[N-ZA-Mn-za-m]'"
+
+# Helps pinentry behave when unlocking GPG keys
+export GPG_TTY=$(tty)
+
+# Clang!
+if type clang >/dev/null; then
+    export CC=clang
+    export CXX=clang++
+fi
+
+# Other compiler fun.
+CPPFLAGS="-D_FORTIFY_SOURCE=2"
+CFLAGS="-march=native -pipe -fstack-protector-strong"
+CXXFLAGS="-march=native -pipe -fstack-protector-strong"
+LDFLAGS="-Wl,-O1,--sort-common,--as-needed,-z,relro,-z,now"
+
+# Stop libstdc++ misadventures:
+# https://www.zerotier.com/blog/2017-05-05-theleak.shtml
+export GLIBCXX_FORCE_NEW=y
+
+# Native rust builds!
+export RUSTFLAGS="-C target-cpu=native"
+
+# Neovim!
+if type nvim >/dev/null; then
+    alias vim="nvim"
+    alias vimterm="nvim -c 'terminal'"
+    export EDITOR=nvim
+elif type vim >/dev/null; then
+    export EDITOR=vim
+elif type vi >/dev/null; then
+    export EDITOR=vi
+else
+    export EDITOR=nano
+fi
+
+
+# Saves some stat() calls, FWIW:
+# https://blog.packagecloud.io/eng/2017/02/21/set-environment-variable-save-thousands-of-system-calls/
+export TZ=":/etc/localtime"
+
+# LESS Options
+export LESS=-x4RSX
+
+
+# Emulate a 32-bit Windows machine with wine
+export WINEARCH=win32
+
+# Set up our prompt
+PROMPT='%F{red}%(?..%? )%f%1d $ '
+
+# Machine-specific nonsense
+[[ -f ~/.zshrc-machine ]] && source ~/.zshrc-machine
+# Clear error code so I'm not greeted with a red "1" at home
+true
