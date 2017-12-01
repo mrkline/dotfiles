@@ -7,21 +7,15 @@ call vundle#begin()
 Plugin 'VundleVim/Vundle.vim'
 
 " My bundles:
-"Plugin 'ervandew/supertab'
-Plugin 'valloric/youcompleteme'
 Plugin 'myusuf3/numbers.vim'
 Plugin 'vim-airline/vim-airline'
 Plugin 'vim-airline/vim-airline-themes'
-Plugin 'vim-scripts/taglist.vim'
+Plugin 'valloric/youcompleteme'
 Plugin 'rust-lang/rust.vim'
+Plugin 'tpope/vim-fugitive'
+Plugin 'wincent/command-t'
 
 "" Plugin config:
-
-" SuperTab:
-" SuperTab option for context aware completion
-"let g:SuperTabDefaultCompletionType="context"
-"let g:SuperTabMappingForward='<c-space>'
-"let g:SuperTabMappingBackward='<c-s-space>'
 
 " YouCompleteMe:
 let g:ycm_extra_conf_globlist = ['~/mantis-top/*']
@@ -33,6 +27,9 @@ let g:ycm_enable_diagnostic_signs = 0
 " Airline's mixed indentation messages are often wrong. Turn them off
 let g:airline#extensions#whitespace#checks = [ 'trailing' ]
 let g:airline_theme='papercolor'
+
+" Use git ls-files and find to scan in Command-T
+let g:CommandTFileScanner = "git"
 
 call vundle#end()
 filetype plugin indent on
@@ -217,7 +214,7 @@ noremap <leader>ss :call ToggleSpellSuggest()<CR>
 " Enable and disable automatic hard wrapping
 noremap <leader>w :call WordProcessorMode()<CR>
 " Trim trailing whitespace
-noremap <leader>t :call RemoveTrailingWhitespace()<CR>
+noremap <leader>rw :call RemoveTrailingWhitespace()<CR>
 " ctags this directory using C++ settings
 noremap <leader>c :!ctags --sort=1 --c++-kinds=+p --fields=+iaS --extra=+fq ./*<CR>
 " Build main.stex in the current directory (useful for note-taking)
