@@ -130,9 +130,6 @@ fi
 # bfs!
 # alias find="bfs"
 
-# Clone AUR packages to /tmp/ - I don't want them filling up .cache/
-export AURDEST=/tmp/pacaur-aur-dest
-
 # Saves some stat() calls, FWIW:
 # https://blog.packagecloud.io/eng/2017/02/21/set-environment-variable-save-thousands-of-system-calls/
 export TZ=":/etc/localtime"
