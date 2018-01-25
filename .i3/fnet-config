@@ -153,6 +153,7 @@ bar {
         font pango:mononoki 14
         position top
         status_command ~/.i3/conky
+        tray_output primary
 }
 
 # Keyboard shortcuts
