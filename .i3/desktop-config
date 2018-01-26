@@ -22,7 +22,7 @@ bindsym $mod+Return exec xfce4-terminal
 bindsym $mod+Ctrl+q kill
 
 # Use rofi as a launcher
-bindsym $mod+d exec rofi -show run -font 'Klein 16' -lines 5 -opacity 95
+bindsym $mod+d exec rofi -show run -font 'mononoki 14' -lines 5 -opacity 95
 
 # change focus
 bindsym $mod+h focus left
@@ -71,9 +71,9 @@ bindsym $mod+4 workspace 4
 bindsym $mod+5 workspace 5
 bindsym $mod+6 workspace 6
 bindsym $mod+7 workspace 7
-bindsym $mod+8 workspace 8:Skype
+bindsym $mod+8 workspace 8
 bindsym $mod+9 workspace 9:Volume
-bindsym $mod+0 workspace 10:Web IO
+bindsym $mod+0 workspace 10
 
 # move focused container to workspace
 bindsym $mod+Ctrl+1 move container to workspace 1
@@ -83,15 +83,15 @@ bindsym $mod+Ctrl+4 move container to workspace 4
 bindsym $mod+Ctrl+5 move container to workspace 5
 bindsym $mod+Ctrl+6 move container to workspace 6
 bindsym $mod+Ctrl+7 move container to workspace 7
-bindsym $mod+Ctrl+8 move container to workspace 8:Skype
+bindsym $mod+Ctrl+8 move container to workspace 8
 bindsym $mod+Ctrl+9 move container to workspace 9:Volume
-bindsym $mod+Ctrl+0 move container to workspace 10:Web IO
+bindsym $mod+Ctrl+0 move container to workspace 10
 
 # Assign certain programs to certain windows
-assign [class="(?i)skype"] 8:Skype
+assign [class="(?i)skype"] 8
 assign [class="(?i)pavu"] 9:Volume
-assign [class="(?i)electrum"] 10:Web IO
-assign [class="(?i)transmission"] 10:Web IO
+assign [class="(?i)electrum"] 10
+assign [class="(?i)transmission"] 10
 
 # ...and launch them with a matching key
 bindsym mod4+8 exec skype
