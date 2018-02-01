@@ -71,7 +71,7 @@ bindsym $mod+4 workspace 4
 bindsym $mod+5 workspace 5
 bindsym $mod+6 workspace 6
 bindsym $mod+7 workspace 7
-bindsym $mod+8 workspace 8:Skype
+bindsym $mod+8 workspace 8
 bindsym $mod+9 workspace 9:Volume
 bindsym $mod+0 workspace 10:Web IO
 
@@ -83,12 +83,13 @@ bindsym $mod+Ctrl+4 move container to workspace 4
 bindsym $mod+Ctrl+5 move container to workspace 5
 bindsym $mod+Ctrl+6 move container to workspace 6
 bindsym $mod+Ctrl+7 move container to workspace 7
-bindsym $mod+Ctrl+8 move container to workspace 8:Skype
+bindsym $mod+Ctrl+8 move container to workspace 8
 bindsym $mod+Ctrl+9 move container to workspace 9:Volume
 bindsym $mod+Ctrl+0 move container to workspace 10:Web IO
 
 # Assign certain programs to certain windows
-assign [class="(?i)skype"] 8:Skype
+assign [class="(?i)skype"] 8
+assign [class="(?i)discord"] 8
 assign [class="(?i)pavu"] 9:Volume
 assign [class="(?i)electrum"] 10:Web IO
 assign [class="(?i)transmission"] 10:Web IO
