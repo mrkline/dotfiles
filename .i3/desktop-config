@@ -89,6 +89,8 @@ bindsym $mod+Ctrl+0 move container to workspace 10
 
 # Assign certain programs to certain windows
 assign [class="(?i)skype"] 8
+assign [class="(?i)discord"] 8
+assign [class="(?i)teamspeak"] 8
 assign [class="(?i)pavu"] 9:Volume
 assign [class="(?i)electrum"] 10
 assign [class="(?i)transmission"] 10
