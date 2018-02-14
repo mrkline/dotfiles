@@ -34,4 +34,5 @@ MiscMiddleClickOpensUri=FALSE
 MiscDefaultWorkingDir=
 MiscUseShiftArrowsToScroll=FALSE
 MiscSlimTabs=FALSE
+ShortcutsNoHelpkey=TRUE
 
