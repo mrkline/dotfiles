@@ -13,7 +13,7 @@ Plugin 'vim-airline/vim-airline-themes'
 Plugin 'valloric/youcompleteme'
 Plugin 'rust-lang/rust.vim'
 Plugin 'tpope/vim-fugitive'
-Plugin 'wincent/command-t'
+"Plugin 'wincent/command-t'
 
 "" Plugin config:
 
