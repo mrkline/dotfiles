@@ -127,9 +127,6 @@ else
     export EDITOR=nano
 fi
 
-# bfs!
-# alias find="bfs"
-
 # Saves some stat() calls, FWIW:
 # https://blog.packagecloud.io/eng/2017/02/21/set-environment-variable-save-thousands-of-system-calls/
 export TZ=":/etc/localtime"
