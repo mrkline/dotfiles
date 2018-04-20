@@ -1,0 +1,8 @@
+#! /bin/sh
+echo "Moving pacaur packages to the cache"
+sudo find ~/.cache/pacaur -type f -name '*.pkg.tar.xz' -exec mv -iv {} /var/cache/pacman/pkg/ \;
+echo "Cleaning up cache"
+paccache -vr
+paccache -vruk0
+echo "Running pacdiff"
+sudo DIFFSEARCHPATH="/boot /etc /usr" DIFFPROG="meld" pacdiff
