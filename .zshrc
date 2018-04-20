@@ -147,9 +147,6 @@ export WINEARCH=win32
 # dem gems
 #export PATH=$PATH:$(ruby -rubygems -e "puts Gem.user_dir")/bin
 
-# Custom D compiler
-export PATH=~/src/dlang/dmd/src:~/src/dlang/tools/generated/linux/64:$PATH
-
 # Set up our prompt
 setopt PROMPT_SUBST
 setopt PROMPT_PERCENT
