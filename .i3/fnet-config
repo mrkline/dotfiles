@@ -1,4 +1,5 @@
 exec desk-monitors.sh
+#exec laptop-screen.sh
 
 set $mod Mod1
 
@@ -166,9 +167,8 @@ exec xset s 0 0 # Screensaver off
 exec xset dpms 0 1800 3600 # Standby screen at 30 mins, off at 60
 exec compton
 #exec dunst
-exec feh --bg-fill /home/mkline/apollo11.jpeg
+exec feh --bg-fill /home/mkline/falcon-heavy.jpg
 exec nm-applet
-exec conky -p 5 # pause a bit to let feh go first
 exec xfce4-clipman
-exec ionice -c 3 nice dropbox
+#exec ionice -c 3 nice dropbox
 # exec xfce4-mixer
