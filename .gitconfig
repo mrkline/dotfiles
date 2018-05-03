@@ -22,11 +22,13 @@
 [diff]
 	tool = meld
 	algorithm = histogram
+	submodule = log
 [color "sh"]
 	branch = yellow bold
 	dirty = red bold
 [push]
 	default = current
+	recurseSubmodules = check
 [merge]
 	ff = false
 	conflictStyle = diff3
