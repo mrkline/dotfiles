@@ -19,7 +19,7 @@ conky.text = [[
 { "full_text":"MEM: $memperc%", "color":"\#ffffff"},
 { "full_text":"SWP: $swapperc%", "color":"\#ffffff"},
 { "full_text":"${exec charge}", "color":"\#ffffff"},
-{ "full_text":"CT: ${tztime US/Central %a, %F %H:%M}", "color":"\#ffffff"},
+{ "full_text":"Z: ${tztime Zulu %a, %F %H:%M}", "color":"\#ffffff"},
 { "full_text":"Me: ${time %a, %F %H:%M}", "color":"\#ffffff"}
 ],
 ]]
