@@ -1,8 +1,8 @@
 #! /bin/zsh
 set -e
 
-echo "Running git-gc on AUR repos"
-for f ($(fd --type d --max-depth 1 . ~/.cache/yay)) { echo "\t$f"; sh -c "cd $f; git gc" >/dev/null 2>&1 }
+#echo "Running git-gc on AUR repos"
+#for f ($(fd --type d --max-depth 1 . ~/.cache/yay)) { echo "\t$f"; sh -c "cd $f; git gc" >/dev/null 2>&1 }
 echo "Moving yay packages to the cache"
 sudo find ~/.cache/yay -type f -name '*.pkg.tar.xz' -exec mv -iv {} /var/cache/pacman/pkg/ \;
 echo "Cleaning up cache"
