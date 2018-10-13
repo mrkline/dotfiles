@@ -14,7 +14,7 @@ conky.config = {
 	own_window_transparent = true,
 	-- Window looks --
 	alignment = 'top_left',
-	gap_x = 1610,
+	gap_x = 1650,
 	gap_y = 35,
 	minimum_width = 250,
 	minimum_height = 5,
@@ -36,19 +36,15 @@ conky.config = {
 }
 
 conky.text = [[
-# SYSTEM
-User:${alignr}${uid_name 1000}
-Kernel:${alignr}$kernel ($machine)
-
 # CPU
-C1:${goto 60}${alignr}${cpu cpu1}% ${cpubar cpu1 6,80}
-C2:${goto 60}${alignr}${cpu cpu2}% ${cpubar cpu2 6,80}
-C3:${goto 60}${alignr}${cpu cpu3}% ${cpubar cpu3 6,80}
-C4:${goto 60}${alignr}${cpu cpu4}% ${cpubar cpu4 6,80}
-C5:${goto 60}${alignr}${cpu cpu5}% ${cpubar cpu5 6,80}
-C6:${goto 60}${alignr}${cpu cpu6}% ${cpubar cpu6 6,80}
-C7:${goto 60}${alignr}${cpu cpu7}% ${cpubar cpu7 6,80}
-C8:${goto 60}${alignr}${cpu cpu8}% ${cpubar cpu8 6,80}
+C1:${alignr}${cpu cpu1}% ${cpubar cpu1 6,80}
+C2:${alignr}${cpu cpu2}% ${cpubar cpu2 6,80}
+C3:${alignr}${cpu cpu3}% ${cpubar cpu3 6,80}
+C4:${alignr}${cpu cpu4}% ${cpubar cpu4 6,80}
+C5:${alignr}${cpu cpu5}% ${cpubar cpu5 6,80}
+C6:${alignr}${cpu cpu6}% ${cpubar cpu6 6,80}
+C7:${alignr}${cpu cpu7}% ${cpubar cpu7 6,80}
+C8:${alignr}${cpu cpu8}% ${cpubar cpu8 6,80}
 
 # RAM
 MEM:${goto 60}$mem${alignr}$memperc% ${membar 6,80}
