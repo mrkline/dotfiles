@@ -20,6 +20,7 @@ setopt hist_ignore_dups # ignore duplication command history list
 setopt hist_ignore_space
 setopt hist_verify
 setopt inc_append_history_time
+setopt share_history # share history between sessions
 
 bindkey -e
 
