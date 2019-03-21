@@ -471,6 +471,11 @@ key_bindings:
   #- { key: W,        mods: Command, action: Quit                         }
 
   - { key: N, mods: Control|Shift, action: SpawnNewInstance }
+  - { key: Home, mods: Control, action: ScrollToTop }
+  - { key: End, mods: Control, action: ScrollToBottom }
+  - { key: PageUp, mods: Control, action: ScrollPageUp }
+  - { key: PageDown, mods: Control, action: ScrollPageDown }
+
   - { key: Paste,                   action: Paste                        }
   - { key: Copy,                    action: Copy                         }
   - { key: L,        mods: Control, action: ClearLogNotice               }
@@ -479,11 +484,7 @@ key_bindings:
   - { key: Home,                    chars: "\x1b[H",   mode: ~AppCursor  }
   - { key: End,                     chars: "\x1bOF",   mode: AppCursor   }
   - { key: End,                     chars: "\x1b[F",   mode: ~AppCursor  }
-  - { key: PageUp,   mods: Shift,   chars: "\x1b[5;2~"                   }
-  - { key: PageUp,   mods: Control, chars: "\x1b[5;5~"                   }
   - { key: PageUp,                  chars: "\x1b[5~"                     }
-  - { key: PageDown, mods: Shift,   chars: "\x1b[6;2~"                   }
-  - { key: PageDown, mods: Control, chars: "\x1b[6;5~"                   }
   - { key: PageDown,                chars: "\x1b[6~"                     }
   - { key: Tab,      mods: Shift,   chars: "\x1b[Z"                      }
   - { key: Back,                    chars: "\x7f"                        }
