@@ -16,7 +16,7 @@ font pango:CMU Concrete 12
 floating_modifier $mod
 
 # start a terminal
-bindsym $mod+Return exec xfce4-terminal
+bindsym $mod+Return exec alacritty
 
 # kill focused window
 bindsym $mod+Ctrl+q kill
@@ -159,7 +159,6 @@ bindsym $mod+Ctrl+v exec xfce4-mixer
 # Startup stuff
 exec xset s 0 0
 exec xset dpms 0 300 600 # Standby screen at 5 mins, off at 10
-exec nice dropbox
 #exec feh --bg-fill ~/Dropbox/Wallpapers/che_rms.png
 exec feh --bg-fill ~/Dropbox/Wallpapers/apollo/csm.jpg
 #exec dunst
