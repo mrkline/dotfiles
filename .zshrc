@@ -143,7 +143,7 @@ export WINEARCH=win32
 setopt PROMPT_SUBST
 setopt PROMPT_PERCENT
 if [[ -x $(which promptoglyph-vcs) && -x $(which promptoglyph-path) ]] then
-    PROMPT='%B%F{red}%(?..%? )%f$(promptoglyph-path -n 3)$(promptoglyph-vcs --zsh -t 300 --prefix " [") $%b '
+    PROMPT='%B%F{red}%(?..%? )%f$(promptoglyph-path -n 3)$(promptoglyph-vcs --zsh --prefix " [") $%b '
 else
     PROMPT='%F{red}%(?..%? )%f%1d $ '
 fi
