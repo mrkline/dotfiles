@@ -34,3 +34,4 @@
 	conflictStyle = diff3
 [fetch]
 	prune = true
+	writeCommitGraph = true
