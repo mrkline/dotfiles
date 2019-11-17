@@ -158,5 +158,5 @@ exec feh --bg-scale ~/Dropbox/Wallpapers/justice_cross.jpg
 exec nm-applet
 exec conky -p 5 # pause a bit to let feh go first
 exec xfce4-clipman
-exec compton
+exec picom
 exec ionice -c 3 nice dropbox

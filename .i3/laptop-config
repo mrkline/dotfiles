@@ -165,4 +165,4 @@ exec feh --bg-fill ~/Dropbox/Wallpapers/apollo/csm.jpg
 exec nm-applet
 #exec conky -p 5 # pause a bit to let feh go first
 exec xfce4-clipman
-exec compton
+exec picom
