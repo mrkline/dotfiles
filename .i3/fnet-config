@@ -1,23 +1,22 @@
 exec desk-monitors.sh
-#exec laptop-screen.sh
 
 set $mod Mod1
 
 # Font for window titles. Will also be used by the bar unless a different font
 # is used in the bar {} block below. ISO 10646 = Unicode
-font pango:CMU Concrete 14
+font pango:Futura Medium 14
 
 # Use Mouse+$mod to drag floating windows to their wanted position
 floating_modifier $mod
 
 # start a terminal
-bindsym $mod+Return exec xfce4-terminal
+bindsym $mod+Return exec alacritty
 
 # kill focused window
 bindsym $mod+Ctrl+q kill
 
 # Use rofi as a launcher
-bindsym $mod+d exec rofi -show run -font 'CMU Concrete 14' -lines 5 -opacity "95"
+bindsym $mod+d exec rofi -show run -font 'mononoki 14' -lines 5 -opacity "95"
 
 # change focus
 bindsym $mod+h focus left
@@ -154,7 +153,6 @@ bar {
         font pango:mononoki 14
         position top
         status_command ~/.i3/conky
-        tray_output primary
 }
 
 # Keyboard shortcuts
@@ -167,7 +165,7 @@ exec xset s 0 0 # Screensaver off
 exec xset dpms 0 1800 3600 # Standby screen at 30 mins, off at 60
 exec picom
 #exec dunst
-exec feh --bg-fill /home/mkline/falcon-heavy.jpg
+exec feh --bg-fill /home/mkline/Wallpapers/lowpass.jpg
 exec nm-applet
 exec xfce4-clipman
 #exec ionice -c 3 nice dropbox
