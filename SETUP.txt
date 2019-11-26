@@ -23,25 +23,22 @@ User config:
 
 Fonts and styling packages:
 - faenza-icon-theme
-- gtk-engine-aurora
 - otf-bitstream-charter
+- otf-bodoni
 - otf-cm-unicode
 - otf-eb-garamond
 - otf-ipafont
+- otf-jost
 - otf-libre-caslon
 - otf-xits
 - ttf-dejavu
 - ttf-droid
 - ttf-envy-code-r
-- ttf-freefont
 - ttf-inconsolata-gwf
 - ttf-indic-otf
 - ttf-lato
-- ttf-liberation
 - ttf-linux-libertine
-- ttf-ms-fonts
-- ttf-sil-fonts
-- ttf-symbola
+- ttf-mplus
 - ttf-ubuntu-font-family
 
 At work:
