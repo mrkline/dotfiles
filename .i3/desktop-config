@@ -16,7 +16,7 @@ font pango:CMU Concrete 12
 floating_modifier $mod
 
 # start a terminal
-bindsym $mod+Return exec xfce4-terminal
+bindsym $mod+Return exec alacritty
 
 # kill focused window
 bindsym $mod+Ctrl+q kill
@@ -159,4 +159,3 @@ exec nm-applet
 exec conky -p 5 # pause a bit to let feh go first
 exec xfce4-clipman
 exec picom
-exec ionice -c 3 nice dropbox
