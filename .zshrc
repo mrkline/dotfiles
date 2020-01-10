@@ -72,7 +72,8 @@ alias pacdiff='sudo DIFFSEARCHPATH="/boot /etc /usr" DIFFPROG="meld" pacdiff'
 alias lss="ls -lShr"
 alias lst="ls -lthr"
 alias el="exa -lh"
-alias es="exa -lhrs size"
+alias es="exa -lhs size"
+alias ed="exa -lhs date"
 alias e1="exa -1"
 
 # Patience diff is best diff
