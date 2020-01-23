@@ -7,7 +7,6 @@ call vundle#begin()
 Plugin 'VundleVim/Vundle.vim'
 
 " My bundles:
-Plugin 'myusuf3/numbers.vim'
 Plugin 'vim-airline/vim-airline'
 Plugin 'vim-airline/vim-airline-themes'
 Plugin 'valloric/youcompleteme'
@@ -33,9 +32,6 @@ let g:CommandTFileScanner = "git"
 
 call vundle#end()
 filetype plugin indent on
-
-" numbers.vim:
-noremap <C-n> :NumbersToggle<CR>
 
 "" Normal vimrc stuff:
 
@@ -72,8 +68,9 @@ set fileformats=unix,dos
 set splitright
 set splitbelow
 
-" Show line numbers
+" Show line numbers, relative when not in insert mode.
 set number
+set relativenumber
 " Numbers take up four columns
 set numberwidth=4
 
@@ -162,6 +159,14 @@ highlight SpecialKey ctermfg=grey
 
 " Key mapping and functions
 
+function! ToggleRelativeNumbers()
+	if &relativenumber
+		set norelativenumber
+	else
+		set relativenumber
+	endif
+endfunction
+
 function! ToggleSpell()
 	set spell!
 	if &spell
@@ -207,6 +212,8 @@ endfunction
 " Reload settings
 noremap <leader>r :so ~/.vimrc<CR>
 
+" Toggle relative numbers on and off
+noremap <C-n> :call ToggleRelativeNumbers()<CR>
 " Enable and disable spell check with a key press
 noremap <leader>sc :call ToggleSpell()<CR>
 " Enable and disable suggestions from the spelling dictionary with a key press
