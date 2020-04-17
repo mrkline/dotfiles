@@ -243,7 +243,7 @@ noremap <S-CR> O<Esc>
 "--------------------
 noremap <C-\> :tab split<CR>:exec("tag ".expand("<cword>"))<CR>
 
-noremap <C-k> :pyf /usr/share/clang/clang-format.py<CR>
+noremap <C-k> :py3f /usr/share/clang/clang-format.py<CR>
 
 " Insert mode mappings
 inoremap <C-j> <Esc>o
