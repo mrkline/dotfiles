@@ -1,0 +1,10 @@
+#!/bin/zsh
+
+set -euo pipefail
+
+# Finds H264 recordings
+# (which could be re-encoded with a smaller, newer codec)
+
+for f ("$1"/**/*.{mkv,mp4}) {
+    if ffprobe -i "$f" 2>&1 | grep h264 -q; then echo "$f"; fi
+}

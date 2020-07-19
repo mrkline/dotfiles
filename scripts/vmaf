@@ -1,0 +1,14 @@
+#!/bin/zsh
+
+set -euo pipefail
+
+# Compares $1 to its source ($2) with VMAF
+# (PTS nonsense taken from the ffmpeg filter docs.)
+
+from="$1"
+to="$2"
+
+echo "check: $from, ref: $to"
+ffmpeg -i "$from" -i "$to" -an \
+    -lavfi "[0:v]settb=AVTB,setpts=PTS-STARTPTS[main];[1:v]settb=AVTB,setpts=PTS-STARTPTS[ref];[main][ref]libvmaf" \
+    -f null -

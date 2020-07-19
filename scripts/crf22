@@ -1,0 +1,14 @@
+#!/bin/zsh
+
+# Encodes video with x265 `-crf 22 -preset slow`,
+# which shows a VMAF of 95+ compared to source recordings
+# (x264 `-crf 18 -preset veryfast`) of flight sim stuff (BFM)
+# Output is a file of the same name in the current directory.
+
+set -euo pipefail
+
+from="$1"
+to="${1:t}"
+
+echo "$from -> $to"
+ffmpeg -i "$from" -map 0 -c:a copy -c:v hevc -crf 22 -preset slow "$to"
