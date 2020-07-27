@@ -1,6 +1,6 @@
 #!/bin/zsh
 
-# Encodes video with x265 `-crf 22 -preset slow`,
+# Encodes video with x265 `-crf 20 -preset slow`,
 # Output is a file of the same name in the current directory.
 
 set -euo pipefail
@@ -9,4 +9,4 @@ from="$1"
 to="${1:t}"
 
 echo "$from -> $to"
-ffmpeg -i "$from" -map 0 -c:a copy -c:v hevc -preset slow -crf 22 "$to"
+ffmpeg -i "$from" -map 0 -c:a copy -c:v hevc -preset slow -crf 20 "$to"
