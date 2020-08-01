@@ -9,4 +9,4 @@ from="$1"
 to="${1:t}"
 
 echo "$from -> $to"
-ffmpeg -i "$from" -map 0 -c:a copy -c:v hevc -preset slow -crf 20 "$to"
+ffmpeg -i "$from" -map 0 -c:s copy -c:a copy -c:v hevc -preset slow -crf 20 "$to"
