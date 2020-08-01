@@ -56,9 +56,9 @@ SWP:${goto 60}$swap${alignr}$swapperc% ${swapbar 6,80}
 ${if_mounted /windows}/w${goto 60}${fs_used /windows}${alignr}${fs_used_perc /windows}% ${fs_bar 6,80 /windows}$endif
 ${if_mounted /windows-data}/w-d${goto 60}${fs_used /windows-data}${alignr}${fs_used_perc /windows-data}% ${fs_bar 6,80 /windows-data}$endif
 
-/h:   ${diskio sda}${alignr}${voffset -7}${diskiograph sda 20,120 000000 edb951 -t}
-/:    ${diskio sdc}${alignr}${voffset -7}${diskiograph sdc 20,120 000000 edb951 -t}
-/w-d: ${diskio sdb}${alignr}${voffset -7}${diskiograph sdb 20,120 000000 edb951 -t}
+/h:   ${diskio label:linux-home}${alignr}${voffset -7}${diskiograph label:linux-home 20,120 000000 edb951 -t}
+/:    ${diskio label:root}${alignr}${voffset -7}${diskiograph label:root 20,120 000000 edb951 -t}
+/w-d: ${diskio label:shared-data}${alignr}${voffset -7}${diskiograph label:shared-data 20,120 000000 edb951 -t}
 
 ${downspeedgraph enp0s25 20,120 000000 edb951 -t} ${upspeedgraph enp0s25 20,120 000000 edb951 -t}
 D: ${downspeed enp0s25}${goto 145}U: ${upspeed enp0s25}
