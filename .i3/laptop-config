@@ -10,7 +10,7 @@ set $mod Mod1
 
 # Font for window titles. Will also be used by the bar unless a different font
 # is used in the bar {} block below. ISO 10646 = Unicode
-font pango:CMU Concrete 12
+font pango:Jost 12
 
 # Use Mouse+$mod to drag floating windows to their wanted position
 floating_modifier $mod
@@ -22,7 +22,7 @@ bindsym $mod+Return exec alacritty
 bindsym $mod+Ctrl+q kill
 
 # Use rofi as a launcher
-bindsym $mod+d exec rofi -show run -font 'CMU Concrete 14' -lines 5 -opacity "95" -bc "$black" -bg "$black" -fg "$darkgrey" -hlbg "$black" -hlfg "$white"
+bindsym $mod+d exec rofi -dpi 200 -show run -font 'Jost 14' -lines 5 -opacity "95" -bc "$black" -bg "$black" -fg "$darkgrey" -hlbg "$black" -hlfg "$white"
 
 # change focus
 bindsym $mod+h focus left
