@@ -17,7 +17,6 @@ conky.text = [[
 [
 { "full_text":"CPU: ${cpu cpu0}%", "color":"\#ffffff"},
 { "full_text":"MEM: $memperc%", "color":"\#ffffff"},
-{ "full_text":"SWP: $swapperc%", "color":"\#ffffff"},
 { "full_text":"${exec charge}", "color":"\#ffffff"},
 { "full_text":"Z: ${tztime Zulu %a, %F %H:%M}", "color":"\#ffffff"},
 { "full_text":"Me: ${time %a, %F %H:%M}", "color":"\#ffffff"}
