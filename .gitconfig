@@ -22,7 +22,7 @@
 [diff]
 	tool = meld
 	algorithm = patience
-	submodule = log
+	submodule = short
 [color "sh"]
 	branch = yellow bold
 	dirty = red bold
@@ -35,3 +35,5 @@
 [fetch]
 	prune = true
 	writeCommitGraph = true
+[pull]
+	rebase = false
