@@ -1,16 +1,10 @@
-# Taken from jbear/dotfiles, though his i3 config seems to have disappeared.
-# Cache at http://webcache.googleusercontent.com/search?q=cache:https://github.com/jearbear/dotfiles/blob/master/i3config
-set $background  #1d2021
-set $foreground  #ebdbb2
-set $black       #282828
-set $darkgrey    #928374
-set $white       #ebdbb2
 
 set $mod Mod1
 
 # Font for window titles. Will also be used by the bar unless a different font
 # is used in the bar {} block below. ISO 10646 = Unicode
-font pango:Jost 12
+font pango:Jost* 14
+for_window [class=".*"] title_format "<span font_weight='500' font_features='ss01'>%title</span>"
 
 # Use Mouse+$mod to drag floating windows to their wanted position
 floating_modifier $mod
@@ -22,7 +16,7 @@ bindsym $mod+Return exec alacritty
 bindsym $mod+Ctrl+q kill
 
 # Use rofi as a launcher
-bindsym $mod+d exec rofi -dpi 200 -show run -font 'Jost 14' -lines 5 -opacity "95" -bc "$black" -bg "$black" -fg "$darkgrey" -hlbg "$black" -hlfg "$white"
+bindsym $mod+d exec rofi -dpi 200 -show run -font 'Jost* 14' -lines 5 -opacity "95"
 
 # change focus
 bindsym $mod+h focus left
@@ -88,16 +82,12 @@ bindsym $mod+Ctrl+9 move container to workspace 9:Volume
 bindsym $mod+Ctrl+0 move container to workspace 10:Web IO
 
 # Assign certain programs to certain windows
-assign [class="(?i)skype"] 8
 assign [class="(?i)discord"] 8
 assign [class="(?i)pavu"] 9:Volume
-assign [class="(?i)electrum"] 10:Web IO
 assign [class="(?i)transmission"] 10:Web IO
 
 # ...and launch them with a matching key
-bindsym mod4+8 exec skype
 bindsym mod4+9 exec pavucontrol
-bindsym mod4+0 exec transmission-gtk; exec electrum
 
 # Lock the scren with Super-L
 bindsym mod4+l exec lock.sh
@@ -146,9 +136,10 @@ bindsym $mod+r mode "resize"
 # Start i3bar to display a workspace bar (plus the system information i3status
 # finds out, if available)
 bar {
-        font pango:mononoki 12
-        position top
-        status_command ~/.i3/conky
+    font pango:mononoki 14
+    position top
+    status_command ~/.i3/conky
+    tray_output primary
 }
 
 # Keyboard shortcuts
@@ -157,12 +148,12 @@ bindsym Ctrl+Print exec xfce4-screenshooter
 bindsym $mod+Ctrl+v exec xfce4-mixer
 
 # Startup stuff
-exec xset s 0 0
-exec xset dpms 0 300 600 # Standby screen at 5 mins, off at 10
+#exec xset s 0 0 # Screensaver off
+#exec xset dpms 0 300 600 # Standby screen at 5 mins, off at 10
 #exec feh --bg-fill ~/Dropbox/Wallpapers/che_rms.png
 exec feh --bg-fill ~/Dropbox/Wallpapers/apollo/csm.jpg
-#exec dunst
-exec nm-applet
-#exec conky -p 5 # pause a bit to let feh go first
-exec xfce4-clipman
 exec picom
+exec nm-applet
+exec xfce4-clipman
+exec /usr/lib/xfce4/notifyd/xfce4-notifyd
+exec xfce4-power-manager
