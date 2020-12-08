@@ -140,9 +140,6 @@ export PATH=$PATH:~/src/charge
 # Emulate a 32-bit Windows machine with wine
 export WINEARCH=win32
 
-# dem gems
-#export PATH=$PATH:$(ruby -rubygems -e "puts Gem.user_dir")/bin
-
 # Set up our prompt
 setopt PROMPT_SUBST
 setopt PROMPT_PERCENT
@@ -155,8 +152,8 @@ fi
 # Machine-specific nonsense
 [[ -f ~/.zshrc-machine ]] && source ~/.zshrc-machine
 # Clear error code so I'm not greeted with a red "1" at home
-true
 
+# Nix!
 if [ -e /home/mrkline/.nix-profile/etc/profile.d/nix.sh ]; then
     . /home/mrkline/.nix-profile/etc/profile.d/nix.sh;
 fi # added by Nix installer
