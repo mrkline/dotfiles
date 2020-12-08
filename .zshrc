@@ -143,11 +143,8 @@ export WINEARCH=win32
 # Set up our prompt
 setopt PROMPT_SUBST
 setopt PROMPT_PERCENT
-if [[ -x $(which promptoglyph-vcs) && -x $(which promptoglyph-path) ]] then
-    PROMPT='%B%F{red}%(?..%? )%f$(promptoglyph-path -n 3)$(promptoglyph-vcs --zsh --prefix " [") $%b '
-else
-    PROMPT='%F{red}%(?..%? )%f%1d $ '
-fi
+export PROMPT='%B%(?..[%?] )%b%n@%U%m%u> '
+export RPS1='%F{green}%~%f'
 
 # Machine-specific nonsense
 [[ -f ~/.zshrc-machine ]] && source ~/.zshrc-machine
