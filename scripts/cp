@@ -1,2 +1,2 @@
 #!/bin/sh
-/usr/bin/cp --reflink=auto --sparse=auto "$@"
+/run/current-system/sw/bin/cp --reflink=auto --sparse=auto "$@"
