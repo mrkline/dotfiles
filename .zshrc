@@ -143,7 +143,7 @@ export WINEARCH=win32
 # Set up our prompt
 setopt PROMPT_SUBST
 setopt PROMPT_PERCENT
-export PROMPT='%B%(?..[%?] )%b%n@%U%m%u> '
+export PROMPT='%B%(?..[%?] )%b%n@%U%m%u $ '
 export RPS1='%F{green}%~%f'
 
 # Machine-specific nonsense
