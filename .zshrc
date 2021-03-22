@@ -107,9 +107,6 @@ LDFLAGS="-Wl,-O1,--sort-common,--as-needed,-z,relro,-z,now"
 # https://www.zerotier.com/blog/2017-05-05-theleak.shtml
 export GLIBCXX_FORCE_NEW=y
 
-# Native rust builds!
-export RUSTFLAGS="-C target-cpu=native"
-
 # Neovim!
 if type nvim >/dev/null; then
     alias vim="nvim"
