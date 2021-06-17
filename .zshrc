@@ -140,8 +140,8 @@ export WINEARCH=win32
 # Set up our prompt
 setopt PROMPT_SUBST
 setopt PROMPT_PERCENT
-export PROMPT='%B%(?..[%?] )%b%n@%U%m%u $ '
-export RPS1='%F{green}%~%f'
+export PS1='%F{red}%B%(?..[%?] )%b%f%F{green}%~%f $ '
+export RPS1=''
 
 # Machine-specific nonsense
 [[ -f ~/.zshrc-machine ]] && source ~/.zshrc-machine
