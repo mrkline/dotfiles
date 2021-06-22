@@ -91,20 +91,9 @@ alias rot13="tr '[A-Za-z]' '[N-ZA-Mn-za-m]'"
 # Helps pinentry behave when unlocking GPG keys
 export GPG_TTY=$(tty)
 
-# Clang!
-if type clang >/dev/null; then
-    export CC=clang
-    export CXX=clang++
-fi
-
-# Other compiler fun.
-CPPFLAGS="-D_FORTIFY_SOURCE=2"
-CFLAGS="-march=native -pipe -fstack-protector-strong"
-CXXFLAGS="-march=native -pipe -fstack-protector-strong"
-LDFLAGS="-Wl,-O1,--sort-common,--as-needed,-z,relro,-z,now"
-
 # Stop libstdc++ misadventures:
 # https://www.zerotier.com/blog/2017-05-05-theleak.shtml
+# https://gcc.gnu.org/onlinedocs/libstdc++/manual/memory.html
 export GLIBCXX_FORCE_NEW=y
 
 # Neovim!
@@ -130,17 +119,18 @@ export LESS=-x4RSX
 # Add some user scripts to the path
 export PATH=~/scripts:$PATH
 
-# Add the crap I wrote to the path
-export PATH=$PATH:~/src/promptoglyph/build
-export PATH=$PATH:~/src/charge
-
-# Emulate a 32-bit Windows machine with wine
-export WINEARCH=win32
 
 # Set up our prompt
-setopt PROMPT_SUBST
-setopt PROMPT_PERCENT
-export PS1='%F{red}%B%(?..[%?] )%b%f%F{green}%~%f $ '
+setopt prompt_subst
+setopt prompt_percent
+
+export PATH=$PATH:~/src/promptoglyph/build
+
+if promptoglyph-vcs --version >/dev/null; then
+    export PS1='%F{red}%(?..[%?] )%f%F{green}%~%f$(promptoglyph-vcs --zsh --prefix " [") $ '
+else
+    export PS1='%F{red}%(?..[%?] )%f%F{green}%~%f $ '
+fi
 export RPS1=''
 
 # Machine-specific nonsense
