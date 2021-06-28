@@ -119,7 +119,6 @@ export LESS=-x4RSX
 # Add some user scripts to the path
 export PATH=~/scripts:$PATH
 
-
 # Set up our prompt
 setopt prompt_subst
 setopt prompt_percent
@@ -136,8 +135,4 @@ export RPS1=''
 # Machine-specific nonsense
 [[ -f ~/.zshrc-machine ]] && source ~/.zshrc-machine
 # Clear error code so I'm not greeted with a red "1" at home
-
-# Nix!
-if [ -e /home/mrkline/.nix-profile/etc/profile.d/nix.sh ]; then
-    . /home/mrkline/.nix-profile/etc/profile.d/nix.sh;
-fi # added by Nix installer
+true
