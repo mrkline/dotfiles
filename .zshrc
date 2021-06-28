@@ -105,6 +105,7 @@ LDFLAGS="-Wl,-O1,--sort-common,--as-needed,-z,relro,-z,now"
 
 # Stop libstdc++ misadventures:
 # https://www.zerotier.com/blog/2017-05-05-theleak.shtml
+# https://gcc.gnu.org/onlinedocs/libstdc++/manual/memory.html
 export GLIBCXX_FORCE_NEW=y
 
 # Neovim!
@@ -127,30 +128,27 @@ export TZ=":/etc/localtime"
 # LESS Options
 export LESS=-x4RSX
 
-# Add some user scripts to the path
-export PATH=~/scripts:$PATH
-
-# Add the crap I wrote to the path
-export PATH=$PATH:~/src/promptoglyph/build
-export PATH=$PATH:~/src/charge
-
 # Emulate a 32-bit Windows machine with wine
 export WINEARCH=win32
 
+# Add some user scripts to the path
+export PATH=~/scripts:$PATH
+export PATH=$PATH:~/src/charge
+
 # Set up our prompt
-setopt PROMPT_SUBST
-setopt PROMPT_PERCENT
-if [[ -x $(which promptoglyph-vcs) && -x $(which promptoglyph-path) ]] then
-    PROMPT='%B%F{red}%(?..%? )%f$(promptoglyph-path -n 3)$(promptoglyph-vcs --zsh --prefix " [") $%b '
+setopt prompt_subst
+setopt prompt_percent
+
+export PATH=$PATH:~/src/promptoglyph/build
+
+if promptoglyph-vcs --version >/dev/null; then
+    export PS1='%F{red}%(?..[%?] )%f%F{green}%~%f$(promptoglyph-vcs --zsh --prefix " [") $ '
 else
-    PROMPT='%F{red}%(?..%? )%f%1d $ '
+    export PS1='%F{red}%(?..[%?] )%f%F{green}%~%f $ '
 fi
+export RPS1=''
 
 # Machine-specific nonsense
 [[ -f ~/.zshrc-machine ]] && source ~/.zshrc-machine
 # Clear error code so I'm not greeted with a red "1" at home
-
-# Nix!
-if [ -e /home/mrkline/.nix-profile/etc/profile.d/nix.sh ]; then
-    . /home/mrkline/.nix-profile/etc/profile.d/nix.sh;
-fi # added by Nix installer
+true
