@@ -17,6 +17,8 @@ System config:
 - Consider playing with swappiness (via /etc/sysctl.d)
 - Disable laptop close sleep in /etc/systemd/logind.conf
 - Configure Network Manger to use dhclient (dhcp=dhclient)
+- Setup BBR, Sysrq, and other goodness in /etc/sysctl.d)
+- Configure IO schedulers with Udev (see /etc/udev/rules.d)
 
 User config:
 - Symlink gitconfig, desired ~/.config, etc. from dotfiles
