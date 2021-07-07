@@ -138,7 +138,7 @@ bindsym $mod+r mode "resize"
 bar {
     font pango:mononoki 14
     position top
-    status_command ~/.i3/conky
+    status_command ~/.config/i3/conky
     tray_output primary
 }
 
@@ -151,8 +151,8 @@ bindsym $mod+Ctrl+v exec xfce4-mixer
 #exec xset s 0 0 # Screensaver off
 #exec xset dpms 0 300 600 # Standby screen at 5 mins, off at 10
 #exec feh --bg-fill ~/Dropbox/Wallpapers/che_rms.png
-exec feh --bg-fill ~/Dropbox/Wallpapers/apollo/csm.jpg
-exec picom
+#exec feh --bg-fill ~/Dropbox/Wallpapers/apollo/csm.jpg
+#exec picom
 exec nm-applet
 exec xfce4-clipman
 exec /usr/lib/xfce4/notifyd/xfce4-notifyd

@@ -23,8 +23,7 @@ if [ -f "$usermodmap" ]; then
     xmodmap "$usermodmap"
 fi
 
-# Kill previous instances of nice programs
-
+# Kill previous instances of daemons we launch here.
 killall gnome-keyring-daemon
 killall gpg-agent
 killall ssh-agent
@@ -47,5 +46,4 @@ export GPG_AGENT_INFO
 
 eval $(ssh-agent -t 1h)
 
-xrandr --dpi 200
 exec i3

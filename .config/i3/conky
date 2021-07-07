@@ -7,4 +7,4 @@ echo '{"version":1}'
 echo '['
 
 # Now send blocks with information forever:
-exec conky -c $HOME/.i3/conkyrc -p 5
+exec conky -c $HOME/.config/i3/conkyrc -p 5
