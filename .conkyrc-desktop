@@ -60,6 +60,6 @@ ${if_mounted /windows-data}/w-d${goto 60}${fs_used /windows-data}${alignr}${fs_u
 /:    ${diskio label:root}${alignr}${voffset -7}${diskiograph label:root 20,120 000000 edb951 -t}
 /w-d: ${diskio label:shared-data}${alignr}${voffset -7}${diskiograph label:shared-data 20,120 000000 edb951 -t}
 
-${downspeedgraph enp0s25 20,120 000000 edb951 -t} ${upspeedgraph enp0s25 20,120 000000 edb951 -t}
-D: ${downspeed enp0s25}${goto 145}U: ${upspeed enp0s25}
+${downspeedgraph enp7s0 20,120 000000 edb951 -t} ${upspeedgraph enp7s0 20,120 000000 edb951 -t}
+D: ${downspeed enp7s0}${goto 145}U: ${upspeed enp7s0}
 ]]

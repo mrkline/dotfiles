@@ -144,7 +144,7 @@ bindsym $mod+r mode "resize"
 bar {
         font pango:mononoki 13
         position top
-        status_command ~/.i3/conky
+        status_command ~/.config/i3/conky
 }
 
 # Keyboard shortcuts
@@ -154,7 +154,7 @@ bindsym Ctrl+Print exec xfce4-screenshooter
 # Startup stuff
 exec xset s 0 0
 exec xset dpms 0 1800 3600 # Standby screen at 30 mins, off at 60
-exec feh --bg-scale ~/Dropbox/Wallpapers/justice_cross.jpg
+exec feh --bg-scale ~/justice_cross.jpg
 exec nm-applet
 exec conky -p 5 # pause a bit to let feh go first
 exec xfce4-clipman
