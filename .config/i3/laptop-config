@@ -148,11 +148,8 @@ bindsym Ctrl+Print exec xfce4-screenshooter
 bindsym $mod+Ctrl+v exec xfce4-mixer
 
 # Startup stuff
-#exec xset s 0 0 # Screensaver off
-#exec xset dpms 0 300 600 # Standby screen at 5 mins, off at 10
-#exec feh --bg-fill ~/Dropbox/Wallpapers/che_rms.png
-#exec feh --bg-fill ~/Dropbox/Wallpapers/apollo/csm.jpg
-#exec picom
+exec feh --bg-fill ~/wallpapers/15-29-intercept-cropped.jpg
+exec picom
 exec nm-applet
 exec xfce4-clipman
 exec /usr/lib/xfce4/notifyd/xfce4-notifyd
