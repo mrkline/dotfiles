@@ -9,8 +9,8 @@ Plugin 'VundleVim/Vundle.vim'
 " My bundles:
 Plugin 'vim-airline/vim-airline'
 Plugin 'vim-airline/vim-airline-themes'
-Plugin 'valloric/youcompleteme'
-Plugin 'rust-lang/rust.vim'
+"Plugin 'valloric/youcompleteme'
+"Plugin 'rust-lang/rust.vim'
 Plugin 'tpope/vim-fugitive'
 "Plugin 'wincent/command-t'
 
