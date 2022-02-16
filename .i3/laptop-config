@@ -138,7 +138,7 @@ bindsym $mod+r mode "resize"
 bar {
     font pango:mononoki 14
     position top
-    status_command ~/.i3/conky
+    status_command ~/.config/i3/conky
     tray_output primary
 }
 
