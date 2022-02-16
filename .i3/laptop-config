@@ -16,7 +16,7 @@ bindsym $mod+Return exec alacritty
 bindsym $mod+Ctrl+q kill
 
 # Use rofi as a launcher
-bindsym $mod+d exec rofi -dpi 200 -show run -font 'Jost* 14' -lines 5 -opacity "95"
+bindsym $mod+d exec rofi -show run -font 'Jost* 12' -lines 5 -opacity "95"
 
 # change focus
 bindsym $mod+h focus left
@@ -90,7 +90,7 @@ assign [class="(?i)transmission"] 10:Web IO
 bindsym mod4+9 exec pavucontrol
 
 # Lock the scren with Super-L
-bindsym mod4+l exec lock.sh
+bindsym mod4+l exec ~/scripts/lock.sh
 
 # Volume stuff
 bindsym XF86AudioMute exec pactl set-sink-mute 0 toggle
@@ -105,7 +105,7 @@ bindsym $mod+Ctrl+c reload
 # restart i3 inplace (preserves your layout/session, can be used to upgrade i3)
 bindsym $mod+Ctrl+r restart
 # exit i3 (logs you out of your X session)
-bindsym $mod+Ctrl+BackSpace exec i3-msg exit
+bindsym $mod+Ctrl+BackSpace exec xfce4-session-logout
 
 # resize window (you can also use the mouse for that)
 mode "resize" {
@@ -139,7 +139,6 @@ bar {
     font pango:mononoki 14
     position top
     status_command ~/.config/i3/conky
-    tray_output primary
 }
 
 # Keyboard shortcuts
@@ -148,12 +147,6 @@ bindsym Ctrl+Print exec xfce4-screenshooter
 bindsym $mod+Ctrl+v exec xfce4-mixer
 
 # Startup stuff
-#exec xset s 0 0 # Screensaver off
-#exec xset dpms 0 300 600 # Standby screen at 5 mins, off at 10
-#exec feh --bg-fill ~/Dropbox/Wallpapers/che_rms.png
-exec feh --bg-fill ~/Dropbox/Wallpapers/apollo/csm.jpg
+#exec feh --bg-fill ~/Dropbox/Wallpapers/apollo/csm.jpg
 exec picom
 exec nm-applet
-exec xfce4-clipman
-exec /usr/lib/xfce4/notifyd/xfce4-notifyd
-exec xfce4-power-manager
