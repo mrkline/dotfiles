@@ -3,6 +3,7 @@
 	email = matt@bitbashing.io
 [core]
 	autocrlf = false
+	compression = 0
 [color]
 	ui = auto
 [alias]
