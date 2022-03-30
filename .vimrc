@@ -12,7 +12,8 @@ Plugin 'vim-airline/vim-airline-themes'
 "Plugin 'valloric/youcompleteme'
 "Plugin 'rust-lang/rust.vim'
 Plugin 'tpope/vim-fugitive'
-"Plugin 'wincent/command-t'
+Plugin 'vijaymarupudi/nvim-fzf' " requires the nvim-fzf library
+Plugin 'vijaymarupudi/nvim-fzf-commands'
 
 "" Plugin config:
 
@@ -27,8 +28,8 @@ let g:ycm_enable_diagnostic_signs = 0
 let g:airline#extensions#whitespace#checks = [ 'trailing' ]
 let g:airline_theme='papercolor'
 
-" Use git ls-files and find to scan in Command-T
-let g:CommandTFileScanner = "git"
+" Get rid of the hot pink FZF widow.
+set winhighlight=Normal:Normal
 
 call vundle#end()
 filetype plugin indent on
@@ -210,7 +211,7 @@ function! RemoveTrailingWhitespace()
 endfunction
 
 " Reload settings
-noremap <leader>r :so ~/.vimrc<CR>
+noremap <leader>r :so ~/.config/nvim/init.vim<CR>
 
 " Toggle relative numbers on and off
 noremap <C-n> :call ToggleRelativeNumbers()<CR>
@@ -252,6 +253,12 @@ inoremap <C-k> <Esc>O
 " Use Ctrl+d for digraphs
 inoremap <C-d> <C-k>
 cnoremap <C-d> <C-k>
+
+" FZF!
+noremap <leader>f :lua require('fzf-commands').files()<CR>
+
+command! -nargs=1 Rg call luaeval('require("fzf-commands").rg(_A)', <f-args>)
+noremap <leader>g :call luaeval('require("fzf-commands").rg(_A)', expand("<cword>"))<CR>
 
 " Neovim: When in the terminal, use Ctrl+] to escape the terminal,
 " then seek to the end of the last non-whitespace.
