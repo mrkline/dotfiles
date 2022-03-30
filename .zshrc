@@ -151,6 +151,18 @@ else
 fi
 export RPS1=''
 
+# warm fuzzies
+if [ -n "${commands[fzf-share]}" ]; then
+  source "$(fzf-share)/key-bindings.zsh"
+  source "$(fzf-share)/completion.zsh"
+fi
+
+# bat (syntax-highlighting cat) - white text on light term is bad, mmmk?
+export BAT_THEME=ansi
+
+# ditto for fd (colorized find)
+export LS_COLORS=""
+
 # Machine-specific nonsense
 [[ -f ~/.zshrc-machine ]] && source ~/.zshrc-machine
 # Clear error code so I'm not greeted with a red "1" at home
