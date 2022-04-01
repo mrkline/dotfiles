@@ -1,28 +1,14 @@
-"" Vundle Setup:
-filetype off
-set rtp+=~/.config/nvim/bundle/Vundle.vim
-call vundle#begin()
+call plug#begin()
 
-" let Vundle manage Vundle
-Plugin 'VundleVim/Vundle.vim'
+Plug 'vim-airline/vim-airline'
+Plug 'vim-airline/vim-airline-themes'
+Plug 'tpope/vim-fugitive'
+Plug 'vijaymarupudi/nvim-fzf' " requires the nvim-fzf library
+Plug 'vijaymarupudi/nvim-fzf-commands'
 
-" My bundles:
-Plugin 'vim-airline/vim-airline'
-Plugin 'vim-airline/vim-airline-themes'
-"Plugin 'valloric/youcompleteme'
-"Plugin 'rust-lang/rust.vim'
-Plugin 'tpope/vim-fugitive'
-Plugin 'vijaymarupudi/nvim-fzf' " requires the nvim-fzf library
-Plugin 'vijaymarupudi/nvim-fzf-commands'
+call plug#end()
 
 "" Plugin config:
-
-" YouCompleteMe:
-let g:ycm_extra_conf_globlist = ['~/mantis-top/*']
-let g:ycm_global_ycm_extra_conf = '~/.vim/bundle/youcompleteme/ycm_extra_conf.py'
-let g:ycm_min_num_of_chars_for_completion = 8
-let g:ycm_autoclose_preview_window_after_insertion = 1
-let g:ycm_enable_diagnostic_signs = 0
 
 " Airline's mixed indentation messages are often wrong. Turn them off
 let g:airline#extensions#whitespace#checks = [ 'trailing' ]
@@ -31,7 +17,6 @@ let g:airline_theme='papercolor'
 " Get rid of the hot pink FZF widow.
 set winhighlight=Normal:Normal
 
-call vundle#end()
 filetype plugin indent on
 
 "" Normal vimrc stuff:
