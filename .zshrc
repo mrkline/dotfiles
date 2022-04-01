@@ -100,15 +100,11 @@ export GLIBCXX_FORCE_NEW=y
 
 # Neovim!
 if type nvim >/dev/null; then
-    alias vim="nvim"
-    alias vimterm="nvim -c 'terminal'"
     export EDITOR=nvim
 elif type vim >/dev/null; then
     export EDITOR=vim
 elif type vi >/dev/null; then
     export EDITOR=vi
-else
-    export EDITOR=nano
 fi
 
 # Saves some stat() calls, FWIW:
