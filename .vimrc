@@ -208,12 +208,6 @@ noremap <leader>ss :call ToggleSpellSuggest()<CR>
 noremap <leader>w :call WordProcessorMode()<CR>
 " Trim trailing whitespace
 noremap <leader>rw :call RemoveTrailingWhitespace()<CR>
-" ctags this directory using C++ settings
-noremap <leader>c :!ctags --sort=1 --c++-kinds=+p --fields=+iaS --extra=+fq ./*<CR>
-" Build main.stex in the current directory (useful for note-taking)
-noremap <leader>p :!semtex -v -p xelatex main.stex<CR>
-" Do the same for the current file
-noremap <leader>P :!semtex -v -p xelatex %<CR>
 
 " Make Y consistent with C, D, etc.
 noremap Y y$
@@ -222,14 +216,6 @@ noremap <Space> :noh<CR>
 " Make the enter key do something useful
 noremap <CR> o<Esc>
 noremap <S-CR> O<Esc>
-
-"--------------------
-" Function: Open tag under cursor in new tab
-" Source:   http://stackoverflow.com/questions/563616/vimctags-tips-and-tricks
-"--------------------
-noremap <C-\> :tab split<CR>:exec("tag ".expand("<cword>"))<CR>
-
-noremap <C-k> :py3f /usr/share/clang/clang-format.py<CR>
 
 " Insert mode mappings
 inoremap <C-j> <Esc>o
