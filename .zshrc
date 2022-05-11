@@ -163,3 +163,5 @@ export LS_COLORS=""
 [[ -f ~/.zshrc-machine ]] && source ~/.zshrc-machine
 # Clear error code so I'm not greeted with a red "1" at home
 true
+
+if [ -e /home/mrkline/.nix-profile/etc/profile.d/nix.sh ]; then . /home/mrkline/.nix-profile/etc/profile.d/nix.sh; fi # added by Nix installer
