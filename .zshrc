@@ -148,10 +148,8 @@ fi
 export RPS1=''
 
 # warm fuzzies
-if [ -n "${commands[fzf-share]}" ]; then
-  source "$(fzf-share)/key-bindings.zsh"
-  source "$(fzf-share)/completion.zsh"
-fi
+source "/usr/share/fzf/key-bindings.zsh"
+source "/usr/share/fzf/completion.zsh"
 
 # bat (syntax-highlighting cat) - white text on light term is bad, mmmk?
 export BAT_THEME=ansi
