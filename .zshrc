@@ -94,12 +94,6 @@ alias rot13="tr '[A-Za-z]' '[N-ZA-Mn-za-m]'"
 # Helps pinentry behave when unlocking GPG keys
 export GPG_TTY=$(tty)
 
-# Clang!
-if type clang >/dev/null; then
-    export CC=clang
-    export CXX=clang++
-fi
-
 # Other compiler fun.
 CPPFLAGS="-D_FORTIFY_SOURCE=2"
 CFLAGS="-march=native -pipe -fstack-protector-strong"
