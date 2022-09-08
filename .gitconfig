@@ -45,3 +45,5 @@
 	required = true
 [init]
 	defaultBranch = master
+[gc]
+	autoDetach = false
