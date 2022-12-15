@@ -154,6 +154,7 @@ endfunction
 set background=light
 
 highlight SpecialKey ctermfg=grey
+highlight NormalFloat ctermfg=NONE ctermbg=NONE
 
 " Key mapping and functions
 
