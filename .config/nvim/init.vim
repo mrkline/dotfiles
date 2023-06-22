@@ -1,5 +1,6 @@
 call plug#begin()
 
+Plug 'neovim/nvim-lspconfig'
 Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
 Plug 'tpope/vim-fugitive'
@@ -10,14 +11,25 @@ call plug#end()
 
 "" Plugin config:
 
+" We don't want per-filetype plugins running - they blow away omnifunc and
+" other stuff set below.
+filetype plugin off
+filetype indent on
+
+lua require('hls')
+noremap K :lua vim.lsp.buf.hover()<CR>
+noremap <leader>a :lua vim.lsp.buf.code_action()<CR>
+noremap <leader>D :lua vim.lsp.buf.declaration()<CR>
+noremap <leader>d :lua vim.lsp.buf.definition()<CR>
+noremap <leader>r :lua vim.lsp.buf.references()<CR>
+set omnifunc=v:lua.vim.lsp.omnifunc
+
 " Airline's mixed indentation messages are often wrong. Turn them off
 let g:airline#extensions#whitespace#checks = [ 'trailing' ]
 let g:airline_theme='papercolor'
 
 " Get rid of the hot pink FZF widow.
 set winhighlight=Normal:Normal
-
-filetype plugin indent on
 
 "" Normal vimrc stuff:
 
@@ -142,6 +154,7 @@ endfunction
 set background=light
 
 highlight SpecialKey ctermfg=grey
+highlight NormalFloat ctermfg=NONE ctermbg=NONE
 
 " Key mapping and functions
 
@@ -196,7 +209,7 @@ function! RemoveTrailingWhitespace()
 endfunction
 
 " Reload settings
-noremap <leader>r :so ~/.config/nvim/init.vim<CR>
+noremap <leader>R :so ~/.config/nvim/init.vim<CR>
 
 " Toggle relative numbers on and off
 noremap <C-n> :call ToggleRelativeNumbers()<CR>

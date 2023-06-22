@@ -22,7 +22,6 @@ setopt hist_expire_dups_first # Remove duplicates before unique commands.
 setopt hist_ignore_space # Don't record entries starting with a space.
 setopt hist_reduce_blanks # Strip extra whitespace.
 setopt hist_verify
-setopt inc_append_history_time
 setopt share_history # share history between sessions
 
 bindkey -e

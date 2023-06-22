@@ -45,5 +45,7 @@
 	required = true
 [init]
 	defaultBranch = master
+[gc]
+	autoDetach = false
 [credential]
 	helper = cache
