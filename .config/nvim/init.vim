@@ -66,9 +66,9 @@ set fileformats=unix,dos
 set splitright
 set splitbelow
 
-" Show line numbers, relative when not in insert mode.
+" Show line numbers
 set number
-set relativenumber
+
 " Numbers take up four columns
 set numberwidth=4
 
@@ -158,14 +158,6 @@ highlight NormalFloat ctermfg=NONE ctermbg=NONE
 
 " Key mapping and functions
 
-function! ToggleRelativeNumbers()
-	if &relativenumber
-		set norelativenumber
-	else
-		set relativenumber
-	endif
-endfunction
-
 function! ToggleSpell()
 	set spell!
 	if &spell
@@ -212,7 +204,7 @@ endfunction
 noremap <leader>R :so ~/.config/nvim/init.vim<CR>
 
 " Toggle relative numbers on and off
-noremap <C-n> :call ToggleRelativeNumbers()<CR>
+noremap <C-n> :set relativenumber!<CR>
 " Enable and disable spell check with a key press
 noremap <leader>sc :call ToggleSpell()<CR>
 " Enable and disable suggestions from the spelling dictionary with a key press
