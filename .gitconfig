@@ -47,3 +47,4 @@
 	defaultBranch = master
 [gc]
 	autoDetach = false
+	auto = 0
