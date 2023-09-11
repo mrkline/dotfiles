@@ -31,7 +31,6 @@
 	default = current
 	recurseSubmodules = check
 [merge]
-	ff = false
 	conflictStyle = diff3
 [fetch]
 	prune = true
