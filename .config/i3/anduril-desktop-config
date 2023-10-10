@@ -1,10 +1,8 @@
-exec desk-monitors.sh
-
 set $mod Mod1
 
 # Font for window titles. Will also be used by the bar unless a different font
 # is used in the bar {} block below. ISO 10646 = Unicode
-font pango:Futura Medium 14
+font pango:Jost* Medium 12
 
 # Use Mouse+$mod to drag floating windows to their wanted position
 floating_modifier $mod
@@ -88,19 +86,14 @@ bindsym $mod+Ctrl+9 move container to workspace 9:Volume
 bindsym $mod+Ctrl+0 move container to workspace 10:Status
 
 # Assign certain programs to certain windows
-assign [class="(?i)skype"] 8:Skype
 assign [class="(?i)pavu"] 9:Volume
-assign [class="(?i)electrum"] 7:Web IO
-assign [class="(?i)transmission"] 7:Web IO
 assign [class="Conky"] 10:Status
 
 # ...and launch them with a matching key
-bindsym mod4+8 exec skype
 bindsym mod4+9 exec pavucontrol
-bindsym mod4+0 exec transmission-gtk; exec electrum
 
 # Lock the scren with Super-L
-bindsym mod4+l exec lock.sh
+bindsym mod4+l exec ~/scripts/lock.sh
 
 # Volume stuff
 bindsym XF86AudioMute exec amixer set Master toggle
@@ -112,14 +105,12 @@ for_window [title="Calculator"] floating enable # Gnome calculator
 
 for_window [class="Conky"] border 1pixel
 
-for_window [title="OpenArena"] floating disable
-
 # reload the configuration file
 bindsym $mod+Ctrl+c reload
 # restart i3 inplace (preserves your layout/session, can be used to upgrade i3)
 bindsym $mod+Ctrl+r restart
 # exit i3 (logs you out of your X session)
-bindsym $mod+Ctrl+BackSpace exec i3-msg exit
+bindsym $mod+Ctrl+BackSpace exec xfce4-session-logout exit
 
 # resize window (you can also use the mouse for that)
 mode "resize" {
@@ -152,21 +143,12 @@ bindsym $mod+r mode "resize"
 bar {
         font pango:mononoki 14
         position top
-        status_command ~/.i3/conky
+        status_command ~/.config/i3/conky
 }
 
 # Keyboard shortcuts
 bindsym Print exec xfce4-screenshooter -f
 bindsym Ctrl+Print exec xfce4-screenshooter
-bindsym $mod+Ctrl+v exec xfce4-mixer
 
-# Startup stuff
-exec xset s 0 0 # Screensaver off
-exec xset dpms 0 1800 3600 # Standby screen at 30 mins, off at 60
-exec picom
-#exec dunst
-exec feh --bg-fill /home/mkline/Wallpapers/lowpass.jpg
-exec nm-applet
-exec xfce4-clipman
-#exec ionice -c 3 nice dropbox
-# exec xfce4-mixer
+# Set the wallpaper (everything else handled by xfce4 session mumbo jumbo)
+exec feh --bg-max --no-xinerama ~/.background-image
