@@ -6,11 +6,16 @@ function whichHls()
     return which;
 end
 
-require('lspconfig').hls.setup{
-    cmd = { whichHls(), "--lsp" },
-    settings = {
-        haskell = {
-            hlintOn = true
-        }
+res, hls = pcall(whichHls)
+if res then
+    require('lspconfig').hls.setup{
+        cmd = { hls, "--lsp" },
+        settings = {
+            haskell = {
+                hlintOn = true,
+            },
+        },
     }
-}
+-- else
+--    error(hls)
+end
