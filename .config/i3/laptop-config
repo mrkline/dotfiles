@@ -16,7 +16,7 @@ bindsym $mod+Return exec alacritty
 bindsym $mod+Ctrl+q kill
 
 # Use rofi as a launcher
-bindsym $mod+d exec rofi -show run -font 'Jost* 12' -lines 5 -opacity "95"
+bindsym $mod+d exec rofi -dpi 200 -show run -font 'Jost* 12' -lines 5 -opacity "95"
 
 # change focus
 bindsym $mod+h focus left
