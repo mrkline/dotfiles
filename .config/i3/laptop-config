@@ -147,6 +147,6 @@ bindsym Ctrl+Print exec xfce4-screenshooter
 bindsym $mod+Ctrl+v exec xfce4-mixer
 
 # Startup stuff
-#exec feh --bg-fill ~/Dropbox/Wallpapers/apollo/csm.jpg
 exec picom
 exec nm-applet
+exec feh --no-fehbg --bg-fill ~/wallpapers/15-29-intercept-cropped.jpg
