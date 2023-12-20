@@ -1,4 +1,4 @@
-#!/bin/zsh
+#!/usr/bin/env zsh
 
 # Encodes video with x265 `-crf 22 -preset slow`,
 # Output is a file of the same name in the current directory.

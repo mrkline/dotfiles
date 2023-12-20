@@ -1,3 +1,4 @@
-#!/bin/sh
+#!/usr/bin/env sh
+
 rm -fv *.aux *.log *.out *.toc
 rm -rfv _minted*

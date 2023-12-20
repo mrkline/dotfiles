@@ -1,6 +1,0 @@
-#!/bin/sh
-set -e
-
-cd /tmp/linux-ck
-sudo cp -iv *.pkg.tar.xz /var/cache/pacman/pkg/
-sudo nice pacman -U *.pkg.tar.xz
