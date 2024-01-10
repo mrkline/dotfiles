@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/usr/bin/env bash
 
 #
 # Script that outputs the filesystem usage of snapshots in a location ( root if omited )

@@ -1,4 +1,0 @@
-#!/usr/bin/python2
-# Decodes a string that has been URL-encoded
-import sys, urllib as ul;
-print ul.unquote(sys.argv[1])

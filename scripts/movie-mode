@@ -1,3 +1,0 @@
-#!/bin/sh
-xset s 0 0 # Screensaver off
-xset dpms 0 0 0 # Screen blanking off

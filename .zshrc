@@ -113,9 +113,6 @@ export TZ=":/etc/localtime"
 # LESS Options
 export LESS=-x4RSX
 
-# Add some user scripts to the path
-export PATH=~/scripts:$PATH
-
 # Set up our prompt
 setopt prompt_subst
 setopt prompt_percent
