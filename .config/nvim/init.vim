@@ -239,6 +239,4 @@ noremap <leader>g :call luaeval('require("fzf-commands").rg(_A)', expand("<cword
 
 " Neovim: When in the terminal, use Ctrl+] to escape the terminal,
 " then seek to the end of the last non-whitespace.
-if (has('nvim'))
-    tnoremap <C-]> <C-\><C-n>G$:call search('\S', 'b')<CR>$
-endif
+tnoremap <C-]> <C-\><C-n>G$:call search('\S', 'b')<CR>$
