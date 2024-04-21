@@ -73,8 +73,8 @@ set number
 " Numbers take up four columns
 set numberwidth=4
 
-" Mark column 81 (to encourage 80-column lines)
-set colorcolumn=81
+" Mark column 101 (to encourage 100-column lines)
+set colorcolumn=101
 
 " Tabs are four spaces wide, and are expanded into spaces
 set tabstop=4
