@@ -17,7 +17,7 @@ filetype plugin off
 filetype indent on
 
 lua require('hls')
-lua require('lspconfig').rust_analyzer.setup{}
+lua require('lspconfig').rust_analyzer.setup{ autostart = false }
 noremap K :lua vim.lsp.buf.hover()<CR>
 noremap <leader>a :lua vim.lsp.buf.code_action()<CR>
 noremap <leader>D :lua vim.lsp.buf.declaration()<CR>
@@ -73,8 +73,8 @@ set number
 " Numbers take up four columns
 set numberwidth=4
 
-" Mark column 81 (to encourage 80-column lines)
-set colorcolumn=81
+" Mark column 101 (to encourage 100-column lines)
+set colorcolumn=101
 
 " Tabs are four spaces wide, and are expanded into spaces
 set tabstop=4
