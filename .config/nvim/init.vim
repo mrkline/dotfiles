@@ -17,7 +17,7 @@ filetype plugin off
 filetype indent on
 
 lua require('hls')
-lua require('lspconfig').rust_analyzer.setup{}
+lua require('lspconfig').rust_analyzer.setup{ autostart = false }
 noremap K :lua vim.lsp.buf.hover()<CR>
 noremap <leader>a :lua vim.lsp.buf.code_action()<CR>
 noremap <leader>D :lua vim.lsp.buf.declaration()<CR>
