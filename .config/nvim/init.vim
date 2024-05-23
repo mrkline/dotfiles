@@ -27,8 +27,11 @@ set omnifunc=v:lua.vim.lsp.omnifunc
 
 " Airline's mixed indentation messages are often wrong. Turn them off
 let g:airline#extensions#whitespace#checks = [ 'trailing' ]
-let g:airline_theme='papercolor'
 
+" Color schemes!
+let g:airline_theme='papercolor'
+" nvim 0.10 decided a less readable scheme is more "neovim branded". Wtf.
+colorscheme vim
 " Get rid of the hot pink FZF widow.
 set winhighlight=Normal:Normal
 
